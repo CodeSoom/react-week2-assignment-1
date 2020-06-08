@@ -64,6 +64,8 @@ npm test
 - [X] handleCounterClick 함수의 인자명을 좀 더 적합한 이름으로 변경
 - [X] MultiCounterButtons 명칭에서 중복된 복수형 표기 제거하기
 - [ ] App 컴포넌트의 책임 분할하기
+    - [ ] App에서 렌더링만 하도록 화면에 그림 그리고 상태 관리하는 부분 별도로 분리
+    - [ ] 상태 관리하는 부분 별도로 분리
 - [X] 파일명과 내부의 함수명 일치시키기
 - [X] 외부 라이브러리 import와 내가 만든 component import에 구분 주기
-- [ ] export를 좀 더 간략하게 표현하기
+- [X] export를 좀 더 간략하게 표현하기
