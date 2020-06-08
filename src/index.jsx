@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 
+import ClickMeButton from './ClickMeButton';
+import CountupButton from './CountUpButton';
+
 function App() {
   const [state, setState] = useState({
     count: 0,
@@ -16,14 +19,10 @@ function App() {
   return (
     <div>
       <h1>Counter</h1>
-      <button type="button" onClick={() => handleCountUp(1)}>
-        Click me!! (
-        {count}
-        )
-      </button>
+      <ClickMeButton count={count} onClick={() => handleCountUp(1)} />
       <br />
       {[1, 2, 3, 4, 5].map((num) => (
-        <button type="button" onClick={() => handleCountUp(num)}>{num}</button>
+        <CountupButton number={num} onClick={() => handleCountUp(num)} />
       ))}
     </div>
   );
