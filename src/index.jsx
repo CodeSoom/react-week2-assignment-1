@@ -6,10 +6,17 @@ function App() {
     count: 0,
   });
   const { count } = state;
+
+  const handleCountUp = (number) => {
+    setState({
+      count: count + number,
+    });
+  };
+
   return (
     <div>
       <h1>Counter</h1>
-      <button type="button">
+      <button type="button" onClick={() => handleCountUp(1)}>
         Click me!! (
         {count}
         )
