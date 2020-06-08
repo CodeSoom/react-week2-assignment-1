@@ -1,12 +1,11 @@
 import React from 'react';
+import MultiCounterButton from './MultiCounterButton';
 
 function MultiCounterButtons() {
   return (
     <div>
       {[1, 2, 3, 4, 5].map((num) => (
-        <button type="button" key={num}>
-          {num}
-        </button>
+        <MultiCounterButton displayName={num} key={num} />
       ))}
     </div>
   );
