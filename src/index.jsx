@@ -12,11 +12,11 @@ function Counter({ count, onClick }) {
   );
 }
 
-function Buttons() {
+function Buttons({ onClick }) {
   return (
     <p>
-      {[1, 2, 3].map((i) => (
-        <Button key={i}>
+      {[1, 2, 3, 4, 5].map((i) => (
+        <Button key={i} onClick={onClick}>
           {i}
         </Button>
       ))}
@@ -24,9 +24,9 @@ function Buttons() {
   );
 }
 
-function Button({ children }) {
+function Button({ children, onClick }) {
   return (
-    <button type="button">
+    <button type="button" onClick={() => onClick(children)}>
       {children}
     </button>
   );
@@ -41,7 +41,9 @@ function Page({ count, onClick }) {
         count={count}
         onClick={onClick}
       />
-      <Buttons />
+      <Buttons
+        onClick={onClick}
+      />
     </div>
   );
 }
@@ -53,9 +55,9 @@ function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function handleClick(number = 1) {
     setState({
-      count: count + 1,
+      count: count + number,
     });
   }
 
