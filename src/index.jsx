@@ -22,11 +22,9 @@ function App() {
         )
       </button>
       <br />
-      <button type="button">1</button>
-      <button type="button">2</button>
-      <button type="button">3</button>
-      <button type="button">4</button>
-      <button type="button">5</button>
+      {[1, 2, 3, 4, 5].map((num) => (
+        <button type="button" onClick={() => handleCountUp(num)}>{num}</button>
+      ))}
     </div>
   );
 }
