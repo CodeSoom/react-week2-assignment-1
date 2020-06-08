@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-
-import CounterButton from './CounterButton';
-import NumberCounterButtons from './multiCounter/NumberCounterButtons';
-import Title from './Title';
+import CounterTemplate from './CounterTemplate';
 
 export default function CouterApp() {
   const [state, setState] = useState({
@@ -18,10 +15,6 @@ export default function CouterApp() {
   }
 
   return (
-    <div>
-      <Title />
-      <CounterButton count={count} onClick={() => handleCounterClick(1)} />
-      <NumberCounterButtons onClick={handleCounterClick} />
-    </div>
+    <CounterTemplate count={count} onClick={handleCounterClick} />
   );
 }
