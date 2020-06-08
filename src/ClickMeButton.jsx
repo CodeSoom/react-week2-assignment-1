@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-function ClickMeButton({ showNumber, handleClickMe }) {
+export default function ClickMeButton({ showNumber, handleClickMe }) {
   return (
     <div>
       <button
@@ -15,6 +14,3 @@ function ClickMeButton({ showNumber, handleClickMe }) {
     </div>
   );
 }
-
-
-export default ClickMeButton;

@@ -1,7 +1,8 @@
 import React from 'react';
+
 import CountButton from './CountButton';
 
-function CountButtons({ handleClickMe }) {
+export default function CountButtons({ handleClickMe }) {
   const counts = [1, 2, 3, 4, 5];
 
   return (
@@ -16,6 +17,3 @@ function CountButtons({ handleClickMe }) {
     </p>
   );
 }
-
-
-export default CountButtons;

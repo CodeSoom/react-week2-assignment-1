@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+
 import Title from './Title';
 import ClickMeButton from './ClickMeButton';
 import CountButtons from './CountButtons';
@@ -22,7 +23,6 @@ function App() {
       <CountButtons
         handleClickMe={handleClickMe}
       />
-
     </div>
   );
 }
