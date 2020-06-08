@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import CounterButton from './CounterButton';
+import MultiCounterButtons from './MultiCounterButtons';
 
 function App() {
   const [state, setState] = useState({
@@ -19,8 +20,7 @@ function App() {
     <div>
       <p>Counter</p>
       <CounterButton count={count} onClick={handleCounterClick}/>
-      <br />
-      {[1,2,3,4,5].map(num => <button type="button">{num}</button>)}
+      <MultiCounterButtons />
     </div>
   );
 }
