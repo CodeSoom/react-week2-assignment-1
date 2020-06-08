@@ -1,9 +1,9 @@
 import React from 'react';
 
-function CounterButton({ displayName, onClick }) {
+function CounterButton({ number, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
-      {displayName}
+    <button type="button" onClick={() => onClick(number)}>
+      {number}
     </button>
   );
 }

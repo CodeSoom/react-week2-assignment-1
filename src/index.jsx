@@ -20,7 +20,7 @@ function App() {
     <div>
       <p>Counter</p>
       <CounterButton count={count} onClick={() => handleCounterClick(1)}/>
-      <MultiCounterButtons />
+      <MultiCounterButtons onClick={handleCounterClick}/>
     </div>
   );
 }
