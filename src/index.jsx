@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import CounterButton from './CounterButton';
-import MultiCounterButtons from './multiCounter/MultiCounterButtons';
+import NumberCounterButtons from './multiCounter/NumberCounterButtons';
 import Title from './Title';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     <div>
       <Title />
       <CounterButton count={count} onClick={() => handleCounterClick(1)} />
-      <MultiCounterButtons onClick={handleCounterClick} />
+      <NumberCounterButtons onClick={handleCounterClick} />
     </div>
   );
 }

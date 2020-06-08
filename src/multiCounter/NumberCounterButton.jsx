@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CounterButton({ number, onClick }) {
+function NumberCounterButton({ number, onClick }) {
   return (
     <button type="button" onClick={() => onClick(number)}>
       {number}
@@ -8,4 +8,4 @@ function CounterButton({ number, onClick }) {
   );
 }
 
-export default CounterButton;
+export default NumberCounterButton;
