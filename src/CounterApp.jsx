@@ -4,7 +4,7 @@ import CounterButton from './CounterButton';
 import NumberCounterButtons from './multiCounter/NumberCounterButtons';
 import Title from './Title';
 
-export default function CouterTemplate() {
+export default function CouterApp() {
   const [state, setState] = useState({
     count: 0,
   });

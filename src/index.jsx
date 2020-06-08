@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import CounterTemplate from './CounterTemplate';
+import CounterApp from './CounterApp';
 
 function App() {
   return (
-    <CounterTemplate />
+    <CounterApp />
   );
 }
 
