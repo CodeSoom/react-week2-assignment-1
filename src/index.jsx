@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import CounterButton from './CounterButton';
-import MultiCounterButtons from './MultiCounterButtons';
+import MultiCounterButtons from './multiCounter/MultiCounterButtons';
 
 function App() {
   const [state, setState] = useState({
     count: 0,
-  })
+  });
 
   const { count } = state;
 
@@ -14,13 +14,13 @@ function App() {
     setState({
       count: count + increaseAmount,
     });
-  };
+  }
 
   return (
     <div>
       <p>Counter</p>
-      <CounterButton count={count} onClick={() => handleCounterClick(1)}/>
-      <MultiCounterButtons onClick={handleCounterClick}/>
+      <CounterButton count={count} onClick={() => handleCounterClick(1)} />
+      <MultiCounterButtons onClick={handleCounterClick} />
     </div>
   );
 }
