@@ -22,7 +22,7 @@ function App() {
       <ClickMeButton count={count} onClick={() => handleCountUp(1)} />
       <br />
       {[1, 2, 3, 4, 5].map((num) => (
-        <CountupButton number={num} onClick={() => handleCountUp(num)} />
+        <CountupButton key={num} number={num} onClick={() => handleCountUp(num)} />
       ))}
     </div>
   );
