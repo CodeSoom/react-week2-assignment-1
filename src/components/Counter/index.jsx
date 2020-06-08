@@ -1,16 +1,12 @@
 import React from 'react';
-import Button from '../Button';
+import ClickMe from '../ClickMe';
+import CounterButtonGroups from '../CounterButtonGroups';
 
 function Counter({ buttons, count, onClick }) {
   return (
     <>
-      <Button onClick={() => onClick(1)}>
-        Click me! (
-        {count}
-        )
-      </Button>
-      <br />
-      {buttons.map((n) => <Button key={n} onClick={() => onClick(n)}>{n}</Button>)}
+      <ClickMe count={count} onClick={onClick} />
+      <CounterButtonGroups buttons={buttons} onClick={onClick} />
     </>
   );
 }
