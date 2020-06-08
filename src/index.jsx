@@ -9,10 +9,16 @@ function App() {
 
   const { count } = state;
 
+  function handleCounterClick() {
+    setState({
+      count: count + 1,
+    })
+  };
+
   return (
     <div>
       <p>Counter</p>
-      <CounterButton count={count}/>
+      <CounterButton count={count} onClick={handleCounterClick}/>
     </div>
   );
 }
