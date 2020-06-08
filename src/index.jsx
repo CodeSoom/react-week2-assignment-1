@@ -11,9 +11,9 @@ function App() {
 
   const { count } = state;
 
-  function handleCounterClick(increaseAmount) {
+  function handleCounterClick(numberOfIncrease) {
     setState({
-      count: count + increaseAmount,
+      count: count + numberOfIncrease,
     });
   }
 

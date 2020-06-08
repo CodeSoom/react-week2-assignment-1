@@ -61,7 +61,7 @@ npm test
 - [X] 1,2,3,4,5 숫자 버튼을 누르면 적힌 숫자 만큼 'Clicke me!' 버튼 내 괄호 안의 숫자가 증가한다.
 
 ### 1차 리뷰 Todo List
-- [ ] handleCounterClick 함수의 인자명을 좀 더 적합한 이름으로 변경
+- [X] handleCounterClick 함수의 인자명을 좀 더 적합한 이름으로 변경
 - [ ] MultiCounterButtons 명칭에서 중복된 복수형 표기 제거하기
 - [ ] App 컴포넌트의 책임 분할하기
 - [ ] 파일명과 내부의 함수명 일치시키기
