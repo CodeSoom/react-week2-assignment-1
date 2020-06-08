@@ -8,8 +8,8 @@ import CountButtons from './CountButtons';
 export default function App() {
   const [number, setNumber] = useState(0);
 
-  const handleClickMe = (upNumber) => {
-    setNumber(number + upNumber);
+  const handleClickMe = (count) => {
+    setNumber(number + count);
   };
 
   return (
