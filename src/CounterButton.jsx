@@ -1,9 +1,9 @@
 import React from 'react';
 
-function CounterButton({ count, onClick }) {
+function CounterButton({ displayName, count, onClick }) {
   return (
     <button type="button" onClick={onClick}>
-      Click me!
+      {displayName}
       (
       {count}
       )

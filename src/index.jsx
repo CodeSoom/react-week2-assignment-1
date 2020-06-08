@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <p>Counter</p>
-      <CounterButton count={count} onClick={() => handleCounterClick(1)}/>
+      <CounterButton displayName="Click me!" count={count} onClick={() => handleCounterClick(1)}/>
       <MultiCounterButtons />
     </div>
   );
