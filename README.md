@@ -65,5 +65,5 @@ npm test
 - [X] MultiCounterButtons 명칭에서 중복된 복수형 표기 제거하기
 - [ ] App 컴포넌트의 책임 분할하기
 - [X] 파일명과 내부의 함수명 일치시키기
-- [ ] 외부 라이브러리 import와 내가 만든 component import에 구분 주기
+- [X] 외부 라이브러리 import와 내가 만든 component import에 구분 주기
 - [ ] export를 좀 더 간략하게 표현하기

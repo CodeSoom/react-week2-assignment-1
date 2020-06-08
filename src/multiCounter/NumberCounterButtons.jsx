@@ -2,7 +2,7 @@ import React from 'react';
 
 import MultiCounterButton from './NumberCounterButton';
 
-function NumberCounterButtons({ onClick }) {
+export default function NumberCounterButtons({ onClick }) {
   return (
     <div>
       {[1, 2, 3, 4, 5].map((num) => (
@@ -11,5 +11,3 @@ function NumberCounterButtons({ onClick }) {
     </div>
   );
 }
-
-export default NumberCounterButtons;

@@ -1,9 +1,7 @@
 import React from 'react';
 
-function Title() {
+export default function Title() {
   return (
     <p>Counter</p>
   );
 }
-
-export default Title;
