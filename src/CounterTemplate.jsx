@@ -1,8 +1,8 @@
 import React from 'react';
 
-import CounterButton from './CounterButton';
-import NumberCounterButtons from './multiCounter/NumberCounterButtons';
-import Title from './Title';
+import CounterButton from './components/CounterButton';
+import NumberCounterButtons from './components/multiCounter/NumberCounterButtons';
+import Title from './components/Title';
 
 export default function CounterTemplate({ count, onClick }) {
   return (
