@@ -4,7 +4,6 @@ import Title from './Title';
 import ClickMeButton from './ClickMeButton';
 import CountButtons from './CountButtons';
 
-
 export default function App() {
   const [number, setNumber] = useState(0);
 
