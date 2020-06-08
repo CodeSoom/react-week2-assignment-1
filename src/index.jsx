@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CounterButton from './CounterButton';
 
 function App() {
   return (
     <div>
       <p>Counter</p>
-      <button type="button">Click me!()</button>
+      <CounterButton />
     </div>
   );
 }
