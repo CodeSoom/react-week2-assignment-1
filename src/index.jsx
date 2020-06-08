@@ -1,23 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import ClickMeButton from './ClickMeButton'
-import NumberButton from './NumerButton'
+import Counter from './Counter';
 
-const App = () => {
-  const [number, setNumber] = React.useState(0)
-
-  const handleClick = (num = 1) => {
-    setNumber(number => number + num)
-  }
-
+function App() {
   return (
     <>
       <h1>Counter</h1>
-      <ClickMeButton number={number} onClick={handleClick} />
-      <NumberButton onClick={handleClick} />
+      <Counter />
     </>
-  )
-};
+  );
+}
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));
