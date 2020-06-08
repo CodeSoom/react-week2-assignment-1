@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import CounterButton from './CounterButton';
 
 function App() {
+  const [state, setState] = useState({
+    count: 0,
+  })
+
+  const { count } = state;
+
   return (
     <div>
       <p>Counter</p>
-      <CounterButton />
+      <CounterButton count={count}/>
     </div>
   );
 }
