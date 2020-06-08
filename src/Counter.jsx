@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ClickMeButton from './ClickMeButton';
-import NumberButton from './NumberButton';
+import NumberButtonGroup from './NumberButtonGroup';
 
 export default function Counter() {
   const [count, setCount] = React.useState(0);
@@ -16,7 +16,7 @@ export default function Counter() {
         <ClickMeButton count={count} incrementCount={incrementCount} />
       </p>
       <p>
-        <NumberButton incrementCount={incrementCount} />
+        <NumberButtonGroup incrementCount={incrementCount} />
       </p>
     </>
   );
