@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import CounterButtons from './CounterButtons';
+import CountDisplayButton from './CountDisplayButton';
+import NumberButtons from './NumberButtons';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -10,10 +11,17 @@ const Counter = () => {
 
   return (
     <>
-      <CounterButtons
-        count={count}
-        onClick={handleCounter}
-      />
+      <p>
+        <CountDisplayButton
+          count={count}
+          onClick={() => handleCounter(count + 1)}
+        />
+      </p>
+      <p>
+        <NumberButtons
+          onClick={(increment) => handleCounter(count + increment)}
+        />
+      </p>
     </>
   );
 };
