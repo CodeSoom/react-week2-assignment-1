@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Title from './Title';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -9,7 +10,7 @@ const Counter = () => {
 
   return (
     <>
-      <p>Counter</p>
+      <Title />
       <p>
         <button type="button" onClick={() => handleCounter(count + 1)}>
           Click me! (
