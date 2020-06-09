@@ -7,23 +7,18 @@ function App() {
     count: 0,
   });
 
-  function handleClickCounter() {
-    setState({
-      count: state.count + 1,
-    });
-  }
+  const { count } = state;
 
-  function handleClickNumber(i) {
+  function handleButtonClick(i) {
     setState({
-      count: state.count + i,
+      count: count + i,
     });
   }
 
   return (
     <Page
-      count={state.count}
-      handleClickCounter={handleClickCounter}
-      handleClickNumber={handleClickNumber}
+      count={count}
+      handleButtonClick={handleButtonClick}
     />
   );
 }
