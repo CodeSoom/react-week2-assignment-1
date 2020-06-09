@@ -1,6 +1,6 @@
 import React from 'react';
-import Buttons from '../components/buttons';
-import Counter from '../components/counter';
+import Buttons from '../components/Buttons';
+import Counter from '../components/Counter';
 
 function Page({ count, onClick }) {
   return (
