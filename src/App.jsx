@@ -4,7 +4,7 @@ import Title from './components/Title';
 import Counter from './components/Counter';
 
 
-const buttons = [1, 2, 3, 4, 5];
+const BUTTONS = [1, 2, 3, 4, 5];
 
 function App() {
   const [state, setState] = useState({
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Title title="Counter" />
-      <Counter buttons={buttons} count={count} onClick={onClickCount} />
+      <Counter buttons={BUTTONS} count={count} onClick={onClickCount} />
     </>
   );
 }
