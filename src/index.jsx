@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './components/Counter';
+import Page from './components/Page';
 
-const App = () => <Counter />;
+const App = () => <Page />;
 
 ReactDOM.render(<App />, document.getElementById('app'));

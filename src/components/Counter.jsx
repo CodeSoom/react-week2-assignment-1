@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Title from './Title';
 import CountDisplayButton from './CountDisplayButton';
 import NumberButtons from './NumberButtons';
 
@@ -12,7 +11,6 @@ const Counter = () => {
 
   return (
     <>
-      <Title />
       <p>
         <CountDisplayButton
           count={count}
