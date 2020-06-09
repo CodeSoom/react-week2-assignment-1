@@ -1,27 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Page from './pages/Page';
-
-function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
-
-  function handleClick(number = 1) {
-    setState({
-      count: count + number,
-    });
-  }
-
-  return (
-    <Page
-      count={count}
-      onClick={handleClick}
-    />
-  );
-}
+import App from './App';
 
 ReactDOM.render(
   <App />,
