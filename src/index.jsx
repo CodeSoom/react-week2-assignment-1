@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Page from './components/Page';
-
-const App = () => <Page />;
+import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('app'));
