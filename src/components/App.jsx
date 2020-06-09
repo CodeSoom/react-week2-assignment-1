@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import ClickmeButton from './ClickmeButton';
-import NumberButtons from './NumberButtons';
+import Counter from './Counter';
 
 export default function App() {
   const [state, setState] = useState({
@@ -16,15 +15,9 @@ export default function App() {
   };
 
   return (
-    <div>
-      <p>Counter</p>
-      <ClickmeButton
-        count={count}
-        onClick={handleClickButton}
-      />
-      <NumberButtons
-        onClick={handleClickButton}
-      />
-    </div>
+    <Counter
+      count={count}
+      onClick={handleClickButton}
+    />
   );
 }
