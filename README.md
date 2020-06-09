@@ -52,3 +52,20 @@ npm run lint
 ```bash
 npm test
 ```
+
+## Simple Counter Todo List
+- [X] 'Counter'를 웹페이지에서 볼 수 있다.
+- [X] 'Click me! ({숫자})'를 웹페이지에서 볼 수 있다.
+- [X] 1,2,3,4,5가 적힌 버튼 다섯개를 웹페이지에서 볼 수 있다.
+- [X] 'Click me!'를 누르면 괄호 안의 숫자가 1씩 증가한다.
+- [X] 1,2,3,4,5 숫자 버튼을 누르면 적힌 숫자 만큼 'Clicke me!' 버튼 내 괄호 안의 숫자가 증가한다.
+
+### 1차 리뷰 Todo List
+- [X] handleCounterClick 함수의 인자명을 좀 더 적합한 이름으로 변경
+- [X] MultiCounterButtons 명칭에서 중복된 복수형 표기 제거하기
+- [X] App 컴포넌트의 책임 분할하기
+    - [X] App에서 렌더링만 하도록 화면에 그림 그리고 상태 관리하는 부분 별도로 분리
+    - [X] 상태 관리하는 부분 별도로 분리
+- [X] 파일명과 내부의 함수명 일치시키기
+- [X] 외부 라이브러리 import와 내가 만든 component import에 구분 주기
+- [X] export를 좀 더 간략하게 표현하기
