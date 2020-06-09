@@ -15,6 +15,12 @@ export default function App() {
     });
   };
 
+  const handleClickNumber = (value) => {
+    setState({
+      count: count + value,
+    });
+  };
+
   return (
     <div>
       <p>Counter</p>
@@ -22,7 +28,9 @@ export default function App() {
         count={count}
         onClick={handleClickButton}
       />
-      <NumberButtons />
+      <NumberButtons
+        onClick={handleClickNumber}
+      />
     </div>
   );
 }
