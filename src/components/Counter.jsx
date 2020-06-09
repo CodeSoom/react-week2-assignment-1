@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Title from './Title';
 import CountDisplayButton from './CountDisplayButton';
-import NumberButton from './NumberButton';
+import NumberButtons from './NumberButtons';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -20,13 +20,9 @@ const Counter = () => {
         />
       </p>
       <p>
-        {[1, 2, 3, 4, 5].map((i) => (
-          <NumberButton
-            key={i}
-            number={i}
-            onClick={() => handleCounter(count + i)}
-          />
-        ))}
+        <NumberButtons
+          onClick={(increment) => handleCounter(count + increment)}
+        />
       </p>
     </>
   );
