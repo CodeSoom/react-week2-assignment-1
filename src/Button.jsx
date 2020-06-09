@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-export default ({ children, clickhandler }) => {
-  return (
-    <button type="button" onClick={clickhandler}>{children}</button>
-  );
-}
+export default ({ children, clickhandler }) => (
+  <button type="button" onClick={clickhandler}>{children}</button>
+);
