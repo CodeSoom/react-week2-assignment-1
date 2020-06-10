@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './button';
+import Button from './Button';
 
 export default function Buttons({ onClick }) {
   return (
@@ -8,7 +8,7 @@ export default function Buttons({ onClick }) {
         <Button
           key={i}
           number={i}
-          onClick={onClick}
+          onClick={() => onClick(i)}
         />
       ))}
     </p>
