@@ -1,15 +1,14 @@
 import React from 'react';
 
-function MainButton({ count, onClick }) {
+export default function MainButton({ display, onClick }) {
+  const increment = 1;
   return (
     <p>
-      <button type="button" onClick={() => onClick({ count })}>
+      <button type="button" onClick={() => onClick(increment)}>
         Click me!(
-        {count}
+        {display}
         )
       </button>
     </p>
   );
 }
-
-export default MainButton;
