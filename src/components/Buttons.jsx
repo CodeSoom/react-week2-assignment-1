@@ -1,11 +1,11 @@
 import React from 'react';
-import NumberButton from './NumberButton';
+import Button from './Button';
 
-export default function NumberButtons({ onClick }) {
+export default function Buttons({ onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
-        <NumberButton
+        <Button
           key={i}
           number={i}
           onClick={onClick}

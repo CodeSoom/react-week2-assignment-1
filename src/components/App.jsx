@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Counter from './Counter';
+import Page from './Page';
 
 export default function App() {
   const [state, setState] = useState({
@@ -15,7 +15,7 @@ export default function App() {
   };
 
   return (
-    <Counter
+    <Page
       count={count}
       onClick={handleClickButton}
     />
