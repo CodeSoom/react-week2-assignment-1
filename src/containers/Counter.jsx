@@ -1,13 +1,15 @@
-import React from 'react';
-
-import useCounter from '../hooks/useCounter';
+import React, { useState } from 'react';
 
 import Title from '../components/Title';
 import ClickMeButton from '../components/ClickMeButton';
 import NumberButtons from '../components/NumberButtons';
 
 export default function Counter() {
-  const [count, incrementCount] = useCounter(0);
+  const [count, setCount] = useState(0);
+
+  const incrementCount = (delta = 1) => {
+    setCount(count + delta);
+  };
 
   return (
     <>
