@@ -1,26 +1,47 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-function Title({ title }) {
+function Title() {
   return (
     <p>
-      {title}
+      Counter
+    </p>
+  );
+}
+
+function MainButton({ count, onClick }) {
+  return (
+    <p>
+      <button type="button" onClick={() => onClick({ count })}>
+        Click me!(
+        {count}
+        )
+      </button>
     </p>
   );
 }
 
 function App() {
   const [state, setState] = useState({
-    title: 'Counter',
+    count: 0,
     numbers: [1, 2, 3, 4, 5],
+    increment: 0,
   });
 
-  const { title } = state;
+  function handleMainClick({ count }) {
+    setState({
+      count: count + 1,
+    });
+  }
+
+  const { count } = state;
 
   return (
     <div>
-      <Title
-        title={title}
+      <Title />
+      <MainButton
+        count={count}
+        onClick={handleMainClick}
       />
     </div>
   );
