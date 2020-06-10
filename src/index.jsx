@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-
-function Title() {
-  return (
-    <p>
-      Counter
-    </p>
-  );
-}
+import Title from './component/title';
 
 function MainButton({ count, onClick }) {
   return (
