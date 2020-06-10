@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Button({ children, handleNumbersClick }) {
+function Button({ number, handleNumbersClick }) {
   return (
-    <button type="button" onClick={() => handleNumbersClick(children)}>
-      {children}
+    <button type="button" onClick={() => handleNumbersClick(number)}>
+      {number}
     </button>
   );
 }

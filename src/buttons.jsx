@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Button from './button';
 
 function Buttons({ handleNumbersClick }) {
@@ -6,7 +7,7 @@ function Buttons({ handleNumbersClick }) {
   return (
     <p>
       {numbers.map((i) => (
-        <Button key={i} handleNumbersClick={handleNumbersClick}>
+        <Button key={i} number={i} handleNumbersClick={handleNumbersClick}>
           {i}
         </Button>
       ))}
