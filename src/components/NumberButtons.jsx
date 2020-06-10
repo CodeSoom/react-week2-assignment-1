@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function NumberButtonGroup({ incrementCount }) {
+export default function NumberButtons({ incrementCount }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((number) => (
