@@ -9,15 +9,9 @@ function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function handleClick(value = 1) {
     setState({
-      count: count + 1,
-    });
-  }
-
-  function handleClickNumber(number) {
-    setState({
-      count: count + number,
+      count: count + value,
     });
   }
 
@@ -26,7 +20,7 @@ function App() {
       <Page
         count={count}
         handleClick={handleClick}
-        handleClickNumber={handleClickNumber}
+        handleClickNumber={handleClick}
       />
     </div>
 

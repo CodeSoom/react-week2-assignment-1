@@ -7,6 +7,7 @@ function NumberButtons({ handleClickNumber }) {
       {[1, 2, 3, 4, 5].map((i) => (
         <Button
           key={i}
+          value={i}
           handleClickNumber={handleClickNumber}
         >
           {i}
