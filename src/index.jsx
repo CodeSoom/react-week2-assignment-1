@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Title from './component/title';
-
-function MainButton({ count, onClick }) {
-  return (
-    <p>
-      <button type="button" onClick={() => onClick({ count })}>
-        Click me!(
-        {count}
-        )
-      </button>
-    </p>
-  );
-}
+import MainButton from './component/main-button';
 
 function ButtonGroup({ count, onClick }) {
   const numbers = [1, 2, 3, 4, 5];
