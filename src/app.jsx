@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import Title from '../components/Title';
-import ClickMeButton from '../components/ClickMeButton';
-import NumberButtons from '../components/NumberButtons';
+import Title from './components/Title';
+import ClickMeButton from './components/ClickMeButton';
+import NumberButtons from './components/NumberButtons';
 
-export default function Counter() {
+export default function App() {
   const [count, setCount] = useState(0);
 
   const incrementCount = (delta = 1) => {
