@@ -5,10 +5,7 @@ import Counter from './containers/Counter';
 
 function App() {
   return (
-    <>
-      <h1>Counter</h1>
-      <Counter />
-    </>
+    <Counter />
   );
 }
 
