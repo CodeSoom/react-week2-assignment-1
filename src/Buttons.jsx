@@ -1,13 +1,13 @@
 import React from 'react';
 
-import CountUpButton from './Button';
+import Button from './Button';
 
-export default function CountUpButtonBox({ onClick }) {
+export default function Buttons({ onClick }) {
   const btnList = [1, 2, 3, 4, 5];
   return (
     <div>
       {btnList.map((number) => (
-        <CountUpButton key={number} number={number} onClick={onClick} />
+        <Button key={number} number={number} onClick={onClick} />
       ))}
     </div>
   );
