@@ -8,15 +8,11 @@ export default () => {
     <div>
       <p>Conter</p>
       <p>
-        <Button clickhandler={() => setCount(count + 1)}>
-          Click me!(
-          { count }
-          )
-        </Button>
+        <Button clickhandler={() => setCount(count + 1)} i={`Click me!(${count})`} />
       </p>
       <p>
         {[1, 2, 3, 4, 5].map((number) => (
-          <Button key={number} clickhandler={() => setCount(count + number)}>{number}</Button>
+          <Button key={number} clickhandler={() => setCount(count + number)} i={number} />
         ))}
       </p>
     </div>
