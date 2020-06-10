@@ -1,10 +1,11 @@
 import React from 'react';
+
 import ClickMe from './ClickMe';
-import CounterButtonGroup from './CounterButtonGroup';
+import CounterButtons from './CounterButtons';
 
 export default ({ buttons, count, onClick }) => (
   <>
     <ClickMe count={count} onClick={onClick} />
-    <CounterButtonGroup buttons={buttons} onClick={onClick} />
+    <CounterButtons buttons={buttons} onClick={onClick} />
   </>
 );
