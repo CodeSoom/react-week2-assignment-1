@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Page from './components/Page';
 
 export default function App() {
-  return <Page />;
+  const [count, setCount] = useState(0);
+
+  const handleCount = (number) => {
+    setCount(number);
+  };
+
+  return (
+    <Page
+      count={count}
+      handleCount={handleCount}
+    />
+  );
 }
