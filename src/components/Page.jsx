@@ -2,11 +2,11 @@ import React from 'react';
 import Title from './Title';
 import Counter from './Counter';
 
-const Page = () => (
-  <>
-    <Title />
-    <Counter />
-  </>
-);
-
-export default Page;
+export default function Page() {
+  return (
+    <>
+      <Title />
+      <Counter />
+    </>
+  );
+}

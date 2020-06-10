@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Title = () => <p>Counter</p>;
-
-export default Title;
+export default function Title() {
+  return <p>Counter</p>;
+}

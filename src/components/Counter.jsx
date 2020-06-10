@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CountDisplayButton from './CountDisplayButton';
 import NumberButtons from './NumberButtons';
 
-const Counter = () => {
+export default function Counter() {
   const [count, setCount] = useState(0);
 
   const handleCounter = (number) => {
@@ -24,6 +24,4 @@ const Counter = () => {
       </p>
     </>
   );
-};
-
-export default Counter;
+}
