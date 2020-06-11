@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import Buttons from './components/Buttons';
+import Button from './components/Button';
 
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
   });
   const { count } = state;
 
-  const handleClick = (v) => {
+  const handleClick = (increasement) => {
     setState({
-      count: count + v,
+      count: count + increasement,
     });
   };
 
@@ -22,10 +22,17 @@ function App() {
       Click me !(
       {count}
       )
-      <Buttons
-        buttonList={buttonList}
-        onClick={handleClick}
-      />
+      <div>
+        {buttonList.map(
+          (buttonText) => (
+            <Button
+              key={buttonText}
+              buttonText={buttonText}
+              onClick={() => handleClick(buttonText)}
+            />
+          ),
+        )}
+      </div>
     </div>
   );
 }
