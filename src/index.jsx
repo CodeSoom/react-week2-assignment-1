@@ -11,7 +11,7 @@ function App() {
   });
   const { count } = state;
 
-  const handleClick = (increasement) => {
+  const handleClick = (increasement = 1) => {
     setState({
       count: count + increasement,
     });
@@ -19,9 +19,10 @@ function App() {
 
   return (
     <div>
-      Click me !(
-      {count}
-      )
+      <Button
+        buttonText={`Click me ! ${count}`}
+        onClick={() => handleClick()}
+      />
       <div>
         {buttonList.map(
           (buttonText) => (
