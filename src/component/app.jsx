@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Title from './title';
-import MainButton from './main-button';
-import Buttons from './buttons';
+import Title from './Title';
+import MainButton from './MainButton';
+import Buttons from './Buttons';
 
 export default function App() {
   const [count, setCount] = useState(0);
