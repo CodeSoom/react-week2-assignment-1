@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Page from './page';
+import Page from './Page';
 
 function App() {
   const [state, setState] = useState({
