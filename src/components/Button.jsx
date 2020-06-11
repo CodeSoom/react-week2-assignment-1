@@ -3,7 +3,7 @@ import React from 'react';
 function Button({ buttonText, onClick }) {
   return (
     <button
-      onClick={onClick}
+      onClick={() => onClick(buttonText)}
       type="button"
     >
       {buttonText}
