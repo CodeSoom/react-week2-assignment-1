@@ -1,28 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 
-import ClickMeButton from './ClickMeButton';
-import Buttons from './Buttons';
+import Todo from './pages/Todo';
 
 function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-  const { count } = state;
-
-  const handleClick = (number) => {
-    setState({
-      count: count + number,
-    });
-  };
-
-  return (
-    <div>
-      <h1>Counter</h1>
-      <ClickMeButton count={count} onClick={handleClick} />
-      <Buttons onClick={handleClick} />
-    </div>
-  );
+  return <Todo />;
 }
 
 ReactDom.render(<App />, document.getElementById('app'));
