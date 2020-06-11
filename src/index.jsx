@@ -2,14 +2,16 @@
 
 // import React, {children} from 'react'; 하면 왜 안되지?
 // react hooks 중에 useState 사용
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
 // Counter 컴포넌트; count의 값을 보여주는 역할(ui)
 function Counter({ count, onClick }) {
   return (
     <button type="button" onClick={() => onClick()}>
-      Click me! ({count})
+      Click me! (
+      {count}
+      )
     </button>
   );
 }
@@ -64,4 +66,4 @@ function App() {
 
   return <Page count={count} onClick={handleClick} />;
 }
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));
