@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-import Todo from './pages/Todo';
+import Count from './pages/Count';
 
 function App() {
-  return <Todo />;
+  return <Count />;
 }
 
 ReactDom.render(<App />, document.getElementById('app'));

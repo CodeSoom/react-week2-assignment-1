@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ClickMeButton from '../components/ClickMeButton';
 import Buttons from '../components/Buttons';
 
-export default function Todo() {
+export default function Count() {
   const [state, setState] = useState({
     count: 0,
   });
