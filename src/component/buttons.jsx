@@ -8,6 +8,7 @@ export default function Buttons({ onClick }) {
     <p>
       {numbers.map((number) => (
         <NumberButton
+          key={number}
           number={number}
           onClick={onClick}
         />
