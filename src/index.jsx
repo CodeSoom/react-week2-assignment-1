@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-function Button({ value }) {
+function Button({ children }) {
   return (
     <button type="button">
-      {value}
+      {children}
     </button>
   );
 }
@@ -25,10 +25,12 @@ function Buttons() {
   );
 }
 
-const element = (
-  <div>
-    <Buttons />
-  </div>
-);
+function App() { 
+    return (
+    <div>
+      <Buttons />
+    </div>
+  );
+}
 
-ReactDOM.render(element, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
