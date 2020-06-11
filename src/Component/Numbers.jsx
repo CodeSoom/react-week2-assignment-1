@@ -1,9 +1,12 @@
 import React from 'react';
 
-import Number from './Number';
-
-export default function Numbers({ number, handleClick }) {
+export default function Numbers({ number, onClick }) {
+  const numbers = [...Array(number)].map((_, i) => i + 1);
   return (
-    <Number number={number} onClick={handleClick} />
+    numbers.map((i) => (
+      <button type="button" onClick={() => onClick(i)} key={i}>
+        {i}
+      </button>
+    ))
   );
 }
