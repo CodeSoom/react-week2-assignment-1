@@ -19,8 +19,7 @@ function App() {
     <div>
       <Page
         count={count}
-        handleClick={handleClick}
-        handleClickNumber={handleClick}
+        onClick={handleClick}
       />
     </div>
 
