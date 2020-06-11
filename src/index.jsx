@@ -7,6 +7,7 @@ import CounterButtons from './components/CounterButtons';
 
 function App() {
   const buttonList = [1, 2, 3, 4, 5];
+  const baseIncreasement = 1;
   const [state, setState] = useState({
     count: 0,
   });
@@ -22,7 +23,7 @@ function App() {
     <div>
       <Button
         buttonText={`Click me ! ${count}`}
-        onClick={() => handleClick()}
+        onClick={() => handleClick(baseIncreasement)}
       />
       <div>
         <CounterButtons
