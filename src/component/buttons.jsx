@@ -2,7 +2,7 @@ import React from 'react';
 
 import NumberButton from './number-button';
 
-export default function ButtonGroup({ onClick }) {
+export default function Buttons({ onClick }) {
   const numbers = [1, 2, 3, 4, 5];
   return (
     <p>

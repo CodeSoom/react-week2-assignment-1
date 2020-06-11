@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Title from './title';
 import MainButton from './main-button';
-import ButtonGroup from './button-group';
+import Buttons from './buttons';
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +18,7 @@ export default function App() {
         display={count}
         onClick={handleClick}
       />
-      <ButtonGroup
+      <Buttons
         onClick={handleClick}
       />
     </div>
