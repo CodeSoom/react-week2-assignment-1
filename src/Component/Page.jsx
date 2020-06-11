@@ -1,15 +1,16 @@
 import React from 'react';
+
 import Counter from './Counter';
 import Numbers from './Numbers';
 
-function Page({ count, handleClickButton, handleClickNumber }) {
+export default function Page({ count, handleClickButton, handleClickNumber }) {
   return (
     <div>
       <p>Counter</p>
       <p>
         <Counter
           count={count}
-          handleClick={handleClickButton}
+          onClick={handleClickButton}
         />
       </p>
       <p>
@@ -21,5 +22,3 @@ function Page({ count, handleClickButton, handleClickNumber }) {
     </div>
   );
 }
-
-export default Page;

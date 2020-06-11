@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Counter({ count, handleClick }) {
+export default function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" onClick={onClick}>
       Click me!
       (
       {count}
@@ -10,5 +10,3 @@ function Counter({ count, handleClick }) {
     </button>
   );
 }
-
-export default Counter;

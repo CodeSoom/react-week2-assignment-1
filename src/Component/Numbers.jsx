@@ -1,20 +1,9 @@
 import React from 'react';
 
-function Number({ number, handleClick }) {
-  const array = [...Array(number)].map((_, i) => i + 1);
+import Number from './Number';
+
+export default function Numbers({ number, handleClick }) {
   return (
-    array.map((i) => (
-      <button type="button" onClick={() => handleClick(i)} key={i}>
-        {i}
-      </button>
-    ))
+    <Number number={number} onClick={handleClick} />
   );
 }
-
-function Numbers({ number, handleClick }) {
-  return (
-    <Number number={number} handleClick={handleClick} />
-  );
-}
-
-export default Numbers;
