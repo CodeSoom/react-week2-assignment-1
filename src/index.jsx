@@ -2,28 +2,14 @@ import React, { useState } from 'react';
 import { render } from 'react-dom';
 
 
-const Counter = () => {
-  const [state, setState] = useState({
-    count: 0,
-  });
-  const { count } = state;
-  const handleClick = () => {
-    console.log('handleClick');
-    setState({
-      count: count + 1,
-    });
-    console.log(count);
-  };
+const Counter = ({ count, onClick }) => (
 
-  return (
-
-    <button type="button" onClick={handleClick}>
-      Click Me (
-      {count}
-      )
-    </button>
-  );
-};
+  <button type="button" onClick={onClick}>
+    Click Me (
+    {count}
+    )
+  </button>
+);
 
 const Buttons = () => (
   <div>
@@ -33,13 +19,31 @@ const Buttons = () => (
 
 const Button = ({ children }) => (<button>{children}</button>);
 
-
-const App = () => (
+const Page = ({ onClick, count }) => (
   <div>
     <p>Hello World !</p>
     <p>Hi</p>
     <Buttons />
-    <Counter />
+    <Counter count={count} onClick={onClick} />
   </div>
 );
+
+
+const App = () => {
+  const [state, setState] = useState({
+    count: 0,
+  });
+  const handleClick = () => {
+    setState({
+      count: count + 1,
+    });
+  };
+  const { count } = state;
+  return (
+    <Page
+      count={count}
+      onClick={handleClick}
+    />
+  );
+};
 render(<App />, document.getElementById('app'));
