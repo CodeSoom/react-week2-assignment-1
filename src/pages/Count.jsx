@@ -1,25 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import ClickMeButton from '../components/ClickMeButton';
+import Counter from '../components/Counter';
 import Buttons from '../components/Buttons';
 
-export default function Count() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-  const { count } = state;
-
-  const handleClick = (number) => {
-    setState({
-      count: count + number,
-    });
-  };
-
+export default function Count({ count, onClick }) {
   return (
     <div>
       <h1>Counter</h1>
-      <ClickMeButton count={count} onClick={handleClick} />
-      <Buttons onClick={handleClick} />
+      <Counter count={count} onClick={onClick} />
+      <Buttons onClick={onClick} />
     </div>
   );
 }
