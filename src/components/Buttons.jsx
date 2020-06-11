@@ -1,9 +1,18 @@
 import React from 'react';
+import Button from './Button';
 
-function Buttons({ buttonList }) {
+function Buttons({ buttonList, onClick }) {
   return (
     <div>
-      {buttonList.map((v) => (<button key={v}>{v}</button>))}
+      {buttonList.map(
+        (buttonText) => (
+          <Button
+            key={buttonText}
+            buttonText={buttonText}
+            onClick={onClick}
+          />
+        ),
+      )}
     </div>
   );
 }

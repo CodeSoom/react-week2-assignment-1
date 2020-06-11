@@ -9,6 +9,7 @@ function App() {
     count: 0,
   });
   const { count } = state;
+
   return (
     <div>
       Click me !(
