@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import Button from './components/Button';
+import CounterButtons from './components/CounterButtons';
 
 
 function App() {
@@ -24,15 +25,10 @@ function App() {
         onClick={() => handleClick()}
       />
       <div>
-        {buttonList.map(
-          (buttonText) => (
-            <Button
-              key={buttonText}
-              buttonText={buttonText}
-              onClick={() => handleClick(buttonText)}
-            />
-          ),
-        )}
+        <CounterButtons
+          buttonList={buttonList}
+          onClick={handleClick}
+        />
       </div>
     </div>
   );
