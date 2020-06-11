@@ -8,7 +8,7 @@ function App() {
 
   const { count } = state;
 
-  function handleClickNumber(number) {
+  function handleClick(number) {
     setState({
       count: count + number,
     });
@@ -17,7 +17,7 @@ function App() {
   return (
     <Page
       count={count}
-      handleClickNumber={handleClickNumber}
+      handleClick={handleClick}
     />
   );
 }
