@@ -1,55 +1,30 @@
 /* @jsx React.createElement */
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import Page from './Page/Page';
 
-
-function Counter() {
+function App() {
   const [state, setState] = useState({
     count: 0,
   });
   const { count } = state;
 
-  function handleCount() {
-    setState({
-      count: count + 1,
-    });
+  function handleClick(num) {
+    if (num) {
+      setState({
+        count: count + num,
+      });
+    }
+    if (!num) {
+      setState({
+        count: count + 1,
+      });
+    }
   }
 
   return (
-    <button type="button" onClick={handleCount}>
-      counter:
-      {count}
-    </button>
-  );
-}
-
-function Button({ children }) {
-  return (
-    <button type="button">
-      {children}
-    </button>
-  );
-}
-
-function Buttons() {
-  return (
-    <p>
-      {
-        [1, 2, 3].map((i) => (
-          <Button key={i}>
-            {i}
-          </Button>
-        ))
-      }
-    </p>
-  );
-}
-
-function App() {
-  return (
     <div>
-      <Counter />
-      <Buttons />
+      <Page count={count} onClick={handleClick} />
     </div>
   );
 }
