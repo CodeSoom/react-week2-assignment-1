@@ -2,33 +2,24 @@ import React, { useState } from 'react';
 import Page from './page';
 
 function App() {
-    
-    const [state, setState] = useState(
-        { count : 0, }
-    )
+  const [state, setState] = useState(
+    { count: 0 },
+  );
 
-    const { count } = state;
+  const { count } = state;
 
-    function handleClick() {
-        setState({
-            count : count + 1,                
-        });
-    }
+  function handleClickNumber(number) {
+    setState({
+      count: count + number,
+    });
+  }
 
-    function handleClickNumber(number) {
-        setState({
-            count : count + number,                
-        });
-    }
-    
-    return (
-        <Page
-            count = {count}
-            onClick = {handleClick}
-            handleClickNumber = {handleClickNumber}
-        />
-            
-    );
+  return (
+    <Page
+      count={count}
+      handleClickNumber={handleClickNumber}
+    />
+  );
 }
 
 export default App;

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app.jsx';
+import App from './app';
 
 ReactDOM.render(
-    <App />,
-    document.getElementById('app'),
-)
+  <App />,
+  document.getElementById('app'),
+);

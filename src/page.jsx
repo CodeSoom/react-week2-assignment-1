@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 import Counter from './counter';
-import Buttons from './buttons.jsx';
+import Buttons from './buttons';
 
-function Page({count,onClick,handleClickNumber}){
-    return (
-        <div>
-            <p>Hello,world!</p>
-            <Counter
-                count = {count}
-                onClick = {onClick}
-            />
-            <Buttons 
-                handleClickNumber = {handleClickNumber}
-            />
-        </div>
-    );
+function Page({ count, handleClickNumber }) {
+  return (
+    <div>
+      <p>Hello,world!</p>
+      <Counter
+        count={count}
+        onClick={handleClickNumber}
+      />
+      <Buttons
+        onClick={handleClickNumber}
+      />
+    </div>
+  );
 }
 
 export default Page;
