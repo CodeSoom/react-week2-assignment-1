@@ -16,7 +16,7 @@ export default function Page({ count, handleClickButton, handleClickNumber }) {
       <p>
         <Numbers
           number={5}
-          handleClick={handleClickNumber}
+          onClick={handleClickNumber}
         />
       </p>
     </div>
