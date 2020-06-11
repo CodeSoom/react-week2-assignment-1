@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom';
 //Counter 컴포넌트; count의 값을 보여주는 역할(ui)
 function Counter({count, onClick}){
     return(
-        <button type = "button" onClick={onClick}>
+        <button type = "button" onClick={() => onClick()}>
             Click me! 
             (
             {count}
@@ -18,19 +18,19 @@ function Counter({count, onClick}){
     )
 }
 
-function Button({ children }) {
+function Button({ children, onClick }) {
     return (
-    <button type="button">
+    <button type="button" onClick= {() => onClick(children)}>
         {children}
     </button>
     );
 }
 
-function Buttons() {
-    return ([1, 2, 3].map(
+function Buttons({onClick}) {
+    return ([1, 2, 3, 4, 5].map(
         (i) => 
         //선언적 프로그래밍
-        <Button key={i}>
+        <Button key={i} onClick={() => onClick(i)}>
             {i}
         </Button>
     ));
@@ -40,27 +40,33 @@ function Buttons() {
 function Page({count, onClick}){
     return (
         <div>
-            <p>hello world</p>
-            <p><Counter
+            <p>Counter</p>
+            <p>
+            <Counter
                 count={count}
-                onClick={onClick} />
+                onClick={onClick} 
+            />
             </p>
-            <Buttons />
+            <p>
+            <Buttons onClick={onClick}/>
+            </p>
         </div>
     );
 }
 
-//App 컴포넌트; 보여지는 건 관심 없고, 상태 관리(business logic)
+//App 컴포넌트; 
+//보여지는 건 관심 없고, 
+//상태 관리(business logic)
 function App() {
     const [state, setState] = useState({
-        count: 0,
+        count: 0
     });
 
-    const { count } =state;
+    const { count } = state;
 
-    function handleClick(){
+    function handleClick(number){
         setState({
-            count: count + 1,
+            count: count + (number||1),
         })
     }
 
