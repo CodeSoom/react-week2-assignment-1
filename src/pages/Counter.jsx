@@ -8,7 +8,10 @@ export default function Counter({ count, onClick }) {
     <div>
       <h1>Counter</h1>
       <Button onClick={onClick} number={1}>
+        Click me!
+        (
         {count}
+        )
       </Button>
       <Buttons onClick={onClick} />
     </div>
