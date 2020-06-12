@@ -7,10 +7,7 @@ import Buttons from './Buttons';
 export default function App() {
   const [count, setCount] = useState(0);
 
-  console.log(count);
-
   function handleCount(number) {
-    console.log('handleCount', number);
     setCount(number);
   }
 
@@ -22,7 +19,7 @@ export default function App() {
         onClick={() => handleCount(count + 1)}
       />
       <Buttons
-        onClick={handleCount}
+        onClick={(number) => handleCount(count + number)}
       />
     </div>
   );

@@ -10,7 +10,7 @@ export default function Buttons({ onClick }) {
         <NumberButton
           key={number.toString()}
           number={number}
-          onClick={onClick}
+          onClick={() => onClick(number)}
         />
       ))}
     </p>
