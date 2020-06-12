@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function Button({ number, onClick }) {
+function Button({ number, onClick, children }) {
   return (
     <button type="button" onClick={() => onClick(number)}>
-      {number}
+      {children !== undefined ? `Click me! (${children})` : number}
     </button>
   );
 }
+
+export default React.memo(Button);

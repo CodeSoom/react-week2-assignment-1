@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from './Button';
 
-export default function Buttons({ onClick }) {
+function Buttons({ onClick }) {
   const btnList = [1, 2, 3, 4, 5];
   return (
     <div>
@@ -12,3 +12,5 @@ export default function Buttons({ onClick }) {
     </div>
   );
 }
+
+export default React.memo(Buttons);
