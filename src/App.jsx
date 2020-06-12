@@ -4,7 +4,7 @@ import Page from './Page';
 // App 컴포넌트;
 // 보여지는 건 관심 없고,
 // 상태 관리(business logic)
-function App() {
+export default function App() {
   const [state, setState] = useState({
     count: 0,
   });
@@ -17,7 +17,10 @@ function App() {
     });
   }
 
-  return <Page count={count} onClick={handleClick} />;
+  return (
+    <Page
+      count={count}
+      handleClick={handleClick}
+    />
+  );
 }
-
-export default App;
