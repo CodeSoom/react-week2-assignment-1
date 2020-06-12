@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NumberButton from './number-button';
+import NumberButton from './NumberButton';
 
 export default function Buttons({ onClick }) {
   const numbers = [1, 2, 3, 4, 5];
@@ -8,7 +8,7 @@ export default function Buttons({ onClick }) {
     <p>
       {numbers.map((number) => (
         <NumberButton
-          key={number}
+          key={number.toString()}
           number={number}
           onClick={onClick}
         />

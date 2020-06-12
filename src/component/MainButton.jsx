@@ -1,12 +1,11 @@
 import React from 'react';
 
-export default function MainButton({ display, onClick }) {
-  const number = 1;
+export default function MainButton({ count, onClick }) {
   return (
     <p>
-      <button type="button" onClick={() => onClick({ number })}>
+      <button type="button" onClick={onClick}>
         Click me!(
-        {display}
+        {count}
         )
       </button>
     </p>
