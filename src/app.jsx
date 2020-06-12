@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import Buttons from './Buttons';
+import Button from './Button';
 
-export default function App () {
-    return (<div><div>Counter</div><p /><Buttons /></div>);
-  };
+export default function App() {
+  const [state, setState] = useState({ count: 0 });
+  const handlers = [1, 1, 2, 3, 4, 5].map(
+    (number) => () => setState({ count: state.count + number }),
+  );
+  const mapButton = (number) => <Button value={number} onClick={handlers[number]} />;
+
+  return (
+    <div>
+      <div>Counter</div>
+      <div><Button value={`Click me! (${state.count})`} onClick={handlers[0]} /></div>
+      {[1, 2, 3, 4, 5].map(mapButton)}
+    </div>
+  );
+}
