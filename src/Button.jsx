@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default ({ i, clickhandler }) => (
-  <button type="button" onClick={clickhandler}>{i}</button>
-);
+export default function Button({ i, clickhandler }) {
+  return (
+    <button type="button" onClick={clickhandler}>{i}</button>
+  );
+}
