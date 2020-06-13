@@ -3,17 +3,17 @@ import React from 'react';
 import Counter from './Counter';
 import Buttons from './Buttons';
 
-function Page({ count, handleButtonClick }) {
+function Page({ count, handleClick }) {
   return (
     <div>
       <p>
         Counter
       </p>
       <p>
-        <Counter count={count} onClick={handleButtonClick} />
+        <Counter count={count} onClick={handleClick} />
       </p>
       <p>
-        <Buttons onClick={handleButtonClick} />
+        <Buttons onClick={handleClick} />
       </p>
     </div>
   );
