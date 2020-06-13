@@ -1,29 +1,22 @@
 import React, { useState } from 'react';
 
-import Button from './Button';
+import Page from './Page';
 
-export default () => {
+export default function App() {
   const [state, setState] = useState({
     count: 0,
   });
 
   const { count } = state;
 
+  const handlerClick = (e) => {
+    setState({ count: count + Number(e.target.dataset.number) });
+  };
+
   return (
-    <div>
-      <p>Counter</p>
-      <p>
-        <Button clickhandler={() => setState({ count: count + 1 })} i={`Click me!(${count})`} />
-      </p>
-      <p>
-        {[1, 2, 3, 4, 5].map((number) => (
-          <Button
-            key={number}
-            clickhandler={() => setState({ count: count + number })}
-            i={number}
-          />
-        ))}
-      </p>
-    </div>
+    <Page
+      count={count}
+      onClick={handlerClick}
+    />
   );
-};
+}

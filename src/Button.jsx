@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Button({ i, clickhandler }) {
+export default function Button({ children, onClick }) {
   return (
-    <button type="button" onClick={clickhandler}>{i}</button>
+    <button type="button" onClick={onClick} data-number={children}>{children}</button>
   );
 }
