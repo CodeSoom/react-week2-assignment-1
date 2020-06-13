@@ -1,20 +1,20 @@
 import React from 'react';
+
 import Button from './Button';
 
-function CounterButtons({ buttonList, onClick }) {
+export default function CounterButtons({ buttonList, onClick }) {
   return (
     <div>
       {buttonList.map(
         (buttonText) => (
           <Button
             key={buttonText}
-            buttonText={buttonText}
             onClick={() => onClick(buttonText)}
-          />
+          >
+            {buttonText}
+          </Button>
         ),
       )}
     </div>
   );
 }
-
-export default CounterButtons;

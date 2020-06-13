@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import Button from './components/Button';
-import CounterButtons from './components/CounterButtons';
+import CounterPage from './page/CounterPage';
 
 
 function App() {
   const buttonList = [1, 2, 3, 4, 5];
-  const baseIncreasement = 1;
   const [state, setState] = useState({
     count: 0,
   });
   const { count } = state;
 
-  const handleClick = (increasement = 1) => {
+  const handleClick = (increasement) => {
     setState({
       count: count + increasement,
     });
@@ -21,16 +19,11 @@ function App() {
 
   return (
     <div>
-      <Button
-        buttonText={`Click me ! ${count}`}
-        onClick={() => handleClick(baseIncreasement)}
+      <CounterPage
+        count={count}
+        onClick={handleClick}
+        buttonList={buttonList}
       />
-      <div>
-        <CounterButtons
-          buttonList={buttonList}
-          onClick={handleClick}
-        />
-      </div>
     </div>
   );
 }
