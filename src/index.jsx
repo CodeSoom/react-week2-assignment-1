@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Counter from './Counter';
+import Counter from './Counter/CounterContainer';
 
-
-function App() {
-  const [count, setCount] = useState(0);
-
-  return <Counter count={count} setCount={setCount} />;
-}
 
 ReactDOM.render(
-  <App />,
+  <div>
+    <h1>Counter</h1>
+    <Counter />
+  </div>,
   document.getElementById('app'),
 );
