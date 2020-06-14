@@ -3,7 +3,7 @@
  import Counter from './components/counter';
  import Button from './components/button';
  import Buttons from './components/buttons';
- import Page from './components/page';
+ import Counter from './components/counter';
  import App from 'App';
 
  
