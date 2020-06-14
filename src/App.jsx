@@ -9,8 +9,8 @@ export default function App() {
 
   const { count } = state;
 
-  const handlerClick = (e) => {
-    setState({ count: count + Number(e.target.dataset.number) });
+  const handlerClick = (number) => {
+    setState({ count: count + number });
   };
 
   return (
