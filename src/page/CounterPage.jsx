@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '../components/Button';
 import CounterButtons from '../components/CounterButtons';
 
-export default function CounterPage({ onClick, buttonList, count }) {
+export default function CounterPage({ onClick, buttons, count }) {
   const BaseIncreasement = 1;
   return (
     <div>
@@ -12,7 +12,7 @@ export default function CounterPage({ onClick, buttonList, count }) {
       </Button>
       <div>
         <CounterButtons
-          buttonList={buttonList}
+          buttons={buttons}
           onClick={onClick}
         />
       </div>
