@@ -8,7 +8,7 @@ export default function CounterPage({ onClick, buttonList, count }) {
   return (
     <div>
       <Button onClick={() => onClick(BaseIncreasement)}>
-        {`Click me ! ${count}`}
+        {`Click me ! (${count})`}
       </Button>
       <div>
         <CounterButtons

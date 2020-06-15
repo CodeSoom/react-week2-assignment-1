@@ -5,7 +5,7 @@ import CounterPage from './page/CounterPage';
 
 
 function App() {
-  const buttonList = [1, 2, 3, 4, 5];
+  const buttons = [1, 2, 3, 4, 5];
   const [state, setState] = useState({
     count: 0,
   });
@@ -22,7 +22,7 @@ function App() {
       <CounterPage
         count={count}
         onClick={handleClick}
-        buttonList={buttonList}
+        buttons={buttons}
       />
     </div>
   );
