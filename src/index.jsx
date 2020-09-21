@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-function Counter({ count, onClick }) {
+function Counter({ number, onClick }) {
   return (
     <button type="button" onClick={() => onClick(1)}>
       Click me!
       (
-      {count}
+      {number}
       )
     </button>
   );
 }
 
-function Button({ children, onClick }) {
+function Button({ number, onClick }) {
   return (
-    <button type="button" onClick={() => onClick(children)}>
-      {children}
+    <button type="button" onClick={() => onClick(number)}>
+      {number}
     </button>
   );
 }
@@ -32,12 +32,12 @@ function Buttons({ onClick }) {
   );
 }
 
-function Page({ count, onClick }) {
+function Page({ number, onClick }) {
   return (
     <div>
       <p>Counter</p>
       <Counter
-        count={count}
+        number={number}
         onClick={onClick}
       />
       <Buttons
@@ -49,20 +49,20 @@ function Page({ count, onClick }) {
 
 function App() {
   const [state, setState] = useState({
-    count: 0,
+    number: 0,
   });
 
-  const { count } = state;
+  const { number } = state;
 
   function handleClick(numeral) {
     setState({
-      count: count + numeral,
+      number: number + numeral,
     });
   }
 
   return (
     <Page
-      count={count}
+      number={number}
       onClick={handleClick}
     />
   );
