@@ -8,8 +8,8 @@ export default function App() {
 
   const { count } = state;
 
-  const handleClick = () => {
-    setState({ count: count + 1 });
+  const handleClick = (number) => {
+    setState({ count: count + number });
   };
 
   return (
@@ -17,11 +17,16 @@ export default function App() {
       <p>Counter</p>
       <Counter
         count={count}
-        onClick={handleClick}
+        onClick={() => handleClick(1)}
       />
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <button type="button">{i}</button>
+          <button
+            type="button"
+            onClick={() => handleClick(i)}
+          >
+            {i}
+          </button>
         ))}
       </p>
     </div>
