@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({ children, onClick }) {
+function Counter({ children, onClick }) {
   return (
     <button type="button" onClick={onClick}>
       {children}

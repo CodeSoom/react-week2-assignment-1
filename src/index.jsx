@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Button from './Components/Button';
+import Counter from './Components/Counter';
 
 const INCREASED_NUMBERS = [1, 2, 3, 4, 5];
 
@@ -15,17 +15,17 @@ function App() {
     <div>
       <h1>Counter</h1>
       <p>
-        <Button onClick={() => handleClickIncreasedNumber(1)}>
+        <Counter onClick={() => handleClickIncreasedNumber(1)}>
           Click me (
           {count}
           )
-        </Button>
+        </Counter>
       </p>
       <p>
         {INCREASED_NUMBERS.map((i) => (
-          <Button key={i} onClick={() => handleClickIncreasedNumber(i)}>
+          <Counter key={i} onClick={() => handleClickIncreasedNumber(i)}>
             {i}
-          </Button>
+          </Counter>
         ))}
       </p>
     </div>
