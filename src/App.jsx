@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import MainPage from './MainPage';
 
 function App() {
-  const [state, setState] = useState({
+  const [count, setCount] = useState({
     number: 0,
   });
 
-  const { number } = state;
+  const { number } = count;
 
   function handleClickNumber(numeral) {
-    setState({
+    setCount({
       number: number + numeral,
     });
   }
