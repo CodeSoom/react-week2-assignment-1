@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
+    <button type="button" onClick={() => onClick(1)}>
       Click me!
       (
       {count}
@@ -14,7 +14,7 @@ function Counter({ count, onClick }) {
 
 function Button({ children, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
+    <button type="button" onClick={() => onClick(children)}>
       {children}
     </button>
   );
@@ -54,9 +54,9 @@ function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function handleClick(numeral) {
     setState({
-      count: count + 1,
+      count: count + numeral,
     });
   }
 
