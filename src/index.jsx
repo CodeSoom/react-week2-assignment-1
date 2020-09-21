@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
+import Counter from './Counter'
+
 function App() {
     const [state, setState] = useState({
         count: 0,
@@ -15,19 +17,7 @@ function App() {
     }
 
     return (
-        <div>
-            <p>Counter</p>
-            <button type="button" onClick={() => handleClickCount(1)}>
-                Click me! ({count})
-            </button>
-            <p>
-                {
-                    [1, 2, 3, 4, 5].map((i) => (
-                        <button type="button" key={i} onClick={() => handleClickCount(i)}>{i}</button>
-                    ))
-                }
-            </p>
-        </div>
+        <Counter count={count} onClick={handleClickCount} />
     );
 }
 
