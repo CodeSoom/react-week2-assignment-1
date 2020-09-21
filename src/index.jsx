@@ -4,38 +4,39 @@ import ReactDOM from 'react-dom';
 function Counter({ count, onClick }) {
   return (
     <button type="button" onClick={onClick}>
-      Click Me! (
+      Click me (
       {count}
       )
     </button>
   );
 }
 
-function Button({ children }) {
+function Button({ children, onClick }) {
   return (
-    <button type="button">
+    <button type="button" onClick={onClick}>
       {children}
     </button>
   );
 }
 
-function Buttons() {
+function Buttons({ onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
-        <Button key={i}>
+        <Button key={i} onClick={() => onClick(i)}>
           {i}
         </Button>
       ))}
     </p>
   );
 }
+
 function Page({ count, onClick }) {
   return (
     <div>
-      <p>Counters</p>
-      <Counter count={count} onClick={onClick} />
-      <Buttons />
+      <p>Counter</p>
+      <Counter count={count} onClick={() => onClick(1)} />
+      <Buttons onClick={onClick} />
     </div>
   );
 }
@@ -47,15 +48,14 @@ function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function handleClick(number) {
     setState({
-      count: count + 1,
+      count: count + number,
     });
   }
   return (
     <Page count={count} onClick={handleClick} />
   );
 }
-
 
 ReactDOM.render(<App />, document.querySelector('#app'));
