@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ClickMeButton from './components/ClickMeButton';
 import NumberButton from './components/NumberButton';
 
 function App() {
+  const [state, setState] = useState({ count: 0 });
+  const { count } = state;
+
   function handleClick(value) {
-    console.log(value);
+    setState({ count: count + value });
   }
 
   return (
@@ -12,8 +15,8 @@ function App() {
       <p>Counter</p>
       <p>
         <ClickMeButton
-          value={0}
-          handleClick={handleClick}
+          value={count}
+          handleClick={() => handleClick(1)}
         />
       </p>
       <p>
