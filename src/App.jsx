@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Counter from './Counter';
 
 export default function App() {
   const [state, setState] = useState({
@@ -14,14 +15,10 @@ export default function App() {
   return (
     <div>
       <p>Counter</p>
-      <button
-        type="button"
+      <Counter
+        count={count}
         onClick={handleClick}
-      >
-        Click me! (
-        {count}
-        )
-      </button>
+      />
     </div>
   );
 }
