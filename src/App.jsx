@@ -19,6 +19,11 @@ export default function App() {
         count={count}
         onClick={handleClick}
       />
+      <p>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <button type="button">{i}</button>
+        ))}
+      </p>
     </div>
   );
 }
