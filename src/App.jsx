@@ -1,4 +1,5 @@
 import React from 'react';
+import NumberButton from './components/NumberButton';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <p>
         {
           [1, 2, 3, 4, 5].map((i) => (
-            <button type="button">{i}</button>
+            <NumberButton value={i} key={i} />
           ))
         }
       </p>
