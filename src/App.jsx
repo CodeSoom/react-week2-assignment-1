@@ -1,4 +1,5 @@
 import React from 'react';
+import ClickMeButton from './components/ClickMeButton';
 import NumberButton from './components/NumberButton';
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <div>
       <p>Counter</p>
       <p>
-        <button type="button">Click me! (0)</button>
+        <ClickMeButton value={0} />
       </p>
       <p>
         {
