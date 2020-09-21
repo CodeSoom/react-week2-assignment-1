@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import ViewCounter from './viewCounter';
+import Buttons from './Buttons';
+import ClickMeCounter from './ClickMeCounter';
 
 
 function App() {
@@ -10,17 +11,30 @@ function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function handleClickCount() {
     setState({
       count: count + 1,
     });
   }
 
+  function handleClickButton(i) {
+    setState({
+      count: count + i,
+    });
+  }
+
   return (
-    <ViewCounter
-      count={count}
-      onClick={handleClick}
-    />
+    <>
+      <ClickMeCounter
+        count={count}
+        onClick={handleClickCount}
+      />
+
+      <Buttons
+        count={count}
+        onClick={handleClickButton}
+      />
+    </>
   );
 }
 
