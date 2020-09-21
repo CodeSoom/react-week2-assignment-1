@@ -1,17 +1,15 @@
 import React from 'react';
-import Counter from './Counter';
-import Buttons from './Buttons';
+import NumberButtons from './NumberButtons';
 import Button from './Button';
 
 function Page({ count, onClick }) {
   return (
     <div>
       <p>Counter</p>
-      <Counter count={count} onClick={() => onClick(1)} />
       <Button onClick={() => onClick(1)}>
-        {`count : ${count}`}
+        {`Click me (${count})`}
       </Button>
-      <Buttons onClick={onClick} />
+      <NumberButtons onClick={onClick} />
     </div>
   );
 }
