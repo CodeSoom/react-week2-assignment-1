@@ -12,19 +12,19 @@ function Counter({ count, onClick }) {
   );
 }
 
-function Button({ children }) {
+function Button({ children, onClick }) {
   return (
-    <button type="button">
+    <button type="button" onClick={onClick}>
       {children}
     </button>
   );
 }
 
-function Buttons() {
+function Buttons({ onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
-        <Button key={i}>
+        <Button key={i} onClick={onClick}>
           {i}
         </Button>
       ))}
@@ -40,7 +40,9 @@ function Page({ count, onClick }) {
         count={count}
         onClick={onClick}
       />
-      <Buttons />
+      <Buttons
+        onClick={onClick}
+      />
     </div>
   );
 }
