@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-const numbers = (upTo) => Array.from({ length: upTo }, (_, i) => i + 1);
 
-const countInSteps = (origin, step) => origin + step;
+const countInSteps = (step) => (count) => step + count;
+
+const numbers = (upTo) => Array.from(
+  { length: upTo },
+  (_, i) => ({ key: i + 1, value: countInSteps(i + 1) }),
+);
 
 function App() {
   const [state, setState] = useState({
@@ -12,9 +16,9 @@ function App() {
 
   const { count } = state;
 
-  function handleCounterButton(step) {
+  function handleCounterButton(increase) {
     setState({
-      count: countInSteps(count, step),
+      count: increase(count),
     });
   }
 
@@ -23,7 +27,7 @@ function App() {
       <p>
         Counter
       </p>
-      <button type="button" onClick={() => handleCounterButton(1)}>
+      <button type="button" onClick={() => handleCounterButton(countInSteps(1))}>
         Click me!
         (
         {count}
@@ -32,9 +36,9 @@ function App() {
 
       <div>
         {
-          numbers(5).map((i) => (
-            <button key={i} type="button" onClick={() => handleCounterButton(i)}>
-              {i}
+          numbers(5).map(({ key, value }) => (
+            <button key={key} type="button" onClick={() => handleCounterButton(value)}>
+              {key}
             </button>
           ))
         }
