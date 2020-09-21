@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
 
 export default function App() {
-  const [state] = useState({
-    count: 123,
+  const [state, setState] = useState({
+    count: 0,
   });
 
   const { count } = state;
 
+  const handleClick = () => {
+    setState({ count: count + 1 });
+  };
+
   return (
     <div>
       <p>Counter</p>
-      <p>
-        count:(
+      <button
+        type="button"
+        onClick={handleClick}
+      >
+        Click me! (
         {count}
         )
-      </p>
+      </button>
     </div>
   );
 }
