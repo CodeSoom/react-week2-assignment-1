@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 
 import Counter from './Counter';
-import CounterButtons from './CountButtons';
+import CounterButtons from './CounterButtons';
 
 function App() {
   const [state, setState] = useState({
