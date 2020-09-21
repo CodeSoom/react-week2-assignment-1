@@ -12,10 +12,10 @@ function Counter({ number, onClick }) {
   );
 }
 
-function Button({ number, onClick }) {
+function Button({ children, onClick }) {
   return (
-    <button type="button" onClick={() => onClick(number)}>
-      {number}
+    <button type="button" onClick={() => onClick(children)}>
+      {children}
     </button>
   );
 }
