@@ -11,7 +11,10 @@ function App() {
     <div>
       <p>Counter</p>
       <p>
-        <ClickMeButton value={0} />
+        <ClickMeButton
+          value={0}
+          handleClick={handleClick}
+        />
       </p>
       <p>
         {

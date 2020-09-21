@@ -1,8 +1,11 @@
 import React from 'react';
 
-function ClickMeButton({ value }) {
+function ClickMeButton({ value, handleClick }) {
   return (
-    <button type="button">
+    <button
+      type="button"
+      onClick={handleClick}
+    >
       Click me! (
       {value}
       )
