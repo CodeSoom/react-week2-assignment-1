@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Counter from './Counter';
+import Button from './Button';
 
 export default function App() {
   const [state, setState] = useState({
@@ -21,12 +22,10 @@ export default function App() {
       />
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <button
-            type="button"
+          <Button
+            number={i}
             onClick={() => handleClick(i)}
-          >
-            {i}
-          </button>
+          />
         ))}
       </p>
     </div>
