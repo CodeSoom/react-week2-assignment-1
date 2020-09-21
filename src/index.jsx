@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 
 import Counter from './Counter';
+import CounterButtons from './CountButtons';
 
 function App() {
   const [state, setState] = useState({
@@ -16,12 +17,21 @@ function App() {
     });
   };
 
+  const handleClickNumber = (increment) => {
+    setState({
+      count: count + increment,
+    });
+  };
+
   return (
     <div>
       <p>Count</p>
       <Counter
         count={count}
         onClick={handleClick}
+      />
+      <CounterButtons
+        onClick={handleClickNumber}
       />
     </div>
   );
