@@ -1,10 +1,10 @@
 import React from 'react';
 
-function NumberButton({ value, handleClick }) {
+function NumberButton({ value, onClick }) {
   return (
     <button
       type="button"
-      onClick={handleClick}
+      onClick={onClick}
     >
       {value}
     </button>

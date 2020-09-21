@@ -16,7 +16,7 @@ function App() {
       <p>
         <ClickMeButton
           value={count}
-          handleClick={() => handleClick(1)}
+          onClick={() => handleClick(1)}
         />
       </p>
       <p>
@@ -25,7 +25,7 @@ function App() {
             <NumberButton
               value={i}
               key={i}
-              handleClick={() => handleClick(i)}
+              onClick={() => handleClick(i)}
             />
           ))
         }

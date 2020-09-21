@@ -2,11 +2,11 @@
 
 import React from 'react';
 
-function ClickMeButton({ value, handleClick }) {
+function ClickMeButton({ value, onClick }) {
   return (
     <button
       type="button"
-      onClick={handleClick}
+      onClick={onClick}
     >
       Click me! ({value})
     </button>
