@@ -23,7 +23,7 @@ function Button({ children }) {
 function Buttons() {
   return (
     <p>
-      {[1, 2, 3].map((i) => (
+      {[1, 2, 3, 4, 5].map((i) => (
         <Button key={i}>
           {i}
         </Button>
@@ -35,8 +35,7 @@ function Buttons() {
 function Page({ count, onClick }) {
   return (
     <div>
-      <p>Hello World</p>
-      <p>Hi!</p>
+      <p>Counter</p>
       <Counter
         count={count}
         onClick={onClick}
