@@ -1,4 +1,5 @@
 import React from 'react';
+import CountButton from './CountButton';
 
 export default function CountButtons({ onClick }) {
   const numbers = [1, 2, 3, 4, 5];
@@ -6,9 +7,7 @@ export default function CountButtons({ onClick }) {
   return (
     <p>
       {numbers.map((number) => (
-        <button type="button" key={number} onClick={() => onClick(number)}>
-          {number}
-        </button>
+        <CountButton key={number} number={number} onClick={onClick} />
       ))}
     </p>
   );
