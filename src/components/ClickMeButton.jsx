@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-one-expression-per-line */
+
 import React from 'react';
 
 function ClickMeButton({ value, handleClick }) {
@@ -6,9 +8,7 @@ function ClickMeButton({ value, handleClick }) {
       type="button"
       onClick={handleClick}
     >
-      Click me! (
-      {value}
-      )
+      Click me! ({value})
     </button>
   );
 }
