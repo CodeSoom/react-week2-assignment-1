@@ -8,4 +8,4 @@ function Counter({ children, onClick }) {
   );
 }
 
-export default Button;
+export default Counter;
