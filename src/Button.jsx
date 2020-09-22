@@ -1,17 +1,13 @@
 import React from 'react';
 
-export default function Button({ onClick }) {
+export default function Button({ onClick, children }) {
   return (
-    <>
-      {[1, 2, 3, 4, 5].map((number) => (
-        <button
-          type="button"
-          key={number}
-          onClick={() => onClick(number)}
-        >
-          {number}
-        </button>
-      ))}
-    </>
+    <button
+      type="button"
+      key={children}
+      onClick={() => onClick(children)}
+    >
+      {children}
+    </button>
   );
 }
