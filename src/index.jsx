@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 
+import Buttons from './Buttons';
+
 function App() {
   const [state, setState] = useState({
     count: 0,
@@ -25,16 +27,12 @@ function App() {
       <p>Counter</p>
       <p>
         <button type="button" onClick={handleClick}>
-          Click me!({count})
+          Click me!(
+          {count}
+          )
         </button>
       </p>
-      <p>
-        {[1, 2, 3, 4, 5].map((i) => (
-          <button key={i} type="button" onClick={() => handleClickNumber(i)}>
-            {i}
-          </button>
-        ))}
-      </p>
+      <Buttons onClick={handleClickNumber} />
     </div>
   );
 }
