@@ -20,12 +20,12 @@ function App() {
   function handleNumberClick(value) {
     setState({
       count: count + value,
-    })
+    });
   }
 
   return (
     <div>
-      <CountApp 
+      <CountApp
         count={count}
         onClick={handleClick}
         onNumberClick={handleNumberClick}
