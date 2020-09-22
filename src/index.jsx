@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 
 import Buttons from './Buttons';
+import Counter from './Counter';
 
 function App() {
   const [state, setState] = useState({
@@ -25,13 +26,7 @@ function App() {
   return (
     <div>
       <p>Counter</p>
-      <p>
-        <button type="button" onClick={handleClick}>
-          Click me!(
-          {count}
-          )
-        </button>
-      </p>
+      <Counter count={count} onClick={handleClick} />
       <Buttons onClick={handleClickNumber} />
     </div>
   );
