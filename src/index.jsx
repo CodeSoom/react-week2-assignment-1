@@ -7,20 +7,27 @@ function App() {
     const [state, setState] = useState({
         count: 0,
     });
-
+    const [number, setNumber] = useState({
+        btnNumber: 0,
+    });
     const { count } = state;
-    
-    function handleClick() {
+    const { btnNumber } = state;
+
+    function handleClick(conditionValue) {
+        setNumber({
+            btnNumber
+        });
+       
         setState({
             count: count + 1,
-            count2: count + 2,
         });
     }
-
+// 자식에서 부모로 전달하는 법은?
     return (
         <Page 
+            btnNumer={btnNumber}
             count={count}
-            onClick={() => handleClick()}
+            onClick={() => handleClick(it)}
             />
     );
 }

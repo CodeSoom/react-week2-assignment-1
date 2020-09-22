@@ -1,12 +1,12 @@
 import React from 'react';
 import Button from './Button'
 
-function Buttons (onClick) {
+function Buttons (it, onClick) {
     return (
         <p>
-            {[1,2,3,4,5].map((i) => (
-                <Button key={i} onClick={onClick}> 
-                    {i} 
+            {[1,2,3,4,5].map((it) => (
+                <Button key={it} btnNumber={it} onClick={onClick}> 
+                    {it} 
                 </Button>
             ))}
         </p>
