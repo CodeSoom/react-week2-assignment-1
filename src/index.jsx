@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Page from './components/Page';
 
+import Page from './components/Page';
 
 function App() {
   const [state, setState] = useState({ count: 0 });
@@ -19,6 +19,5 @@ function App() {
     />
   );
 }
-
 
 ReactDOM.render(<App />, document.getElementById('app'));
