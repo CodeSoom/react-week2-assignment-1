@@ -9,14 +9,19 @@ function App() {
     setCount(count + value);
   };
 
-  const handleClick = (value) => {
-    updateCount(value);
+  const handleClickButton = () => {
+    updateCount(1);
+  };
+
+  const handleClickButtons = (number) => {
+    updateCount(number);
   };
 
   return (
     <Page
       count={count}
-      onClick={handleClick}
+      onButtonClick={handleClickButton}
+      onButtonsClick={handleClickButtons}
     />
   );
 }

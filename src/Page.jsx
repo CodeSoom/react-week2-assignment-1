@@ -5,7 +5,8 @@ import Buttons from './Buttons';
 
 function Page({
   count,
-  onClick,
+  onButtonClick,
+  onButtonsClick,
 }) {
   return (
     <>
@@ -13,11 +14,11 @@ function Page({
       <p>
         <Button
           count={count}
-          onClick={onClick}
+          onClick={onButtonClick}
         />
       </p>
       <Buttons
-        onClick={onClick}
+        onClick={onButtonsClick}
       />
     </>
   );

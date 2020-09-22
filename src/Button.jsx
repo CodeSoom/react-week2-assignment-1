@@ -1,21 +1,18 @@
 import React from 'react';
 
 function Button({
-  value = 1,
-  children,
   count,
   onClick,
 }) {
-  const handleClick = () => {
-    onClick(value);
-  };
-
   return (
     <button
       type="button"
-      onClick={handleClick}
+      onClick={onClick}
     >
-      {children || `Click me! (${count})`}
+      Click me!
+      (
+      {count}
+      )
     </button>
   );
 }
