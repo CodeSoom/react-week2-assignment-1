@@ -12,7 +12,9 @@ export default function Page({ count, onClick }) {
       />
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <Button number={i} onClick={() => onClick(i)} />
+          <Button onClick={() => onClick(i)}>
+            {i}
+          </Button>
         ))}
       </p>
     </div>
