@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import Counter from './Counter';
-import CounterButtons from './CounterButtons';
+import CounterPage from './CounterPage';
 
 export default function App() {
   const [state, setState] = useState({
@@ -24,15 +23,6 @@ export default function App() {
   };
 
   return (
-    <div>
-      <p>Count</p>
-      <Counter
-        count={count}
-        onClick={handleClick.counter}
-      />
-      <CounterButtons
-        onClick={handleClick.number}
-      />
-    </div>
+    <CounterPage count={count} onClick={handleClick} />
   );
 }
