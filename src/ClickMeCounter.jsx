@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function ClickMeCounter({ count, onClick }) {
   return (
     <>
@@ -11,10 +10,8 @@ function ClickMeCounter({ count, onClick }) {
         {count}
         )
       </button>
-
     </>
   );
 }
-
 
 export default ClickMeCounter;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+
 import Buttons from './Buttons';
 import ClickMeCounter from './ClickMeCounter';
-
 
 function App() {
   const [state, setState] = useState({
@@ -31,7 +31,6 @@ function App() {
       />
 
       <Buttons
-        count={count}
         onClick={handleClickButton}
       />
     </>
