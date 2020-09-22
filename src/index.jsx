@@ -1,41 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 
-import Counter from './Counter';
-import CounterButtons from './CounterButtons';
-
-function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
-
-  const handleClick = () => {
-    setState({
-      count: count + 1,
-    });
-  };
-
-  const handleClickNumber = (increment) => {
-    setState({
-      count: count + increment,
-    });
-  };
-
-  return (
-    <div>
-      <p>Count</p>
-      <Counter
-        count={count}
-        onClick={handleClick}
-      />
-      <CounterButtons
-        onClick={handleClickNumber}
-      />
-    </div>
-  );
-}
+import App from './App';
 
 ReactDom.render(
   <App />,
