@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 
 function App() {
+  const [state, setState] = useState({
+    count: 0,
+  });
+
   return (
     <div>
       <p>Counter</p>
       <p>
-        <button type="button">Click me!(0)</button>
+        <button type="button">Click me!({state.count})</button>
       </p>
       <p>
         <button type="button">1</button>
