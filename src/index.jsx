@@ -4,6 +4,7 @@ import Page from './components/Page';
 
 
 function App() {
+
     const [state, setState] = useState({
         count: 0,
     });
@@ -11,6 +12,7 @@ function App() {
     const { count } = state;
 
     function handleClick(conditionValue) {
+        console.log(conditionValue);
         if(conditionValue === 2){        
         setState({
             count: count + 2,
@@ -38,9 +40,8 @@ function App() {
 
     return (
         <Page 
-            btnNumer={number}
             count={count}
-            onClick={() => handleClick(it)}
+            onClick={() => handleClick()}
             />
     );
 }
