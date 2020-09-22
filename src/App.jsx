@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+
 import ClickMeButton from './components/ClickMeButton';
-import NumberButton from './components/NumberButton';
+import IncreaseCountButton from './components/IncreaseCountButton';
 
 function App() {
   const [state, setState] = useState({ count: 0 });
@@ -22,7 +23,7 @@ function App() {
       <p>
         {
           [1, 2, 3, 4, 5].map((i) => (
-            <NumberButton
+            <IncreaseCountButton
               value={i}
               key={i}
               onClick={() => handleClick(i)}
