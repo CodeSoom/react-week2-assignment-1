@@ -16,6 +16,12 @@ function App() {
     });
   }
 
+  function handleClickNumber(number) {
+    setState({
+      count: count + number,
+    });
+  }
+
   return (
     <div>
       <p>Counter</p>
@@ -23,7 +29,7 @@ function App() {
         count={count}
         onClick={handleClick}
       />
-      <Buttons />
+      <Buttons onClick={handleClickNumber} />
     </div>
   );
 }
