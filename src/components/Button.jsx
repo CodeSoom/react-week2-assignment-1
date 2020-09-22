@@ -1,6 +1,6 @@
 import React from 'react';
 
-function IncreaseCountButton({ value, onClick }) {
+function Button({ value, onClick }) {
   return (
     <button
       type="button"
@@ -11,4 +11,4 @@ function IncreaseCountButton({ value, onClick }) {
   );
 }
 
-export default IncreaseCountButton;
+export default Button;
