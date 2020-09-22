@@ -8,11 +8,11 @@ export default function Page({ count, onClick }) {
       <p>Counter</p>
       <Counter
         count={count}
-        onClick={() => onClick(1)}
+        onClick={() => onClick({ increment: 1 })}
       />
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <Button onClick={() => onClick(i)}>
+          <Button onClick={() => onClick({ increment: i })}>
             {i}
           </Button>
         ))}
