@@ -12,7 +12,7 @@ export default function Page({ count, onClick }) {
       />
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <Button onClick={() => onClick({ increment: i })}>
+          <Button key={i} onClick={() => onClick({ increment: i })}>
             {i}
           </Button>
         ))}
