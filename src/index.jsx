@@ -14,9 +14,9 @@ function App() {
     });
   };
 
-  const handleClickNumber = () => {
+  const handleClickNumber = (value) => {
     setState({
-      count: count + 1,
+      count: count + value,
     });
   };
 
@@ -29,13 +29,21 @@ function App() {
         </button>
       </p>
       <p>
-        <button type="button" onClick={() => handleClickNumber()}>
+        <button type="button" onClick={() => handleClickNumber(1)}>
           1
         </button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button">4</button>
-        <button type="button">5</button>
+        <button type="button" onClick={() => handleClickNumber(2)}>
+          2
+        </button>
+        <button type="button" onClick={() => handleClickNumber(3)}>
+          3
+        </button>
+        <button type="button" onClick={() => handleClickNumber(4)}>
+          4
+        </button>
+        <button type="button" onClick={() => handleClickNumber(5)}>
+          5
+        </button>
       </p>
     </div>
   );
