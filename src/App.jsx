@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Counter from './Counter';
-import Button from './Button';
+import Page from './Page';
 
 export default function App() {
   const [state, setState] = useState({
@@ -9,25 +8,11 @@ export default function App() {
 
   const { count } = state;
 
-  const handleClick = (number) => {
-    setState({ count: count + number });
+  const handleClick = (increment) => {
+    setState({ count: count + increment });
   };
 
   return (
-    <div>
-      <p>Counter</p>
-      <Counter
-        count={count}
-        onClick={() => handleClick(1)}
-      />
-      <p>
-        {[1, 2, 3, 4, 5].map((i) => (
-          <Button
-            number={i}
-            onClick={() => handleClick(i)}
-          />
-        ))}
-      </p>
-    </div>
+    <Page count={count} onClick={handleClick} />
   );
 }
