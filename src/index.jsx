@@ -29,21 +29,11 @@ function App() {
         </button>
       </p>
       <p>
-        <button type="button" onClick={() => handleClickNumber(1)}>
-          1
-        </button>
-        <button type="button" onClick={() => handleClickNumber(2)}>
-          2
-        </button>
-        <button type="button" onClick={() => handleClickNumber(3)}>
-          3
-        </button>
-        <button type="button" onClick={() => handleClickNumber(4)}>
-          4
-        </button>
-        <button type="button" onClick={() => handleClickNumber(5)}>
-          5
-        </button>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <button key={i} type="button" onClick={() => handleClickNumber(i)}>
+            {i}
+          </button>
+        ))}
       </p>
     </div>
   );
