@@ -7,11 +7,10 @@ function Page({btnNumber, count, onClick}) {
         <div>
             <p>Counter</p>
             <CounterBtn 
-                btnNumber={btnNumber}
                 count={count}
                 onClick={onClick}
             />
-            <Buttons btnNumber={btnNumber} onClick={onClick}
+            <Buttons key={btnNumber} onClick={onClick}
             />
         </div>
     )

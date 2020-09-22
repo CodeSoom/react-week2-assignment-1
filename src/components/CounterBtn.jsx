@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CounterBtn ({count, it, onClick})   {
+function CounterBtn ({count, onClick})   {
     return (
         <button type="button" onClick={onClick}>
             Click me!
