@@ -10,16 +10,17 @@ export default function App() {
 
   const { count } = state;
 
-  const handleClick = () => {
-    setState({
-      count: count + 1,
-    });
-  };
-
-  const handleClickNumber = (increment) => {
-    setState({
-      count: count + increment,
-    });
+  const handleClick = {
+    counter: () => {
+      setState({
+        count: count + 1,
+      });
+    },
+    number: (increment) => {
+      setState({
+        count: count + increment,
+      });
+    },
   };
 
   return (
@@ -27,10 +28,10 @@ export default function App() {
       <p>Count</p>
       <Counter
         count={count}
-        onClick={handleClick}
+        onClick={handleClick.counter}
       />
       <CounterButtons
-        onClick={handleClickNumber}
+        onClick={handleClick.number}
       />
     </div>
   );
