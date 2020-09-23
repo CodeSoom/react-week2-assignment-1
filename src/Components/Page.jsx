@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Counter from './Counter';
 
-const INCREASED_NUMBERS = [1, 2, 3, 4, 5];
+const STEPS = [1, 2, 3, 4, 5];
 
 function Page() {
   const [count, setCount] = useState(0);
@@ -21,7 +21,7 @@ function Page() {
         </Counter>
       </p>
       <p>
-        {INCREASED_NUMBERS.map((i) => (
+        {STEPS.map((i) => (
           <Counter key={i} onClick={() => handleClickIncreasedNumber(i)}>
             {i}
           </Counter>
