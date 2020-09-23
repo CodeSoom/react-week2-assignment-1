@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NumberButton({ children, onClick }) {
+function Button({ children, onClick }) {
   return (
     <button type="button" onClick={onClick}>
       {children}
@@ -8,4 +8,4 @@ function NumberButton({ children, onClick }) {
   );
 }
 
-export default NumberButton;
+export default Button;
