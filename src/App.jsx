@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 
 import ClickMeButton from './components/ClickMeButton';
 import Button from './components/Button';
+import NumberInput from './components/NumberInput';
 
 function App() {
-  const [state, setState] = useState({ count: 0 });
-  const { count } = state;
+  const [state, setState] = useState({ count: 0, input: 0 });
+  const { count, input } = state;
 
   function handleClick(value) {
-    setState({ count: count + value });
+    setState({ ...state, count: count + value });
+  }
+
+  function handleChange(e) {
+    setState({ ...state, input: parseInt(e.target.value, 10) });
   }
 
   return (
@@ -30,6 +35,16 @@ function App() {
             />
           ))
         }
+      </p>
+      <p>
+        <NumberInput
+          value={input}
+          onChange={handleChange}
+        />
+        <Button
+          value="increase"
+          onClick={() => handleClick(input)}
+        />
       </p>
     </div>
   );
