@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import ClickMeButton from './components/ClickMeButton';
 import Button from './components/Button';
+import ActionByValueButtons from './components/ActionByValueButtons';
 import NumberInput from './components/NumberInput';
 
 function App() {
@@ -26,15 +27,10 @@ function App() {
         />
       </p>
       <p>
-        {
-          [1, 2, 3, 4, 5].map((i) => (
-            <Button
-              value={i}
-              key={i}
-              onClick={() => handleClick(i)}
-            />
-          ))
-        }
+        <ActionByValueButtons
+          valueList={[1, 2, 3, 4, 5]}
+          onClick={handleClick}
+        />
       </p>
       <p>
         <NumberInput
