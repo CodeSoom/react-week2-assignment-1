@@ -1,22 +1,21 @@
 import React from 'react';
 
 import Counter from './Counter';
-import CounterController from './CounterController';
+import CountController from './CountController';
 
 const Page = ({ count, onClick }) => (
   <div>
     <p>Counter</p>
-    <Counter count={count} onClick={onClick} />
+    <Counter count={count} onClick={() => onClick({ difference: 1 })} />
     <p>
       {[1, 2, 3, 4, 5].map((number) => (
-        <CounterController
+        <CountController
           difference={number}
-          onClick={onClick}
+          onClick={() => { onClick({ difference: number }); }}
           key={number}
         />
       ))}
     </p>
-
   </div>
 );
 

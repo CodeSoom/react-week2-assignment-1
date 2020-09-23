@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CounterButton = ({ count, onClick }) => (
-  <button type="button" onClick={() => { onClick({ difference: 1 }); }}>
+const Counter = ({ count, onClick }) => (
+  <button type="button" onClick={onClick}>
     Click me! (
     {count}
     )
   </button>
 );
 
-export default CounterButton;
+export default Counter;
