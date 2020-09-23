@@ -10,12 +10,7 @@ export default function App() {
   const { count } = state;
 
   const handleClick = {
-    counter: () => {
-      setState({
-        count: count + 1,
-      });
-    },
-    number: (increment) => {
+    counter: (increment) => {
       setState({
         count: count + increment,
       });

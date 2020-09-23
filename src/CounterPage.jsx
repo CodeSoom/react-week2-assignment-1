@@ -9,10 +9,10 @@ export default function CounterPage({ count, onClick }) {
       <p>Count</p>
       <Counter
         count={count}
-        onClick={onClick.counter}
+        onClick={() => onClick.counter(1)}
       />
       <NumberButtons
-        onClick={onClick.number}
+        onClick={onClick.counter}
       />
     </div>
   );
