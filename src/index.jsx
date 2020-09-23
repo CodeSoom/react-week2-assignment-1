@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import CountApp from './CountApp';
+import Counter from './Counter';
+import Buttons from './Buttons';
 
 function App() {
   const [state, setState] = useState({
@@ -10,12 +11,6 @@ function App() {
   });
 
   const { count } = state;
-
-  function handleClick() {
-    setState({
-      count: count + 1,
-    });
-  }
 
   function handleNumberClick(value) {
     setState({
@@ -25,10 +20,14 @@ function App() {
 
   return (
     <div>
-      <CountApp
+      <p>Counter</p>
+      <Counter
         count={count}
-        onClick={handleClick}
-        onNumberClick={handleNumberClick}
+        onClick={handleNumberClick}
+      />
+      <Buttons
+        count={count}
+        onClick={handleNumberClick}
       />
     </div>
   );
