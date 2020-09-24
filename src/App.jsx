@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import ClickMeButton from './components/ClickMeButton';
 import Button from './components/Button';
-import ActionByValueButtons from './components/ActionByValueButtons';
 import NumberInput from './components/NumberInput';
 
 function App() {
@@ -27,10 +26,14 @@ function App() {
         />
       </p>
       <p>
-        <ActionByValueButtons
-          valueList={[1, 2, 3, 4, 5]}
-          onClick={handleClick}
-        />
+        {[1, 2, 3, 4, 5].map((i) => (
+          <Button
+            key={i}
+            onClick={() => handleClick(i)}
+          >
+            {i}
+          </Button>
+        ))}
       </p>
       <p>
         <NumberInput
@@ -38,9 +41,10 @@ function App() {
           onChange={handleChange}
         />
         <Button
-          value="increase"
           onClick={() => handleClick(input)}
-        />
+        >
+          increase
+        </Button>
       </p>
     </div>
   );

@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Button({ value, onClick }) {
+function Button({ children, onClick }) {
   return (
     <button
       type="button"
       onClick={onClick}
     >
-      {value}
+      {children}
     </button>
   );
 }
