@@ -11,7 +11,6 @@ function CounterPage({ count, onClick }) {
         onClick={onClick}
       />
       <Buttons
-        count={count}
         onClick={onClick}
       />
     </div>
