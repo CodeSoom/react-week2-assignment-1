@@ -29,9 +29,10 @@ function App() {
         {[1, 2, 3, 4, 5].map((i) => (
           <Button
             key={i}
-            value={i}
             onClick={() => handleClick(i)}
-          />
+          >
+            {i}
+          </Button>
         ))}
       </p>
       <p>
@@ -40,9 +41,10 @@ function App() {
           onChange={handleChange}
         />
         <Button
-          value="increase"
           onClick={() => handleClick(input)}
-        />
+        >
+          increase
+        </Button>
       </p>
     </div>
   );
