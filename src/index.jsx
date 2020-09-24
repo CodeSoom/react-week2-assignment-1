@@ -9,23 +9,18 @@ function App() {
 
   const { count } = state;
 
-  function Clickme() {
-    setState({
-      count: count + 1,
-    });
-  }
-
-  function ButtonClick(i) {
+  function handleClick(i) {
     setState({
       count: count + i,
     });
   }
 
+
   return (
     <Page
       count={count}
-      onClick={Clickme}
-      ButtonClick={ButtonClick}
+      onClick={handleClick}
+      onButtonClick={handleClick}
     />
   );
 }
