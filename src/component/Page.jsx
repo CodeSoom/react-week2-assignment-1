@@ -1,16 +1,22 @@
 import React from 'react';
 
-import ClickMeButton from './ClickMeButton';
 import Buttons from './Buttons';
+import Button from './Button';
+import { increaseBySteps } from '../utills/increaseFunction';
 
-export default function Page({ count, buttonIndexs, onClick }) {
+export default function Page({ count, numbers, onClick }) {
   return (
     <div>
       <p>
         Counter
       </p>
-      <ClickMeButton count={count} onClick={onClick} />
-      <Buttons buttons={buttonIndexs} onClick={onClick} />
+      <Button onClick={() => onClick(increaseBySteps(1))}>
+        Click me
+        (
+        {count}
+        )
+      </Button>
+      <Buttons numbers={numbers} onClick={onClick} />
     </div>
   );
 }
