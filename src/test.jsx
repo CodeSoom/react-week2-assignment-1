@@ -13,13 +13,18 @@ function Counter ({ count, onClick }) {
     )
 }
 
+function AddCount () {
+    return (handleClick());
+}
+
 //create Buttons
 function Button(props) {
     const { children } = props
     return (
         <button type="button">
            {children}
-        </button>  
+        </button>,
+        <AddCount />  
 );
 }
 
@@ -40,10 +45,8 @@ function Page ({ count, onClick }) {
     return (
         <div>
             <p>Counter</p>
-            <Counter 
-                count={count}
-                onClick={onClick}
-            />
+            <Counter count={count}
+                onClick={onClick} />
             <Buttons count={count}
                 onClick={onClick}/>
         </div>
@@ -67,7 +70,7 @@ function App() {
     return (
         <Page
         count={count}
-        onClick={handleClick} nhb
+        onClick={handleClick}
         />
     );
 
