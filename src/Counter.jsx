@@ -1,10 +1,8 @@
 import React from 'react';
 
-const Counter = ({ count, onClick }) => (
+const Counter = ({ children, onClick }) => (
   <button type="button" onClick={onClick}>
-    Click me! (
-    {count}
-    )
+    {children}
   </button>
 );
 
