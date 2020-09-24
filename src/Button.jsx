@@ -7,7 +7,7 @@ function Button({
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={() => onClick(1)}
     >
       Click me!
       (
