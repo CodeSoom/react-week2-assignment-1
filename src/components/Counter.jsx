@@ -1,17 +1,13 @@
-import React, { useContext } from 'react';
-import AppContext from '../context/AppContext';
+import React from 'react';
 
-const Counter = () => {
-  const { count, handleClick } = useContext(AppContext);
 
-  return (
-    <button type="button" onClick={() => handleClick()}>
-      Click me!
-      (
-      { count }
-      )
-    </button>
-  );
-};
+const Counter = ({ count, onClick }) => (
+  <button type="button" onClick={() => onClick()}>
+    Click me!
+    (
+    { count }
+    )
+  </button>
+);
 
 export default Counter;

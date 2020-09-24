@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Buttons } from './components/Button';
+
+import Buttons from './components/Buttons';
 import Counter from './components/Counter';
-import AppContext from './context/AppContext';
 
 const App = () => {
   const [state, setState] = useState({
@@ -10,19 +10,15 @@ const App = () => {
 
   const { count } = state;
 
+  const handleClick = (num = 1) => {
+    setState({ count: count + num });
+  };
+
   return (
     <div className="App">
       <p>Counter</p>
-      <AppContext.Provider value={{
-        count,
-        handleClick: (num = 1) => {
-          setState({ count: count + num });
-        },
-      }}
-      >
-        <Counter />
-        <Buttons />
-      </AppContext.Provider>
+      <Counter count={count} onClick={handleClick} />
+      <Buttons onClick={handleClick} />
     </div>
   );
 };
