@@ -2,12 +2,12 @@ import React from 'react';
 
 import Button from './Button';
 
-function ButtonNumbers({ onClick }) {
+function NumberButtons({ onClick }) {
   return (
     <p>
       {
         [1, 2, 3, 4, 5].map((i) => (
-          <Button onClick={onClick} increaseCount={i} key={i}>
+          <Button onClick={() => onClick(i)} key={i}>
             {i}
           </Button>
         ))
@@ -16,4 +16,4 @@ function ButtonNumbers({ onClick }) {
   );
 }
 
-export default ButtonNumbers;
+export default NumberButtons;
