@@ -13,7 +13,6 @@ const Page = ({ count, onClick }) => (
     <p>
       {[1, 2, 3, 4, 5].map((number) => (
         <Counter
-          difference={number}
           onClick={() => onClick({ difference: number })}
           key={number}
         >
