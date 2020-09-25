@@ -42,7 +42,7 @@ Scenario('Click 3 test', (I) => {
   I.see('(15)');
 });
 
-Scenario('Click 1 test', (I) => {
+Scenario('Click 4 test', (I) => {
   I.amOnPage('/');
 
   I.see('(0)');
@@ -52,7 +52,7 @@ Scenario('Click 1 test', (I) => {
   I.see('(20)');
 });
 
-Scenario('Click 1 test', (I) => {
+Scenario('Click 5 test', (I) => {
   I.amOnPage('/');
 
   I.see('(0)');
@@ -60,4 +60,16 @@ Scenario('Click 1 test', (I) => {
   range(5).forEach(() => I.click('5'));
 
   I.see('(25)');
+});
+
+Scenario('Click increase test', (I) => {
+  I.amOnPage('/');
+
+  I.see('(0)');
+
+  I.fillField('input', 20);
+
+  range(5).forEach(() => I.click('increase'));
+
+  I.see('(100)');
 });
