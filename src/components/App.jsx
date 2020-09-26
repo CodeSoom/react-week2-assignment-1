@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 
-import Page from './Page';                                                                                                                                                                                                                                                             
+import Page from './Page';
 
 //Operate counting & return Page
 function App() {
     const [state, setState] = useState({
         count: 0,
     });
- 
-    const { count } = state;
 
-    function handleClick() {
+    const {count} = state;
+
+    function handleClick(value) {
         setState({
-            count: count + 1,
- });
+            count: count + value
+        });
     }
 
     return (
         <Page
-        count={count}
-        onClick={handleClick}
+            count={count}
+            onClick={handleClick}
         />
     );
 }

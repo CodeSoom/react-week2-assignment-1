@@ -1,17 +1,15 @@
 import React from 'react';
 
-import Button from './Button';
-
-function Buttons({count, onClick}) {
+function Buttons({ count, onClick }) {
     return (
         <p>
             {[1, 2, 3, 4, 5].map((digit) => (
-                <Button 
-                key={digit} 
-                count = {count} 
-                onClick={onClick}>
+                <button
+                    key={digit}
+                    type="button"
+                    onClick={() => onClick(digit)}>
                     {digit}
-                </Button>
+                </button>
             ))}
         </p>
     );

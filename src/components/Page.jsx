@@ -4,18 +4,18 @@ import Counter from './Counter';
 import Buttons from './Buttons';
 
 //Drawing UI
-function Page ({ count, onClick }) {
+function Page({ count, onClick }) {
     return (
         <div>
             <p>Counter</p>
-            <Counter 
+            <Counter
                 count={count}
                 onClick={onClick}
             />
             <Buttons count={count}
-                onClick={onClick}/>
+                onClick={onClick} />
         </div>
-        );
+    );
 }
 
 export default Page;
