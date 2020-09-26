@@ -5,7 +5,7 @@ function ClickMeCounter({ count, onClick }) {
     <>
       <div>Counter</div>
       <br />
-      <button type="button" onClick={onClick}>
+      <button type="button" onClick={() => onClick(1)}>
         Click me (
         {count}
         )

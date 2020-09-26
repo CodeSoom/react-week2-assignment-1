@@ -11,12 +11,6 @@ function App() {
 
   const { count } = state;
 
-  function handleClickCount() {
-    setState({
-      count: count + 1,
-    });
-  }
-
   function handleClickButton(i) {
     setState({
       count: count + i,
@@ -27,7 +21,7 @@ function App() {
     <>
       <ClickMeCounter
         count={count}
-        onClick={handleClickCount}
+        onClick={handleClickButton}
       />
 
       <Buttons

@@ -1,13 +1,12 @@
 import React from 'react';
 
-export default function Button({ onClick, children }) {
+export default function Button({ onClick, value }) {
   return (
     <button
       type="button"
-      key={children}
-      onClick={() => onClick(children)}
+      onClick={() => onClick(value)}
     >
-      {children}
+      {value}
     </button>
   );
 }
