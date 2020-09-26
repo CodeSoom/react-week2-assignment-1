@@ -8,7 +8,6 @@ function Buttons({ onClick }) {
       {[1, 2, 3, 4, 5].map((number) => (
         <Button onClick={onClick} key={number} value={number}>{number}</Button>
       ))}
-
     </p>
   );
 }
