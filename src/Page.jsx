@@ -2,7 +2,7 @@ import React from 'react';
 import Counter from './Counter';
 import Buttons from './Buttons';
 
-function Page({ count, onClick, onButtonClick }) {
+function Page({ count, onClick }) {
   return (
     <div>
       <p>Hello, world!!</p>
@@ -12,7 +12,7 @@ function Page({ count, onClick, onButtonClick }) {
         count={count}
       />
       <Buttons
-        onButtonClick={onButtonClick}
+        onNumberClick={onClick}
       />
     </div>
   );
