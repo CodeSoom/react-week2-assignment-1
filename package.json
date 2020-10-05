@@ -1,7 +1,7 @@
 {
-  "name": "assignment-2-1",
+  "name": "assignment-2-2",
   "version": "1.0.0",
-  "description": "CodesSoom React Week2 assignment",
+  "description": "CodesSoom React Week2 assignment TODO list",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
