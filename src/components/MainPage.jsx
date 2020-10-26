@@ -2,22 +2,16 @@ import React from 'react';
 
 import Counter from './Counter';
 import Buttons from './Buttons';
-import Button from './Button';
 
-export default function Page({
-  count, onClickCounter, onClickNumber, onClickClear,
-}) {
+export default function Page({ count, onClick }) {
   return (
     <div>
       <p>Counter</p>
       <Counter
         count={count}
-        onClick={onClickCounter}
+        onClick={onClick}
       />
-      <Buttons onClick={onClickNumber} />
-      <Button onClick={onClickClear}>
-        Clear
-      </Button>
+      <Buttons onClick={onClick} />
     </div>
   );
 }
