@@ -12,19 +12,20 @@ function Counter({ count, onClick }) {
     </button>
   );
 }
-function Button({ children }) {
+function Button({ children, onClick }) {
   return (
-    <button type="button">
+    <button type="button" onClick={onClick}>
       {children}
     </button>
   );
 }
-function Buttons() {
+function Buttons({onClick}) {
   return (
     <p>
       {numbers.map((i) => (
-        <Button key={i}>
+        <Button key={i} onClick={onClick}>
           {i}
+          
         </Button>
       ))}
     </p>
@@ -38,7 +39,9 @@ function Page({ count, onClick }) {
         count={count}
         onClick={onClick}
       />
-      <Buttons />
+      <Buttons
+        onClick={onClick}
+      />
     </div>
   );
 }
@@ -50,36 +53,40 @@ function App() {
   const { count } = state;
 
   function handleClick() {
-    if(value == 1){
-        setState(
-            { count: count + 1 },
-          );
-        return;
-    }
-    if(value == 2){
-        setState(
-            { count: count + 2 },
-          );
-        return;
-    }
-    if(value == 3){
-        setState(
-            { count: count + 3 },
-          );
-        return;
-    }
-    if(value == 4){
-        setState(
-            { count: count + 4 },
-          );
-        return;
-    }
-    if(value == 5){
-        setState(
-            { count: count + 5 },
-          );
-        return;
-    }
+      console.log('click');
+    setState(
+        { count: count + 1 },
+      );
+    // if(value == 1){
+    //     setState(
+    //         { count: count + 1 },
+    //       );
+    //     return;
+    // }
+    // if(value == 2){
+    //     setState(
+    //         { count: count + 2 },
+    //       );
+    //     return;
+    // }
+    // if(value == 3){
+    //     setState(
+    //         { count: count + 3 },
+    //       );
+    //     return;
+    // }
+    // if(value == 4){
+    //     setState(
+    //         { count: count + 4 },
+    //       );
+    //     return;
+    // }
+    // if(value == 5){
+    //     setState(
+    //         { count: count + 5 },
+    //       );
+    //     return;
+    // }
     
   }
   return (
