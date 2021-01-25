@@ -2,10 +2,17 @@ import React from 'react';
 
 import Button from './Button';
 
-function Buttons() {
+function Buttons({ onClick }) {
   return (
     <p>
-      {[1, 2, 3].map((i) => <Button key={i}>{i}</Button>)}
+      {[1, 2, 3, 4, 5].map((i) => (
+        <Button
+          key={i}
+          onClick={onClick}
+        >
+          {i}
+        </Button>
+      ))}
     </p>
   );
 }

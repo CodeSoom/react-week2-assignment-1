@@ -16,10 +16,17 @@ function App() {
     });
   }
 
+  function handleDigit(value) {
+    setState({
+      count: count + 1 * value,
+    });
+  }
+
   return (
     <Page
       count={count}
       onClick={handleClick}
+      handleDigit={handleDigit}
     />
   );
 }
