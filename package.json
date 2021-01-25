@@ -2,7 +2,7 @@
   "name": "assignment-2-1",
   "version": "1.0.0",
   "description": "CodesSoom React Week2 assignment",
-  "main": "index.js",
+  "main": "Index.jsx",
   "scripts": {
     "start": "webpack-dev-server",
     "test:e2e": "codeceptjs run --steps",
