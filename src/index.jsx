@@ -3,21 +3,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-function Counter() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
-
-  function handleClick() {
-    setState({
-      count: count + 1,
-    });
-  }
-
+function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" onClick={onClick}>
       click me!
       (
       {count}
@@ -44,16 +32,32 @@ function Buttons() {
   );
 }
 
-function App() {
+function Page({ count, onClick }) {
   return (
     <div>
       <p>hello,world!</p>
-      <Counter />
+      <Counter count={count} onClick={onClick} />
       <p>
         <Buttons />
       </p>
     </div>
   );
+}
+
+function App() {
+  const [state, setState] = useState({
+    count: 0,
+  });
+
+  const { count } = state;
+
+  function handleClick() {
+    setState({
+      count: count + 1,
+    });
+  }
+
+  return <Page count={count} onClick={handleClick} />;
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
