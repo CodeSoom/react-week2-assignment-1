@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Counter from '../util/Counter';
-import Buttons from '../common/Buttons';
-import Reset from '../util/Reset';
+import Counter from '../components/Counter';
+import Buttons from '../commons/Buttons';
+import Reset from '../components/Reset';
 
 function Page({ count, onClick }) {
   return (

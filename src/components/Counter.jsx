@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../common/Button';
+import Button from '../commons/Button';
 
 function Counter({ count, onClick }) {
   return (
