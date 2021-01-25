@@ -20,12 +20,12 @@ function App() {
   return (
     <div className="counter-container">
       <HeaderTitile />
-      <AddOneButton handleAddOne={handleAddOne} numberToShow={number} />
+      <AddOneButton onClick={handleAddOne} numberToShow={number} />
       <br />
       {[1, 2, 3, 4, 5].map((numberToAdd) => (
         <AddSpecificNumberButton
           numberToAdd={numberToAdd}
-          handleAddSpecificNumber={() => {
+          onClick={() => {
             handleAddSpecificNumber(numberToAdd);
           }}
           key={numberToAdd}
