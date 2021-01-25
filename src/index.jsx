@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 const numbers = [1,2,3,4,5];
-function Counter({ count, onClick }) {
+function Counter({ count, num, onClick }) {
   return (
     <button type="button" onClick={onClick}>
       Click me!
@@ -19,11 +19,17 @@ function Button({ children, onClick }) {
     </button>
   );
 }
-function Buttons({onClick}) {
+function Buttons({count, num, onClick}) {
   return (
     <p>
       {numbers.map((i) => (
-        <Button key={i} onClick={onClick}>
+        <Button key={i} onClick={()=>{
+            setState(
+                { count: count,
+                    num: num },
+              );
+            onClick;
+        }}>
           {i}
 
         </Button>
@@ -31,7 +37,7 @@ function Buttons({onClick}) {
     </p>
   );
 }
-function Page({ count, onClick }) {
+function Page({ count, num, onClick }) {
   return (
     <div>
       <p>Counter</p>
@@ -40,6 +46,8 @@ function Page({ count, onClick }) {
         onClick={onClick}
       />
       <Buttons
+        num={num}
+        count={count}
         onClick={onClick}
       />
     </div>
@@ -48,18 +56,57 @@ function Page({ count, onClick }) {
 function App() {
   const [state, setState] = useState({
     count: 0,
+    num: 0,
   });
 
-  const { count } = state;
+  const { count, num } = state;
 
-  function handleClick() {
+  function handleClick({num}) {
     setState(
-        { count: count + 1 },
+        { count: count + 1 ,
+        num,},
       );
+    if(num == 1){
+        setState(
+            { count: count + 2 ,
+                num,},
+          );
+        return;
+    }
+    if(num == 2){
+        setState({ 
+            count: count + 2,
+            num,
+        });
+        return;
+    }
+    if(num == 3){
+        setState({ 
+            count: count + 3,
+            num},
+        );
+        return;
+    }
+    if(num == 4){
+        setState({ 
+            count: count + 4,
+            num,},
+        );
+        return;
+    }
+    if(num == 5){
+        setState({ 
+            count: count + 5,
+            num,},
+        );
+        return;
+    }
+
   }
   return (
     <Page
       count={count}
+      num={num}
       onClick={handleClick}
     />
   );
