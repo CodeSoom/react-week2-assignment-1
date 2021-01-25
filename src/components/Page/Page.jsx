@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Counter from './Counter';
-import Buttons from './Buttons';
+import Counter from '../util/Counter';
+import Buttons from '../common/Buttons';
 
 function Page({ count, onClick }) {
   return (
