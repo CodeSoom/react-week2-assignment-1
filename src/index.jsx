@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-const number = 0;
-function handleClick() {
-  console.log('click');
-}
 function App() {
+  const [number, setState] = useState(0);
+
   return (
     <div>
       <p>
         Counter
       </p>
       <p>
-        <button type="button" onClick={handleClick}>
+        <button type="button" onClick={() => setState(number + 1)}>
           Click me! (
           {number}
           )
