@@ -16,7 +16,7 @@ function Numbers({ onClick }) {
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
         <Number
-          key={i}
+          key={i.toString()}
           value={i}
           onClick={onClick}
         />
