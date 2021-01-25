@@ -9,13 +9,7 @@ function App() {
 
   const { count } = state;
 
-  function handleClick() {
-    setState({
-      count: count + 1,
-    });
-  }
-
-  function handleDigit(value) {
+  function handleClick(value = 1) {
     setState({
       count: count + 1 * value,
     });
@@ -25,7 +19,6 @@ function App() {
     <Page
       count={count}
       onClick={handleClick}
-      handleDigit={handleDigit}
     />
   );
 }
