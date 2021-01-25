@@ -10,14 +10,8 @@ function App() {
   const { count } = state;
 
   function handleClick(value = 1) {
-    if (value === 0) {
-      setState({
-        count: 0,
-      });
-      return;
-    }
     setState({
-      count: count + 1 * value,
+      count: count + 1 * (value || -count),
     });
   }
 
