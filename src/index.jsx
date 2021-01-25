@@ -22,6 +22,18 @@ function Buttons() {
   );
 }
 
+function Page({ count, onClick }) {
+  return (
+    <div>
+      <p>Hello, World!</p>
+      <p>Hi!</p>
+      <Counter count={count} onClick={onClick} />
+      <Buttons />
+    </div>
+  );
+}
+
+
 function App() {
   const [state, setState] = useState({
     count: 0,
@@ -36,12 +48,10 @@ function App() {
   }
 
   return (
-    <div>
-      <p>Hello, World!</p>
-      <p>Hi!</p>
-      <Counter count={count} onClick={handleClick} />
-      <Buttons />
-    </div>
+    <Page
+      count={count}
+      onClick={handleClick}
+    />
   );
 }
 
