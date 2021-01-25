@@ -1,8 +1,13 @@
 import React from 'react';
-import Button from './Button';
+import Button from './button';
 
-function Buttons({ onClick }) {
-  return <Button onClick={onClick} />;
+function Buttons({ buttons, onClick }) {
+  return (
+    <Button
+      buttons={buttons}
+      onClick={onClick}
+    />
+  );
 }
 
 export default Buttons;
