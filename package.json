@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "test:e2e": "codeceptjs run --steps",
     "test": "start-server-and-test start http://localhost:8080 test:e2e",
-    "lint": "eslint --ext js,jsx ."
+    "lint": "eslint --fix ."
   },
   "keywords": [],
   "author": "",
@@ -32,7 +32,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   }
 }
