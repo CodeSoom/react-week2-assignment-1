@@ -19,19 +19,12 @@ function Button({ children, onClick }) {
     </button>
   );
 }
-function Buttons({count, num, onClick}) {
+function Buttons({count, onClick}) {
   return (
     <p>
       {numbers.map((i) => (
-        <Button key={i} onClick={()=>{
-            setState(
-                { count: count,
-                    num: num },
-              );
-            onClick;
-        }}>
+        <Button key={i} onClick={()=>onClick({count,num:i,})}>
           {i}
-
         </Button>
       ))}
     </p>
@@ -46,7 +39,7 @@ function Page({ count, num, onClick }) {
         onClick={onClick}
       />
       <Buttons
-        num={num}
+
         count={count}
         onClick={onClick}
       />
@@ -68,7 +61,7 @@ function App() {
       );
     if(num == 1){
         setState(
-            { count: count + 2 ,
+            { count: count + 1 ,
                 num,},
           );
         return;
