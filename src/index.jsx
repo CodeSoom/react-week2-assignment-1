@@ -2,6 +2,18 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 
+function Button({number, onClick}) {
+  return (
+    <button type="button" onClick={onClick}>
+      Click me! (
+      {
+        number
+      }
+      )
+    </button>
+  );
+}
+
 function App() {
   const [number, setState] = useState(0);
 
@@ -15,11 +27,10 @@ function App() {
         Counter
       </p>
       <p>
-        <button type="button" onClick={() => handleClick(number + 1)}>
-          Click me! (
-          {number}
-          )
-        </button>
+        <Button
+          number={number}
+          onClick={() => handleClick(number + 1)}
+        />
       </p>
     </div>
 
