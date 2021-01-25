@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Buttons({ count, setFunction }) {
+function Buttons({ count, onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
-        <button key={i} type="button" onClick={() => setFunction(count + i)}>
+        <button key={i} type="button" onClick={() => onClick(count + i)}>
           {i}
         </button>
       ))}
