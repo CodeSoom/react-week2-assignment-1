@@ -33,8 +33,7 @@ function Buttons() {
 function Page({ count, onClick }) {
   return (
     <div>
-      <p>Hello, world!</p>
-      <p>Hi</p>
+      <p>Counter</p>
       <Counter
         count={count}
         onClick={onClick}
@@ -51,9 +50,37 @@ function App() {
   const { count } = state;
 
   function handleClick() {
-    setState(
-      { count: count + 1 },
-    );
+    if(value == 1){
+        setState(
+            { count: count + 1 },
+          );
+        return;
+    }
+    if(value == 2){
+        setState(
+            { count: count + 2 },
+          );
+        return;
+    }
+    if(value == 3){
+        setState(
+            { count: count + 3 },
+          );
+        return;
+    }
+    if(value == 4){
+        setState(
+            { count: count + 4 },
+          );
+        return;
+    }
+    if(value == 5){
+        setState(
+            { count: count + 5 },
+          );
+        return;
+    }
+    
   }
   return (
     <Page
