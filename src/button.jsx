@@ -1,7 +1,13 @@
 import React from 'react';
 
-export function Button({ count, onClick }) {
-    return (
-        <p><button onClick={onClick}>Click me!({count})</button></p>
-    )
+export default function Button({ count, onClick }) {
+  return (
+    <p>
+      <button type="button" onClick={onClick}>
+        Click me!(
+        {count}
+        )
+      </button>
+    </p>
+  );
 }
