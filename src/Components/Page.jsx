@@ -4,16 +4,20 @@ import Counter from './Counter';
 import Buttons from './Buttons';
 
 
-function Home() {
+function Page() {
   const [count, setCount] = useState(0);
+
+  function handleCounterClick() {
+    setCount(count + 1);
+  }
 
   return (
     <div>
       <p>Counter</p>
-      <Counter count={count} onClick={setCount} />
+      <Counter count={count} onClick={handleCounterClick} />
       <Buttons count={count} onClick={setCount} />
     </div>
   );
 }
 
-export default Home;
+export default Page;

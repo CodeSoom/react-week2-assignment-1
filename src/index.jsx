@@ -1,12 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Home from './Components/Home';
+import Page from './Components/Page';
 
 
-function App() {
-  return <Home />;
-}
-
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Page />, document.getElementById('app'));
