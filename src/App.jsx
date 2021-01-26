@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import AddOneButton from './AddOneButton';
-import HeaderTitile from './HeaderTitile';
 import AddSpecificNumberButton from './AddSpecificNumberButton';
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
 
   return (
     <div className="counter-container">
-      <HeaderTitile />
+      <h1>Counter</h1>
       <AddOneButton onClick={handleAddOne} numberToShow={number} />
       <br />
       {[1, 2, 3, 4, 5].map((numberToAdd) => (
