@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Counter from './components/Counter';
-import Button from './components/Button';
-
-
-function Buttons() {
-  return (
-    <p>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <Button key={i}>
-          {i}
-        </Button>
-      ))}
-    </p>
-  );
-}
+import Buttons from './components/Buttons';
 
 function Page({ count, onClick }) {
   return (
