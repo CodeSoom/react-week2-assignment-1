@@ -35,8 +35,7 @@ function Buttons() {
 function Page({ count, onClick }) {
   return (
     <div>
-      <p>Hello,world!!!</p>
-      <p>Hi!</p>
+      <p>Counter</p>
       <Counter
         count={count}
         onClick={onClick}
