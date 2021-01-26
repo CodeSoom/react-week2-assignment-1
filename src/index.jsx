@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 const numbers = [1, 2, 3, 4, 5];
 const DEFAULT_INCREASED = 1;
+
 function Counter({ count, onClick }) {
   return (
     <button
@@ -21,7 +22,7 @@ function Button({ children, onClick }) {
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={() => onClick({ increased: children })}
     >
       {children}
     </button>
@@ -34,7 +35,7 @@ function Buttons({ onClick }) {
       {numbers.map((number) => (
         <Button
           key={number}
-          onClick={() => onClick({ increased: number })}
+          onClick={onClick}
         >
           {number}
         </Button>
@@ -42,7 +43,6 @@ function Buttons({ onClick }) {
     </p>
   );
 }
-
 function Page({ count, onClick }) {
   return (
     <div>
@@ -57,7 +57,6 @@ function Page({ count, onClick }) {
     </div>
   );
 }
-
 function App() {
   const [state, setState] = useState({
     count: 0,
@@ -77,7 +76,6 @@ function App() {
     />
   );
 }
-
 ReactDOM.render(
   <App />,
   document.getElementById('app'),
