@@ -1,11 +1,15 @@
 import React from 'react';
 
 export default function NumberButton({ value, onClick }) {
+  function handleClickNumber() {
+    onClick(value);
+  }
+
   return (
     <button
       type="button"
       key={value}
-      onClick={() => onClick(value)}
+      onClick={handleClickNumber}
     >
       {
         value

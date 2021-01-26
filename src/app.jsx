@@ -9,7 +9,7 @@ export default function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function handleClickMeButton() {
     setState({
       count: count + 1,
     });
@@ -24,7 +24,7 @@ export default function App() {
   return (
     <Main
       count={count}
-      onClick={handleClick}
+      onClickMeButton={handleClickMeButton}
       onClickNumber={handleClickNumber}
     />
   );
