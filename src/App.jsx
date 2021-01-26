@@ -15,11 +15,11 @@ function App() {
   return (
     <div>
       <p>Counter</p>
-      <button type="button" onClick={onClickButton}>
+      <Button type="button" onClick={onClickButton}>
         Click me! (
         {count}
         )
-      </button>
+      </Button>
       <p>
         {[1, 2, 3, 4, 5].map((number) => (
           <Button
