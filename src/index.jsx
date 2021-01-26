@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
+const DEFAULT_INCREASED = 1;
 function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={()=>onClick({count, num:1,})}>
+    <button
+      type="button"
+      onClick={() => onClick({ increased: DEFAULT_INCREASED })}
+    >
       Click me!
       (
       {count}
@@ -12,24 +16,33 @@ function Counter({ count, onClick }) {
     </button>
   );
 }
+
 function Button({ children, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
+    <button
+      type="button"
+      onClick={onClick}
+    >
       {children}
     </button>
   );
 }
-function Buttons({count, onClick}) {
+
+function Buttons({ onClick }) {
   return (
     <p>
-      {numbers.map((i) => (
-        <Button key={i} onClick={()=>onClick({count, num:i,})}>
-          {i}
+      {numbers.map((number) => (
+        <Button
+          key={number}
+          onClick={() => onClick({ increased: number })}
+        >
+          {number}
         </Button>
       ))}
     </p>
   );
 }
+
 function Page({ count, onClick }) {
   return (
     <div>
@@ -39,34 +52,32 @@ function Page({ count, onClick }) {
         onClick={onClick}
       />
       <Buttons
-        count={count}
         onClick={onClick}
       />
     </div>
   );
 }
+
 function App() {
   const [state, setState] = useState({
     count: 0,
-    num: 0,
   });
 
-  const { count, num } = state;
+  const { count } = state;
 
-  function handleClick({num}) {
-    setState({ 
-        count: count + num,
-        num,},
-    );
+  function handleClick({ increased }) {
+    setState({
+      count: count + increased,
+    });
   }
   return (
     <Page
       count={count}
-      num={num}
       onClick={handleClick}
     />
   );
 }
+
 ReactDOM.render(
   <App />,
   document.getElementById('app'),
