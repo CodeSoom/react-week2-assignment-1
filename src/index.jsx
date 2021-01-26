@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Counter from './components/Counter';
+import Button from './components/Button';
 
-function Button({ children }) {
-  return (
-    <button type="button">
-      {children}
-    </button>
-  );
-}
 
 function Buttons() {
   return (
