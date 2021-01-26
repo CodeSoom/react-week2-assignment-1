@@ -1,20 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './components/Counter';
-import Buttons from './components/Buttons';
-
-function Page({ count, onClick }) {
-  return (
-    <div>
-      <p>Counter</p>
-      <Counter
-        count={count}
-        onClick={onClick}
-      />
-      <Buttons />
-    </div>
-  );
-}
+import Page from './components/Page';
 
 function App() {
   const [state, setState] = useState({
