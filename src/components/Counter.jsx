@@ -1,15 +1,25 @@
 import React from 'react';
 
-function Counter({ count, onClick }) {
+import Buttons from './buttons';
+
+function Counter({ count, buttons, onClick }) {
   return (
-    <button
-      type="button"
-      onClick={() => onClick(1)}
-    >
-      Click me! (
-      { count }
-      )
-    </button>
+    <>
+      <button
+        type="button"
+        onClick={() => onClick()}
+      >
+        Click me! (
+        { count }
+        )
+      </button>
+      <p>
+        <Buttons
+          buttons={buttons}
+          onClick={onClick}
+        />
+      </p>
+    </>
   );
 }
 

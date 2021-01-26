@@ -1,15 +1,14 @@
 import React from 'react';
 
-function Button({ buttons, onClick }) {
-  return (buttons || []).map((i) => (
+function Button({ value, onClick }) {
+  return (
     <button
       type="button"
-      key={i}
-      onClick={() => onClick(i)}
+      onClick={() => onClick(value)}
     >
-      {i}
+      {value}
     </button>
-  ));
+  );
 }
 
 export default Button;

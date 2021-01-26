@@ -1,13 +1,15 @@
 import React from 'react';
+
 import Button from './button';
 
 function Buttons({ buttons, onClick }) {
-  return (
+  return buttons.map((button) => (
     <Button
-      buttons={buttons}
+      value={button.value}
+      key={button.id}
       onClick={onClick}
     />
-  );
+  ));
 }
 
 export default Buttons;

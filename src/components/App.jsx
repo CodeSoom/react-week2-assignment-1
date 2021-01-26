@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
+
 import Counter from './counter';
-import Buttons from './buttons';
 
 function App() {
   const [state, setState] = useState({
     count: 0,
   });
   const { count } = state;
-  const buttons = [1, 2, 3, 4, 5];
+  const buttons = [
+    { id: 1, value: 1 },
+    { id: 2, value: 2 },
+    { id: 3, value: 3 },
+    { id: 4, value: 4 },
+    { id: 5, value: 5 },
+  ];
 
   function handleClick(addedNumber = 1) {
     setState({
@@ -16,18 +22,11 @@ function App() {
   }
   return (
     <div>
-      <p>
-        <Counter
-          count={count}
-          onClick={handleClick}
-        />
-      </p>
-      <p>
-        <Buttons
-          buttons={buttons}
-          onClick={handleClick}
-        />
-      </p>
+      <Counter
+        count={count}
+        buttons={buttons}
+        onClick={handleClick}
+      />
     </div>
   );
 }
