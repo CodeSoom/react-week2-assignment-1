@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Counter from './Counter';
-import Numbers from './Numbers';
+import NumberButtonList from './NumberButtonList';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,7 +20,7 @@ function App() {
         count={count}
         onClick={handleClickCounter}
       />
-      <Numbers
+      <NumberButtonList
         onClick={handleClickNumber}
       />
     </div>
