@@ -9,7 +9,7 @@ function Page({ count, onClick }) {
     <div>
       <p>Counter</p>
       <Counter count={count} onClick={onClick} />
-      <Buttons onClick={onClick} />
+      <Buttons count={count} onClick={onClick} />
       <Reset onClick={onClick} />
     </div>
   );

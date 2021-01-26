@@ -2,13 +2,13 @@ import React from 'react';
 
 import Button from './Button';
 
-function Buttons({ onClick }) {
+function Buttons({ count, onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
         <Button
           key={i}
-          onClick={onClick}
+          onClick={() => onClick(count + i)}
         >
           {i}
         </Button>

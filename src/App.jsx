@@ -9,9 +9,9 @@ function App() {
 
   const { count } = state;
 
-  function handleClick(value = 1) {
+  function handleClick(value) {
     setState({
-      count: count + 1 * (value || -count),
+      count: value,
     });
   }
 
