@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from 'react';
 
-import NumberPage from './NumberPage';
+import Page from './Page';
 
 function App() {
   const [number, setNumber] = useState(0);
   const handleAddNumber = useCallback(
-    (numberToAdd) => {
-      setNumber(number + numberToAdd);
+    (count) => {
+      setNumber(number + count);
     },
     [number],
   );
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="counter-container">
       <h1>Counter</h1>
-      <NumberPage onClick={handleAddNumber} numberToShow={number} />
+      <Page onClick={handleAddNumber} number={number} />
     </div>
   );
 }
