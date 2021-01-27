@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Counter from './Counter';
 import Buttons from './Buttons';
 
 
-function Page() {
-  const [count, setCount] = useState(0);
-
+function Page({ count, setCount }) {
   function handleCounterClick() {
     setCount(count + 1);
   }
