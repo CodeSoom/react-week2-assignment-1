@@ -1,25 +1,16 @@
 import React, { useState } from 'react';
 
-import Buttons from './Buttons';
-import Counter from './Counter';
+import Page from './Page';
 
 function App() {
   const [count, setCount] = useState(0);
 
-  function onClickButton() {
-    setCount((prevCount) => prevCount + 1);
-  }
-
-  function onClickNumberButton(number) {
-    setCount((prevCount) => prevCount + number);
+  function handleClick(number = 1) {
+    setCount((count) => count + number);
   }
 
   return (
-    <div>
-      <p>Counter</p>
-      <Counter count={count} onClick={onClickButton} />
-      <Buttons onClick={onClickNumberButton} />
-    </div>
+    <Page count={count} onClick={handleClick} />
   );
 }
 
