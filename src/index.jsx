@@ -2,17 +2,7 @@ import React, {useState} from 'react';
 import ReactDom from 'react-dom';
 import { Counter } from './button';
 import { NumberButtons } from './numberButtons';
-
-function Page({count, onclick}){
-    return (
-        <div>
-            <Counter
-                count={count}
-                onClick={onclick}
-            />
-        </div>
-    );
-}
+import { Page } from './page';
 
 function App() {
     const [state, setState] = useState({
