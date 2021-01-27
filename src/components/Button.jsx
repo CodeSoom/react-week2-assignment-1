@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({ value, onClick }) {
+export default function Button({ value, onClick }) {
   return (
     <button
       type="button"
@@ -10,5 +10,3 @@ function Button({ value, onClick }) {
     </button>
   );
 }
-
-export default Button;

@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Buttons from './buttons';
-
-function Counter({ count, buttons, onClick }) {
+export default function Counter({ count, onClick }) {
   return (
     <>
       <div>Counter</div>
@@ -14,14 +12,6 @@ function Counter({ count, buttons, onClick }) {
         { count }
         )
       </button>
-      <p>
-        <Buttons
-          buttons={buttons}
-          onClick={onClick}
-        />
-      </p>
     </>
   );
 }
-
-export default Counter;

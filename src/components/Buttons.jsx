@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from './button';
 
-function Buttons({ buttons, onClick }) {
+export default function Buttons({ buttons, onClick }) {
   return buttons.map((button) => (
     <Button
       value={button.value}
@@ -11,5 +11,3 @@ function Buttons({ buttons, onClick }) {
     />
   ));
 }
-
-export default Buttons;

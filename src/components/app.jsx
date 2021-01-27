@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
 import Counter from './counter';
+import Buttons from './buttons';
 
-function App() {
+export default function App() {
   const [state, setState] = useState({
     count: 0,
   });
+
   const { count } = state;
+
   const buttons = [
     { id: 1, value: 1 },
     { id: 2, value: 2 },
@@ -20,6 +23,7 @@ function App() {
       count: count + addedNumber,
     });
   }
+
   return (
     <div>
       <Counter
@@ -27,8 +31,10 @@ function App() {
         buttons={buttons}
         onClick={handleClick}
       />
+      <Buttons
+        buttons={buttons}
+        onClick={handleClick}
+      />
     </div>
   );
 }
-
-export default App;
