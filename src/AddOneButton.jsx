@@ -1,11 +1,16 @@
 import React from 'react';
 
-function AddOneButton({ onClick, numberToShow }) {
+function AddOneButton({ onClick, number }) {
   return (
     <div className="count-up-button-container">
-      <button type="button" onClick={onClick}>
+      <button
+        type="button"
+        onClick={() => {
+          onClick(1);
+        }}
+      >
         Click me! (
-        {numberToShow}
+        {number}
         )
       </button>
     </div>
