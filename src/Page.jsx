@@ -1,9 +1,9 @@
 import React from 'react';
+
 import Button from './Button';
 import Buttons from './Buttons';
 
-
-function Page({ count, onClick }) {
+export default function Page({ count, onClick }) {
   return (
     <div>
       <p>
@@ -15,12 +15,7 @@ function Page({ count, onClick }) {
         text="Click me"
         onClick={onClick}
       />
-      <br />
-      <Buttons
-        onClick={onClick}
-      />
+      <Buttons onClick={onClick} />
     </div>
   );
 }
-
-export default Page;
