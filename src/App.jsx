@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Page from './Page';
 
-function App() {
+export default function App() {
   const [state, setState] = useState({
     count: 0,
   });
   const { count } = state;
+
   function buttonClick(value = 1) {
     setState(
       {
@@ -14,6 +15,7 @@ function App() {
       },
     );
   }
+
   return (
     <Page
       count={count}
@@ -21,5 +23,3 @@ function App() {
     />
   );
 }
-
-export default App;
