@@ -14,17 +14,6 @@ function Page({count, onclick}){
     );
 }
 
-function PageNum({count, onclick}){
-    return (
-        <div>
-            <Buttons
-                count={count}
-                onClick={onclick}
-            />
-        </div>
-    );
-}
-
 function App() {
     const [state, setState] = useState({
         count: 0,
