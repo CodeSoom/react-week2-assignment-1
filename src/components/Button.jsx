@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react';
 
 class Button extends PureComponent {
   render() {
-    const { children, handleClickNumber } = this.props;
+    const { children, addByClickedNumber } = this.props;
     return (
-      <button type="button" onClick={() => handleClickNumber(children)}>
+      <button type="button" onClick={() => addByClickedNumber(children)}>
         {children}
       </button>
     );

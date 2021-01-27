@@ -3,13 +3,13 @@ import Button from './Button';
 
 class Buttons extends PureComponent {
   render() {
-    const { handleClickNumber } = this.props;
+    const { addByClickedNumber } = this.props;
     return (
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
           <Button
             key={i}
-            handleClickNumber={handleClickNumber}
+            addByClickedNumber={addByClickedNumber}
           >
             {i}
           </Button>

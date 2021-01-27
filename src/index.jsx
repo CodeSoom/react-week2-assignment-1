@@ -9,23 +9,23 @@ function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function addByOne() {
     setState({
       count: count + 1,
     });
   }
 
-  function handleClickNumber(selectedNumber) {
+  function addByClickedNumber(clickedNumber) {
     setState({
-      count: count + selectedNumber,
+      count: count + clickedNumber,
     });
   }
 
   return (
     <Page
       count={count}
-      handleClick={handleClick}
-      handleClickNumber={handleClickNumber}
+      addByOne={addByOne}
+      addByClickedNumber={addByClickedNumber}
     />
   );
 }

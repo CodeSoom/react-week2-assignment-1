@@ -4,16 +4,16 @@ import Buttons from './Buttons';
 
 class Page extends PureComponent {
   render() {
-    const { count, handleClick, handleClickNumber } = this.props;
+    const { count, addByOne, addByClickedNumber } = this.props;
     return (
       <div>
         <p>Counter</p>
         <Counter
           count={count}
-          handleClick={handleClick}
+          addByOne={addByOne}
         />
         <Buttons
-          handleClickNumber={handleClickNumber}
+          addByClickedNumber={addByClickedNumber}
         />
       </div>
     );
