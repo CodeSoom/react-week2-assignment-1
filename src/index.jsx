@@ -1,32 +1,7 @@
 import React, {useState} from 'react';
 import ReactDom from 'react-dom';
-
-function Counter({ count, onClick }) {
-    return (
-        <button type="button" onClick={onClick}>
-            Click me!
-            (
-            { count }
-            )
-        </button>
-    );
-}
-
-function Button({children}) {
-    return (
-        <button type="button">
-            {children}
-        </button>
-    );
-}
-
-function Buttons({ onClick }) {
-    return (
-        <p>
-            {[1, 2, 3, 4, 5].map(i => <button type='button' key={i} onClick={() => onClick(i)}>{i}</button>)}
-        </p>
-    );
-}
+import { Counter } from './button';
+import { NumberButtons } from './numberButtons';
 
 function Page({count, onclick}){
     return (
@@ -76,7 +51,7 @@ function App() {
                 count={count}
                 onclick={handleClick}
             />
-            <Buttons onClick={numClick} />
+            <NumberButtons onClick={numClick} />
         </div>     
     )
 }
