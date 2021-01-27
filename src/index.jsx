@@ -15,10 +15,17 @@ function App() {
     });
   }
 
+  function handleClickNumber(selectedNumber) {
+    setState({
+      count: count + selectedNumber,
+    });
+  }
+
   return (
     <Page
       count={count}
-      onClick={handleClick}
+      handleClick={handleClick}
+      handleClickNumber={handleClickNumber}
     />
   );
 }

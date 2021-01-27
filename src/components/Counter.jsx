@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react';
 
 class Counter extends PureComponent {
   render() {
-    const { count, onClick } = this.props;
+    const { count, handleClick } = this.props;
     return (
-      <button type="button" onClick={onClick}>
+      <button type="button" onClick={handleClick}>
         Click me!
         (
         {count}
