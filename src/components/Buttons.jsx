@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from './button';
+import Button from './Button';
 
 export default function Buttons({ buttons, onClick }) {
   return buttons.map((button) => (

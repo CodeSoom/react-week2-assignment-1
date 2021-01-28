@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Counter from './counter';
-import Buttons from './buttons';
+import Counter from './Counter';
+import Buttons from './Buttons';
 
 export default function App() {
   const [state, setState] = useState({
