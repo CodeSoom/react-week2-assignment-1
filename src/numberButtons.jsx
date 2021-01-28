@@ -6,7 +6,7 @@ export function ShareButtons({value, onClick}) {
 
 export function NumberButtons({ onClick }) {
 
-    const buttonList = [1, 2, 3, 4, 5, 6].map((i) => 
+    const buttonList = [1, 2, 3, 4, 5].map((i) => 
         <ShareButtons key={i} value={i} onClick={() => onClick(i)}></ShareButtons>
     );
     return (
