@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 
-function Button({text, onClick}) {
+function Button({ text, onClick }) {
   return (
     <button type="button" onClick={onClick}>
       {text}
@@ -10,7 +10,7 @@ function Button({text, onClick}) {
   );
 }
 
-function App() {
+function Counter() {
   const [number, setState] = useState(0);
 
   function handleClick(value) {
@@ -27,24 +27,25 @@ function App() {
           text={`Click me! (${number})`}
           onClick={() => handleClick(number + 1)}
         />
-        <p>
-          {[1, 2, 3, 4, 5].map((i) => (
-            <Button
-              text={i}
-              onClick={() => handleClick(number + i)}
-            >
-              {i}
-            </Button>
-          ))}
-        </p>
+      </p>
+      <p>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <Button
+            text={i}
+            onClick={() => handleClick(number + i)}
+          >
+            {i}
+          </Button>
+        ))}
       </p>
     </div>
 
   );
 }
+
 function Page() {
   return (
-    <App />
+    <Counter />
   );
 }
 
