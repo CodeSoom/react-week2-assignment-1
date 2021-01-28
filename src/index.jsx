@@ -2,47 +2,7 @@
 
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-
-function Counter({ count, onClick }) {
-  return (
-    <button type="button" onClick={onClick}>
-      click me!
-      (
-      {count}
-      )
-    </button>
-  );
-}
-
-function Button({ children }) {
-  return (
-    <>
-      <button type="button">{children}</button>
-    </>
-  );
-}
-
-function Buttons() {
-  return (
-    <>
-      {[1, 2, 3].map((i) => (
-        <Button key={i}>{i}</Button>
-      ))}
-    </>
-  );
-}
-
-function Page({ count, onClick }) {
-  return (
-    <div>
-      <p>hello,world!</p>
-      <Counter count={count} onClick={onClick} />
-      <p>
-        <Buttons />
-      </p>
-    </div>
-  );
-}
+import Page from './Page';
 
 function App() {
   const [state, setState] = useState({
