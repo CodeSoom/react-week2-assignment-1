@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-
-
-function Button({ text, onClick }) {
-  return (
-    <button type="button" onClick={onClick}>
-      {text}
-    </button>
-  );
-}
+import Button from './Button';
 
 function Counter() {
   const [number, setState] = useState(0);
