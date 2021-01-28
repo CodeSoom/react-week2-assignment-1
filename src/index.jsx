@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 
-function Button({number, onClick}) {
+function Button({text, onClick}) {
   return (
     <button type="button" onClick={onClick}>
-      Click me! (
-      {
-        number
-      }
-      )
+      {text}
     </button>
   );
 }
@@ -28,14 +24,17 @@ function App() {
       </p>
       <p>
         <Button
-          number={number}
+          text={`Click me! (${number})`}
           onClick={() => handleClick(number + 1)}
         />
         <p>
           {[1, 2, 3, 4, 5].map((i) => (
-            <button>
+            <Button
+              text={i}
+              onClick={() => handleClick(number + i)}
+            >
               {i}
-            </button>
+            </Button>
           ))}
         </p>
       </p>
