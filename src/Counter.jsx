@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
 function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
-      click me! ({count})
-    </button>
+    <>
+      <button type="button" onClick={() => onClick(1)}>
+        Click me!
+        (
+        {count}
+        )
+      </button>
+    </>
   );
 }
 

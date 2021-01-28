@@ -1,14 +1,13 @@
-/* @jsx React.createElement */
-
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import Button from './Button';
 
-function Buttons() {
+function Buttons({ count, onClick }) {
   return (
     <>
       {[1, 2, 3, 4, 5].map((i) => (
-        <Button key={i}>{i}</Button>
+        <Button onClick={onClick} count={count} i={i} key={i}>
+          {i}
+        </Button>
       ))}
     </>
   );

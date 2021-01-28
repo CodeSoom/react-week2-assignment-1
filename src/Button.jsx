@@ -1,12 +1,11 @@
-/* @jsx React.createElement */
+import React from 'react';
 
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-
-function Button({ children }) {
+function Button({ onClick, i }) {
   return (
     <>
-      <button type="button">{children}</button>
+      <button type="button" onClick={() => onClick(i)}>
+        {i}
+      </button>
     </>
   );
 }
