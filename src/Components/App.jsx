@@ -9,7 +9,12 @@ function App() {
     setCount(count + 1);
   }
 
-  return <Page count={count} counterClick={handleCounterClick} setCount={setCount} />;
+  function handleButtonClick(event) {
+    const buttonNumber = parseInt(event.target.name, 10);
+    setCount(count + buttonNumber);
+  }
+
+  return <Page count={count} counterClick={handleCounterClick} buttonClick={handleButtonClick} />;
 }
 
 export default App;

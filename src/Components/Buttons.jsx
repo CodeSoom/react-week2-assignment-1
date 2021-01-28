@@ -1,12 +1,11 @@
 import React from 'react';
+import NumberButton from './NumberButton';
 
-function Buttons({ count, onClick }) {
+function Buttons({ onClick }) {
   return (
     <p>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <button key={i} type="button" onClick={() => onClick(count + i)}>
-          {i}
-        </button>
+      {[1, 2, 3, 4, 5].map((number) => (
+        <NumberButton key={number} number={number} onClick={onClick} />
       ))}
     </p>
   );
