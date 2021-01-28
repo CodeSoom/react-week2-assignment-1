@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function NumberButton({ value, onClick }) {
   return (
-    <div>
+    <>
       <button
         type="button"
-        onClick={() => onClick(value)}
+        onClick={onClick}
       >
         {value}
       </button>
-    </div>
+    </>
   );
 }

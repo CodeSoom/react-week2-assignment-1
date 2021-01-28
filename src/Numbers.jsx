@@ -11,7 +11,7 @@ export default function Numbers({ onClick }) {
         <NumberButton
           key={i}
           value={i}
-          onClick={onClick}
+          onClick={() => onClick(i)}
         />
       ))}
     </div>
