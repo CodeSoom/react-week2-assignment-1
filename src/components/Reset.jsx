@@ -2,9 +2,9 @@ import React from 'react';
 
 import Button from '../commons/Button';
 
-function Reset({ onClick }) {
+function Reset({ count, onClick }) {
   return (
-    <Button onClick={() => onClick(0)}>Reset</Button>
+    <Button onClick={() => onClick(-count)}>Reset</Button>
   );
 }
 
