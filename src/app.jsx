@@ -22,10 +22,10 @@ export function App() {
 
     return (
         <div>
-            <p>Counter</p>
             <Page
                 count={count}
-                onclick={numClick}
+                onclick={handleClick}
+                numClick={numClick}
             />
         </div>     
     )
