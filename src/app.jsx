@@ -8,18 +8,16 @@ export function App() {
 
     const {count} = state;
 
-    function numClick(i){
+    function handleClick(increase){
         setState({
-            count: count + i,
+            count: count + increase,
         });
     }
 
     return (
-        <div>
-            <Page
-                count={count}
-                onclick={numClick}
-            />
-        </div>     
+        <Page
+            count={count}
+            onclick={handleClick}
+        />
     )
 }
