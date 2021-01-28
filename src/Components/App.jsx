@@ -5,7 +5,11 @@ import Page from './Page';
 function App() {
   const [count, setCount] = useState(0);
 
-  return <Page count={count} setCount={setCount} />;
+  function handleCounterClick() {
+    setCount(count + 1);
+  }
+
+  return <Page count={count} counterClick={handleCounterClick} setCount={setCount} />;
 }
 
 export default App;
