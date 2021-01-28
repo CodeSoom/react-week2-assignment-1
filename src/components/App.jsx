@@ -28,7 +28,6 @@ export default function App() {
     <div>
       <Counter
         count={count}
-        buttons={buttons}
         onClick={handleClick}
       />
       <Buttons
