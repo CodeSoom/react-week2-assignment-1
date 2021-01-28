@@ -31,6 +31,13 @@ function App() {
           number={number}
           onClick={() => handleClick(number + 1)}
         />
+        <p>
+          {[1, 2, 3, 4, 5].map((i) => (
+            <button>
+              {i}
+            </button>
+          ))}
+        </p>
       </p>
     </div>
 
