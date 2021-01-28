@@ -4,7 +4,7 @@ import Button from '../commons/Button';
 
 function Counter({ count, onClick }) {
   return (
-    <Button onClick={() => onClick()}>
+    <Button count={1} onClick={onClick}>
       Click me
       (
       {count}
