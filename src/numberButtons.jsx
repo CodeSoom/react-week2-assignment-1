@@ -1,9 +1,9 @@
 import React from 'react';
 
-export function NumberButtons({ numClick }) {
+export function NumberButtons({ onClick }) {
     return (
         <p>
-            {[1, 2, 3, 4, 5].map(i => <button type='button' key={i} onClick={() => numClick(i)}>{i}</button>)}
+            {[1, 2, 3, 4, 5].map(i => <button type='button' key={i} onClick={() => onClick(i)}>{i}</button>)}
         </p>
     );
 }

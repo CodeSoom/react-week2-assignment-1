@@ -2,7 +2,7 @@ import React from 'react';
 import { Counter } from './button';
 import { NumberButtons } from './numberButtons';
 
-export function Page({count, onclick, numClick}){
+export function Page({count, onclick}){
     return (
         <div>
             <p>Counter</p>
@@ -10,7 +10,7 @@ export function Page({count, onclick, numClick}){
                 count = {count}
                 onClick = {onclick}
             />
-            <NumberButtons numClick={numClick} />
+            <NumberButtons onClick={onclick} />
         </div>
     );
 }
