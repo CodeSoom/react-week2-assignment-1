@@ -2,7 +2,7 @@ import React from 'react';
 
 function NumberButton({ number, onClick }) {
   return (
-    <button name={number} type="button" onClick={onClick}>
+    <button type="button" onClick={() => onClick(number)}>
       {number}
     </button>
   );

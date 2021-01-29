@@ -9,9 +9,8 @@ function App() {
     setCount(count + 1);
   }
 
-  function handleButtonClick(event) {
-    const buttonNumber = parseInt(event.target.name, 10);
-    setCount(count + buttonNumber);
+  function handleButtonClick(number) {
+    setCount(count + number);
   }
 
   return (
