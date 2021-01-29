@@ -18,23 +18,19 @@ function ButtonClickme(props) {
 }
 
 function Button(props) {
-  const { value } = props;
-  const [{ number }, setNumber] = useState(0);
-  function handleClickNumber() {
-    setNumber({ number: value });
-  }
-
+  const { value, onClick } = props;
   return (
-    <button type="button" onClick={() => { handleClickNumber(); }}>
+    <button type="button" onClick={() => { onClick(value); }}>
       {value}
     </button>
   );
 }
 
-function ButtonNumber() {
+function ButtonNumber(props) {
+  const { onClick } = props;
   return (
     [1, 2, 3, 4, 5].map((i) => (
-      <Button key={i} value={i} />
+      <Button key={i} value={i} onClick={onClick} />
     )));
 }
 
@@ -44,6 +40,10 @@ function App() {
     setCount(count + 1);
   }
 
+  function handleClickNumber(value) {
+    setCount(count + value);
+  }
+
   return (
     <div>
       <Title />
@@ -51,7 +51,7 @@ function App() {
         <ButtonClickme value={count} onClick={handleClickCount} />
       </p>
       <p>
-        <ButtonNumber />
+        <ButtonNumber onClick={handleClickNumber} />
       </p>
     </div>
   );
