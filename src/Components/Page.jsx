@@ -4,12 +4,12 @@ import Counter from './Counter';
 import Buttons from './Buttons';
 
 
-function Page({ count, counterClick, buttonClick }) {
+function Page({ count, onCounterClick, onButtonClick }) {
   return (
     <div>
       <p>Counter</p>
-      <Counter count={count} onClick={counterClick} />
-      <Buttons onClick={buttonClick} />
+      <Counter count={count} onClick={onCounterClick} />
+      <Buttons onClick={onButtonClick} />
     </div>
   );
 }

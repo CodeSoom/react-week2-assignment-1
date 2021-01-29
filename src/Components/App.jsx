@@ -14,7 +14,13 @@ function App() {
     setCount(count + buttonNumber);
   }
 
-  return <Page count={count} counterClick={handleCounterClick} buttonClick={handleButtonClick} />;
+  return (
+    <Page
+      count={count}
+      onCounterClick={handleCounterClick}
+      onButtonClick={handleButtonClick}
+    />
+  );
 }
 
 export default App;
