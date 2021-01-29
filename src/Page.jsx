@@ -11,7 +11,7 @@ function Page({ count, onClick }) {
         count={count}
         onClick={onClick}
       />
-      <Buttons onCick={onClick} />
+      <Buttons onClick={onClick} />
     </div>
   );
 }
