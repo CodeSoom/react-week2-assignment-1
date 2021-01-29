@@ -18,11 +18,11 @@ function Button({ children }) {
   )
 }
 
-function Buttons() {
+function Buttons({ onClick }) {
   return (
     <p>
       {[1, 2, 3].map((i) => (
-        <Button key={i}>
+        <Button key={i} onClick={onClick}>
           {i}
         </Button>
       ))}
@@ -38,7 +38,10 @@ function Page({ count, onClick }) {
         count={count}
         onClick={onClick}
       />
-      <Buttons />  
+      <Buttons 
+        count = {Counter.count}
+        onClick={onClick}
+      />  
     </div>
   )
 }
@@ -55,6 +58,8 @@ function App() {
       count: count + 1
     });
   }
+
+  console.log(count)
 
   return (
     <Page
