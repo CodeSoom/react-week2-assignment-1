@@ -1,7 +1,7 @@
 Feature('Click me');
 
 const range = (count) => [...Array(count)];
- 
+
 Scenario('Click me test', (I) => {
   I.amOnPage('/');
 
