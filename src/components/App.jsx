@@ -8,22 +8,16 @@ export default function App() {
 
   const { count } = state;
 
-  function addByOne() {
+  function handleClickNumber(SeletedNumber = 1) {
     setState({
-      count: count + 1,
-    });
-  }
-  function addByClickedNumber(clickedNumber) {
-    setState({
-      count: count + clickedNumber,
+      count: count + SeletedNumber,
     });
   }
 
   return (
     <Page
       count={count}
-      addByOne={addByOne}
-      addByClickedNumber={addByClickedNumber}
+      handleClickNumber={handleClickNumber}
     />
   );
 }

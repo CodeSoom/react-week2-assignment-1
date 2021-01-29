@@ -2,16 +2,16 @@ import React from 'react';
 import Counter from './Counter';
 import Buttons from './Buttons';
 
-export default function Page({ count, addByOne, addByClickedNumber }) {
+export default function Page({ count, handleClickNumber }) {
   return (
     <div>
       <p>Counter</p>
       <Counter
         count={count}
-        addByOne={addByOne}
+        handleClickNumber={handleClickNumber}
       />
       <Buttons
-        addByClickedNumber={addByClickedNumber}
+        handleClickNumber={handleClickNumber}
       />
     </div>
   );
