@@ -18,7 +18,11 @@ function Button({ children }) {
   )
 }
 
+<<<<<<< HEAD
 function Buttons({ onClick }) {
+=======
+function Buttons({ count, onClick }) {
+>>>>>>> a65ad7a669c4bcad52bf1b1e36eaec937bb81c9c
   return (
     <p>
       {[1, 2, 3].map((i) => (
@@ -39,7 +43,11 @@ function Page({ count, onClick }) {
         onClick={onClick}
       />
       <Buttons 
+<<<<<<< HEAD
         count = {Counter.count}
+=======
+        count={count}
+>>>>>>> a65ad7a669c4bcad52bf1b1e36eaec937bb81c9c
         onClick={onClick}
       />  
     </div>
