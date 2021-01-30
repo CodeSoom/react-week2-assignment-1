@@ -1,38 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-
-function Title() {
-  return <div>Counter</div>;
-}
-
-function ButtonClickme(props) {
-  const { value, onClick } = props;
-  return (
-    <button type="button" onClick={onClick}>
-      Click me!
-      (
-      {value}
-      )
-    </button>
-  );
-}
-
-function Button(props) {
-  const { value, onClick } = props;
-  return (
-    <button type="button" onClick={() => { onClick(value); }}>
-      {value}
-    </button>
-  );
-}
-
-function ButtonNumber(props) {
-  const { onClick } = props;
-  return (
-    [1, 2, 3, 4, 5].map((i) => (
-      <Button key={i} value={i} onClick={onClick} />
-    )));
-}
+import Title from './Title';
+import ButtonClickme from './ButtonClickme';
+import ButtonNumber from './ButtonNumber';
 
 function App() {
   const [count, setCount] = useState(0);
