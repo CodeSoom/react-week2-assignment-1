@@ -1,56 +1,25 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom'
 
-function Counter({ count, onClick }) {
+import Counter from './Counter.jsx';
+
+function Button({ children, onClick }) {
   return (
     <button type="button" onClick={onClick}>
-      Click me!
-      ({ count })
-    </button>
-  )
-}
-
-function Button({ children }) {
-  return (
-    <button type="button">
       {children}
     </button>
   )
 }
 
-<<<<<<< HEAD
-function Buttons({ onClick }) {
-=======
-function Buttons({ count, onClick }) {
->>>>>>> a65ad7a669c4bcad52bf1b1e36eaec937bb81c9c
+function Buttons() {
   return (
     <p>
-      {[1, 2, 3].map((i) => (
-        <Button key={i} onClick={onClick}>
+      {[1, 2, 3, 4, 5].map((i) => (
+        <Button key={i}>
           {i}
         </Button>
       ))}
     </p>
-  )
-}
-
-function Page({ count, onClick }) {
-  return (
-    <div>
-      <p>Counter</p>
-      <Counter
-        count={count}
-        onClick={onClick}
-      />
-      <Buttons 
-<<<<<<< HEAD
-        count = {Counter.count}
-=======
-        count={count}
->>>>>>> a65ad7a669c4bcad52bf1b1e36eaec937bb81c9c
-        onClick={onClick}
-      />  
-    </div>
   )
 }
 
@@ -64,7 +33,24 @@ function App() {
   function handleClick() {
     setState({
       count: count + 1
+      
     });
+  }
+
+  function Page({ count, onClick }) {
+    return (
+      <div>
+        <p>Counter</p>
+        <Counter
+          count={count}
+          onClick={onClick}
+        />
+        <Buttons 
+          children={count}
+          onClick={onClick}
+        />
+      </div>
+    )
   }
 
   console.log(count)
