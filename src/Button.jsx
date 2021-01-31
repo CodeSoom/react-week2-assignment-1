@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Button({ plus, num, setNum }) {
+function Button({ plus, number, setNumber }) {
   function handleClick() {
-    setNum(num + plus);
+    setNumber(number + plus);
   }
 
   return (

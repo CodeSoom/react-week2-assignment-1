@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import Counter from './Counter.jsx';
-import ButtonGroup from './ButtonGroup.jsx';
+
+import Counter from './Counter';
+import Buttons from './Buttons';
 
 
 function App() {
-  const [num, setNum] = useState(0);
+  const [number, setNumber] = useState(0);
 
   return (
     <div>
       <p>Counter</p>
-      <Counter result={num} />
-      <ButtonGroup setNum={setNum} num={num} />
+      <Counter result={number} />
+      <Buttons setNumber={setNumber} number={number} />
     </div>
   );
 }
