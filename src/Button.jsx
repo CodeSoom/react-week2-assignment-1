@@ -1,13 +1,11 @@
 import React from 'react';
 
-function Button({ onClick, i }) {
+export default function Button({ onClick, number }) {
   return (
     <>
-      <button type="button" onClick={() => onClick(i)}>
-        {i}
+      <button type="button" onClick={() => onClick(number)}>
+        {number}
       </button>
     </>
   );
 }
-
-export default Button;

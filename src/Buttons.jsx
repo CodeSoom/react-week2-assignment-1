@@ -1,16 +1,15 @@
 import React from 'react';
+
 import Button from './Button';
 
-function Buttons({ onClick }) {
+export default function Buttons({ onClick }) {
   return (
-    <>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <Button onClick={onClick} i={i} key={i}>
-          {i}
+    <div>
+      {[1, 2, 3, 4, 5].map((number) => (
+        <Button onClick={onClick} number={number} key={number}>
+          {number}
         </Button>
       ))}
-    </>
+    </div>
   );
 }
-
-export default Buttons;
