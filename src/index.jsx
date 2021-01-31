@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './Counter';
 
-function Page() {
-  return (
-    <Counter />
-  );
-}
+import App from './App';
+
 
 ReactDOM.render(
-  <Page />,
+  <App />,
   document.getElementById('app'),
 );
