@@ -7,11 +7,14 @@ import Buttons from './Buttons';
 function App() {
   const [number, setNumber] = useState(0);
 
+  function handleClick(plus) {
+    setNumber(number + plus);
+  }
   return (
     <div>
       <p>Counter</p>
       <Counter result={number} />
-      <Buttons setNumber={setNumber} number={number} />
+      <Buttons onClick={handleClick} />
     </div>
   );
 }
