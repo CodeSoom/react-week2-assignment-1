@@ -32,7 +32,18 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  }
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeSoom/react-week2-assignment-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeSoom/react-week2-assignment-1/issues"
+  },
+  "homepage": "https://github.com/CodeSoom/react-week2-assignment-1#readme"
 }
