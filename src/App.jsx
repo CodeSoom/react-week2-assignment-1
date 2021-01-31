@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 import Page from './Page';
 
-function App() {
+export default function App() {
   const [state, setState] = useState({
     count: 0,
   });
 
   const { count } = state;
 
-  function handleClick(number = 1) {
+  function handleClick(number) {
     setState({
       count: count + number,
     });
@@ -22,4 +22,3 @@ function App() {
     />
   );
 }
-export default App;

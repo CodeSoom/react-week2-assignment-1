@@ -3,7 +3,7 @@ import React from 'react';
 import Counter from './Counter';
 import Buttons from './Buttons';
 
-function Page({ count, onClick }) {
+export default function Page({ count, onClick }) {
   return (
     <div>
       <Counter
@@ -14,5 +14,3 @@ function Page({ count, onClick }) {
     </div>
   );
 }
-
-export default Page;
