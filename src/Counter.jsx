@@ -3,7 +3,7 @@ import React from 'react';
 function Counter({ count, onClick }) {
   return (
     <button type="button" onClick={onClick}>
-      click me!
+      Click me!
       (
       {count}
       )
