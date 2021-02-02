@@ -1,11 +1,11 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
 
-export default function Counter({ result, onClick }) {
+export default function Counter({ count, onClick }) {
   return (
     <button type="button" onClick={() => onClick(1)}>
       Click me!(
-      {result}
+      {count}
       )
     </button>
   );

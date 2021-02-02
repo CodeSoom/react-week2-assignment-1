@@ -1,5 +1,15 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 
-export default function Page() {
+import Counter from './Counter';
+import Buttons from './Buttons';
 
+export default function Page({ count, onClick }) {
+  return (
+    <div>
+      <p>Counter</p>
+      <Counter count={count} onClick={onClick} />
+      <Buttons onClick={onClick} />
+    </div>
+  );
 }

@@ -1,20 +1,21 @@
 /* eslint-disable linebreak-style */
 import React, { useState } from 'react';
 
-import Counter from './Counter';
-import Buttons from './Buttons';
+import Page from './Page';
 
 export default function App() {
-  const [number, setNumber] = useState(0);
+  const [state, setState] = useState({
+    count: 0,
+  });
 
-  function handleClick(value) {
-    setNumber(number + value);
+  const { count } = state;
+
+  function handleClick(increment) {
+    setState({
+      count: count + increment,
+    });
   }
   return (
-    <div>
-      <p>Counter</p>
-      <Counter result={number} onClick={handleClick} />
-      <Buttons onClick={handleClick} />
-    </div>
+    <Page count={count} onClick={handleClick} />
   );
 }
