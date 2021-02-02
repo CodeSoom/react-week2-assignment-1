@@ -1,13 +1,11 @@
 import React from 'react';
 
-function Counter({ result }) {
+export default function Counter({ result, onClick }) {
   return (
-    <button type="button">
+    <button type="button" onClick={() => onClick(1)}>
       Click me!(
       {result}
       )
     </button>
   );
 }
-
-export default Counter;
