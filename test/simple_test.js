@@ -2,7 +2,7 @@ Feature('Click me');
 
 const range = (count) => [...Array(count)];
 
-Scenario('Click me test', (I) => {
+Scenario('Click me test', ({ I }) => {
   I.amOnPage('/');
 
   I.see('(0)');
@@ -12,7 +12,7 @@ Scenario('Click me test', (I) => {
   I.see('(5)');
 });
 
-Scenario('Click 1 test', (I) => {
+Scenario('Click 1 test', ({ I }) => {
   I.amOnPage('/');
 
   I.see('(0)');
@@ -22,7 +22,7 @@ Scenario('Click 1 test', (I) => {
   I.see('(5)');
 });
 
-Scenario('Click 2 test', (I) => {
+Scenario('Click 2 test', ({ I }) => {
   I.amOnPage('/');
 
   I.see('(0)');
@@ -32,7 +32,7 @@ Scenario('Click 2 test', (I) => {
   I.see('(10)');
 });
 
-Scenario('Click 3 test', (I) => {
+Scenario('Click 3 test', ({ I }) => {
   I.amOnPage('/');
 
   I.see('(0)');
@@ -42,7 +42,7 @@ Scenario('Click 3 test', (I) => {
   I.see('(15)');
 });
 
-Scenario('Click 4 test', (I) => {
+Scenario('Click 4 test', ({ I }) => {
   I.amOnPage('/');
 
   I.see('(0)');
@@ -52,7 +52,7 @@ Scenario('Click 4 test', (I) => {
   I.see('(20)');
 });
 
-Scenario('Click 5 test', (I) => {
+Scenario('Click 5 test', ({ I }) => {
   I.amOnPage('/');
 
   I.see('(0)');
