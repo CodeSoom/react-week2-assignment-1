@@ -4,12 +4,17 @@ export default function Counter() {
   const initialState = { count: 0 };
   const [state, setState] = useState(initialState);
 
+  function increaseCount(value) {
+    setState(({ count }) => ({
+      count: count + value,
+    }));
+  }
   return (
     <p>
       <h1>Counter</h1>
 
       <p>
-        <button type="button">
+        <button type="button" onClick={() => increaseCount(1)}>
           Click me!(
           {state.count}
           )
@@ -17,7 +22,7 @@ export default function Counter() {
       </p>
 
       {[1, 2, 3, 4, 5].map((value) => (
-        <button type="button">
+        <button type="button" key={value} onClick={() => increaseCount(value)}>
           {value}
         </button>
       ))}
