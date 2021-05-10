@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from './Button';
 
 export default function Counter() {
   const initialState = { count: 0 };
@@ -14,17 +15,17 @@ export default function Counter() {
       <h1>Counter</h1>
 
       <p>
-        <button type="button" onClick={() => increaseCount(1)}>
-          Click me!(
-          {state.count}
-          )
-        </button>
+        <Button
+          value={`Click me! (${state.count})`}
+          onClick={() => increaseCount(1)}
+        />
       </p>
 
       {[1, 2, 3, 4, 5].map((value) => (
-        <button type="button" key={value} onClick={() => increaseCount(value)}>
-          {value}
-        </button>
+        <Button
+          value={value}
+          onClick={() => increaseCount(value)}
+        />
       ))}
     </p>
   );
