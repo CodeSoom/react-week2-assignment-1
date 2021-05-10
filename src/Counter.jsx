@@ -4,9 +4,9 @@ export default function Counter() {
   const initialState = { count: 0 };
   const [state, setState] = useState(initialState);
 
-  function increaseCount(value) {
+  function increaseCount(step) {
     setState(({ count }) => ({
-      count: count + value,
+      count: count + step,
     }));
   }
   return (
