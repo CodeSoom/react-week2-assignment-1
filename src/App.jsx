@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import Page from './Page.jsx';
 
 
@@ -7,7 +7,7 @@ function App() {
         count: 0,
     });
 
-    const {count} = state;
+    const { count } = state;
 
     function handelClick(value) {
         setState({
@@ -16,9 +16,9 @@ function App() {
     }
 
     return (
-        <Page 
-        count={count}
-        onClick={handelClick}/>
+        <Page
+            count={count}
+            onClick={handelClick} />
     );
 }
 
