@@ -4,6 +4,7 @@ import Button from './Button';
 export default function Counter() {
   const initialState = { count: 0 };
   const [state, setState] = useState(initialState);
+  const steps = [1, 2, 3, 4, 5];
 
   function increaseCount(step) {
     setState(({ count }) => ({
@@ -21,7 +22,7 @@ export default function Counter() {
         />
       </p>
 
-      {[1, 2, 3, 4, 5].map((value) => (
+      {steps.map((value) => (
         <Button
           value={value}
           onClick={() => increaseCount(value)}
