@@ -1,6 +1,7 @@
 /* JSX React.createElement */
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 const element = (
     <div>
@@ -9,4 +10,4 @@ const element = (
 
 );
 
-console.log(element);
+ReactDOM.render(element, document.getElementById('app'));
