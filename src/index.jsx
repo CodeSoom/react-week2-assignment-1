@@ -3,11 +3,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const element = (
-    <div>
-        <p>Hello, World!!!</p>
-    </div>
+function App() {
+    return (
+        <div>
+            <p>Hello, World!!!</p>
+        </div>
+    );
+}
 
+ReactDOM.render(
+    <App />,
+    document.getElementById('app')
 );
-
-ReactDOM.render(element, document.getElementById('app'));
