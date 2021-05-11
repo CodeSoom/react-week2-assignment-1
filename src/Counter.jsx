@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import Button from './Button';
 
 export default function Counter() {
-  const initialState = { count: 0 };
-  const [state, setState] = useState(initialState);
+  const [state, setState] = useState({ count: 0 });
   const steps = [1, 2, 3, 4, 5];
 
   function increaseCount(step) {
