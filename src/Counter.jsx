@@ -6,10 +6,12 @@ export default function Counter() {
   const [state, setState] = useState({ count: 0 });
   const steps = [1, 2, 3, 4, 5];
 
+  const { count } = state;
+
   function increaseCount(step) {
-    setState(({ count }) => ({
+    setState({
       count: count + step,
-    }));
+    });
   }
   return (
     <p>
@@ -17,7 +19,7 @@ export default function Counter() {
 
       <p>
         <Button
-          value={`Click me! (${state.count})`}
+          value={`Click me! (${count})`}
           onClick={() => increaseCount(1)}
         />
       </p>
