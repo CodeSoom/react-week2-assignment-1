@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Counter from './Counter';
+import CounterContainer from './CounterContainer';
 
 export default function App() {
   return (
-    <Counter />
+    <CounterContainer />
   );
 }

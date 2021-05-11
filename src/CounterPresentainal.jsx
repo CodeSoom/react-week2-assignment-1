@@ -1,18 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import Button from './Button';
 
-export default function Counter() {
-  const [state, setState] = useState({ count: 0 });
+export default function CounterContainer({ count, increaseCount }) {
   const steps = [1, 2, 3, 4, 5];
 
-  const { count } = state;
-
-  function increaseCount(step) {
-    setState({
-      count: count + step,
-    });
-  }
   return (
     <p>
       <h1>Counter</h1>
@@ -33,3 +26,8 @@ export default function Counter() {
     </p>
   );
 }
+
+CounterContainer.propTypes = {
+  count: PropTypes.number.isRequired,
+  increaseCount: PropTypes.func.isRequired,
+};
