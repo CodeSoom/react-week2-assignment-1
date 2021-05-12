@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import Title from './Components/Title';
 import ClickMe from './Components/ClickMe';
 import NumberPad from './Components/NumbersPad';
 
@@ -16,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <Title />
+      <h2>Count</h2>
       <ClickMe count={count} onClick={handleClick} />
       <NumberPad numbers={numbers} onClick={handleClick} />
     </div>
