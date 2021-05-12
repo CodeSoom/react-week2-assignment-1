@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from './Button';
 
-function NumberPad({ numbers, onClick }) {
+export default function NumbersPad({ numbers, onClick }) {
   return (
     <div>
       {numbers.map((i) => (
@@ -15,9 +15,7 @@ function NumberPad({ numbers, onClick }) {
   );
 }
 
-NumberPad.propTypes = {
+NumbersPad.propTypes = {
   numbers: PropTypes.arrayOf(PropTypes.number).isRequired,
   onClick: PropTypes.func.isRequired,
 };
-
-export default NumberPad;

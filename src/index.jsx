@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Title from './Components/Title';
 import ClickMe from './Components/ClickMe';
-import NumberPad from './Components/NumberPad';
+import NumberPad from './Components/NumbersPad';
 
 function App() {
   const [state, setState] = useState({ count: 0 });
