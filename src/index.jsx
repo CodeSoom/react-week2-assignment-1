@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Button from './Button';
-import Buttons from './Buttons';
+import Page from './Page';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -15,13 +14,7 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h2>Counter</h2>
-      <Button counter={count} onHandleClickBtn={handleClickBtn} />
-      <br />
-      <br />
-      <Buttons onHandleClickNumberBtn={handleClickNumberBtn} />
-    </div>
+    <Page counter={count} onClickBtn={handleClickBtn} onClickNumberBtn={handleClickNumberBtn} />
   );
 };
 
