@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from './Button';
 
-function ClickMe({ count, onClick }) {
+export default function ClickMe({ count, onClick }) {
   return (
     <p>
       <Button key="click" onClick={() => onClick(1)}>
