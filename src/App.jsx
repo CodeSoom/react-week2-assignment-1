@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Page from './Page.jsx';
+import Page from './Page';
 
 
 function App() {
