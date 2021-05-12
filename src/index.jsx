@@ -5,16 +5,16 @@ import Page from './Page';
 const App = () => {
   const [count, setCount] = useState(0);
 
-  const handleClickBtn = () => {
+  const handleClick = () => {
     setCount(count + 1);
   };
 
-  const handleClickNumberBtn = (number) => {
+  const handleClickNumber = (number) => {
     setCount(count + number);
   };
 
   return (
-    <Page counter={count} onClickBtn={handleClickBtn} onClickNumberBtn={handleClickNumberBtn} />
+    <Page counter={count} onClick={handleClick} onClickNumber={handleClickNumber} />
   );
 };
 
