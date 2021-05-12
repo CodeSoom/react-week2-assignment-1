@@ -6,7 +6,9 @@ const App = () => {
   return (
     <div>
       <h2>Counter</h2>
-      <button type="button">Click! ({count})</button>
+      <button type="button" onClick={() => {
+        setCount(count + 1)
+      }}>Click! ({count})</button>
       <br />
       <br />
       {[1,2,3,4,5].map(number => (
