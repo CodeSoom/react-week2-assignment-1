@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Counter from './Counter';
 import Buttons from './Buttons';
 
-function Page({ count, onClick, onClickNumber }) {
+export default function Page({ count, onClick, onClickNumber }) {
   return (
     <div>
       <p>Counter</p>
@@ -24,5 +24,3 @@ Page.propTypes = {
   onClick: PropTypes.func.isRequired,
   onClickNumber: PropTypes.func.isRequired,
 };
-
-export default Page;
