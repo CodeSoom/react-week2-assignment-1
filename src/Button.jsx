@@ -3,7 +3,7 @@ import React from 'react';
 
 const Button = ({ count, handleClickBtn }) => (
   <button type="button" onClick={handleClickBtn}>
-    Click! (
+    Click me! (
     {count}
     )
   </button>
