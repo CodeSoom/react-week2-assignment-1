@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import CounterContainer from './CounterContainer';
+import Counter from './Counter';
 
 export default function App() {
+  const [state, setState] = useState({ count: 0 });
+
+  const { count } = state;
+
+  function increaseCount(step) {
+    setState({
+      count: count + step,
+    });
+  }
+
   return (
-    <CounterContainer />
+    <Counter
+      count={count}
+      increaseCount={increaseCount}
+    />
   );
 }
