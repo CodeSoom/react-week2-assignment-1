@@ -6,10 +6,10 @@ import Buttons from './Buttons';
 const Page = ({ counter, onClickBtn, onClickNumberBtn }) => (
   <div>
     <h2>Counter</h2>
-    <Button counter={counter} onHandleClickBtn={onClickBtn} />
+    <Button count={counter} handleClickBtn={onClickBtn} />
     <br />
     <br />
-    <Buttons onHandleClickNumberBtn={onClickNumberBtn} />
+    <Buttons handleClickNumberBtn={onClickNumberBtn} />
   </div>
 );
 

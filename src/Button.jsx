@@ -1,10 +1,10 @@
 import React from 'react';
 
 // eslint-disable-next-line react/prop-types
-const Button = ({ counter, onHandleClickBtn }) => (
-  <button type="button" onClick={onHandleClickBtn}>
+const Button = ({ count, handleClickBtn }) => (
+  <button type="button" onClick={handleClickBtn}>
     Click! (
-    {counter}
+    {count}
     )
   </button>
 );
