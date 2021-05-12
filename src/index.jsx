@@ -1,21 +1,7 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-
-const Button = ({counter, onHandleClickBtn}) => (
-  <button type="button" onClick={onHandleClickBtn}>
-    Click! ({counter})
-  </button>
-)
-
-const Buttons = ({onHandleClickNumberBtn}) => (
-  <>
-    {[1,2,3,4,5].map(number => (
-      <button type="button" onClick={() => onHandleClickNumberBtn(number)}>
-        {number}
-      </button>
-    ))}
-  </>
-)
+import Button from './Button';
+import Buttons from './Buttons';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -27,7 +13,7 @@ const App = () => {
   const handleClickNumberBtn = (number) => {
     setCount(count + number)
   }
-  
+
   return (
     <div>
       <h2>Counter</h2>
