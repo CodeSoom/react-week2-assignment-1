@@ -1,6 +1,6 @@
+import { func, number } from 'prop-types';
 import React from 'react';
 
-// eslint-disable-next-line react/prop-types
 const Button = ({ count, handleClickBtn }) => (
   <button type="button" onClick={handleClickBtn}>
     Click! (
@@ -8,5 +8,10 @@ const Button = ({ count, handleClickBtn }) => (
     )
   </button>
 );
+
+Button.propTypes = {
+  count: number.isRequired,
+  handleClickBtn: func.isRequired,
+};
 
 export default Button;
