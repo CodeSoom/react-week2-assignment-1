@@ -5,7 +5,7 @@ import Page from './Page';
 const App = () => {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => {
+  const handleClickPlusCount = () => {
     setCount(count + 1);
   };
 
@@ -14,7 +14,11 @@ const App = () => {
   };
 
   return (
-    <Page counter={count} onClick={handleClick} onClickNumber={handleClickNumber} />
+    <Page
+      counter={count}
+      onClickPlusCount={handleClickPlusCount}
+      onClickNumber={handleClickNumber}
+    />
   );
 };
 

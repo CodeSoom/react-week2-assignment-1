@@ -1,8 +1,11 @@
 import { func, number } from 'prop-types';
 import React from 'react';
 
-const Button = ({ count, handleClick }) => (
-  <button type="button" onClick={handleClick}>
+const Button = ({ count, onClick }) => (
+  <button
+    type="button"
+    onClick={onClick}
+  >
     Click me! (
     {count}
     )
@@ -11,7 +14,7 @@ const Button = ({ count, handleClick }) => (
 
 Button.propTypes = {
   count: number.isRequired,
-  handleClick: func.isRequired,
+  onClick: func.isRequired,
 };
 
 export default Button;

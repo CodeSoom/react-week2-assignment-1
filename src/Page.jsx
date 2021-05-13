@@ -3,10 +3,13 @@ import { func, number } from 'prop-types';
 import Button from './Button';
 import Buttons from './Buttons';
 
-const Page = ({ counter, onClick, onClickNumber }) => (
+const Page = ({ counter, onClickPlusCount, onClickNumber }) => (
   <div>
     <h2>Counter</h2>
-    <Button count={counter} handleClick={onClick} />
+    <Button
+      count={counter}
+      onClick={onClickPlusCount}
+    />
     <br />
     <br />
     <Buttons handleClickNumber={onClickNumber} />
@@ -15,7 +18,7 @@ const Page = ({ counter, onClick, onClickNumber }) => (
 
 Page.propTypes = {
   counter: number.isRequired,
-  onClick: func.isRequired,
+  onClickPlusCount: func.isRequired,
   onClickNumber: func.isRequired,
 };
 
