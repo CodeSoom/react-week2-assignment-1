@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Button from './Button';
 
@@ -12,8 +11,3 @@ export default function ClickMe({ count, onClick }) {
     </p>
   );
 }
-
-ClickMe.propTypes = {
-  count: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
-};

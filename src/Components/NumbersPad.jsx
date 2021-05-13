@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Button from './Button';
 
@@ -14,8 +13,3 @@ export default function NumbersPad({ numbers, onClick }) {
     </div>
   );
 }
-
-NumbersPad.propTypes = {
-  numbers: PropTypes.arrayOf(PropTypes.number).isRequired,
-  onClick: PropTypes.func.isRequired,
-};
