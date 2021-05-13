@@ -9,6 +9,7 @@ export default function App() {
 
   function increaseCount(value) {
     setState({
+      ...state,
       count: count + value,
     });
   }
