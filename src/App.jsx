@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import Page from './Page';
 
-
 function App() {
   const [state, setState] = useState({
     count: 0,
@@ -19,7 +18,8 @@ function App() {
   return (
     <Page
       count={count}
-      onClick={handleClick} />
+      onClick={handleClick}
+    />
   );
 }
 

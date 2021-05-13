@@ -1,15 +1,15 @@
 import React from 'react';
 
-
 function Counter({ count, onClick }) {
   return (
     <p>
       <button
-        type='button'
-        onClick={() => onClick(1)}>
+        type="button"
+        onClick={() => onClick(1)}
+      >
         Click me!
         (
-          {count}
+        {count}
         )
       </button>
     </p>
