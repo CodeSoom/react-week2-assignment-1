@@ -17,10 +17,10 @@ export default function CounterContainer({ count, increaseCount }) {
         />
       </p>
 
-      {steps.map((value) => (
+      {steps.map((step) => (
         <Button
-          value={value}
-          onClick={() => increaseCount(value)}
+          value={step}
+          onClick={() => increaseCount(step)}
         />
       ))}
     </p>

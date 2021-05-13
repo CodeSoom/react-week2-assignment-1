@@ -7,9 +7,9 @@ export default function App() {
 
   const { count } = state;
 
-  function increaseCount(step) {
+  function increaseCount(value) {
     setState({
-      count: count + step,
+      count: count + value,
     });
   }
 
