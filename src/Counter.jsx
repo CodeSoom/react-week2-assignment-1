@@ -19,6 +19,7 @@ export default function CounterContainer({ count, increaseCount }) {
 
       {steps.map((step) => (
         <Button
+          key={step}
           value={step}
           onClick={() => increaseCount(step)}
         />
