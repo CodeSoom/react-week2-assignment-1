@@ -1,12 +1,10 @@
 import React from 'react';
 
-export default ({ count, onClick }) => (
+export default ({ onClick, children }) => (
   <button
     type="button"
     onClick={onClick}
   >
-    Click me! (
-    {count}
-    )
+    {children}
   </button>
 );

@@ -1,14 +1,15 @@
 import React from 'react';
+import Button from './Button';
 
 export default ({ handleClickNumber }) => (
   <>
     {[1, 2, 3, 4, 5].map((number) => (
-      <button
+      <Button
         type="button"
         onClick={() => handleClickNumber(number)}
       >
         {number}
-      </button>
+      </Button>
     ))}
   </>
 );
