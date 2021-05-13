@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 function Button({ id, count, onClick }) {
   return (
@@ -10,10 +9,10 @@ function Button({ id, count, onClick }) {
   );
 }
 
-Button.prototype = {
-  id: PropTypes.string,
-  count: PropTypes.number,
-  onClick: PropTypes.func,
+Button.propTypes = {
+  id: propTypes.string.isRequired,
+  count: propTypes.number.isRequired,
+  onClick: propTypes.func.isRequired,
 };
 
 export default Button;

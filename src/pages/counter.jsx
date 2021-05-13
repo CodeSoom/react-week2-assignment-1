@@ -1,22 +1,25 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
-import Button from '../components/Button';
-import Buttons from '../components/Buttons';
+import propTypes from 'prop-types';
 
-function Counter({ numbers, count, onClick }) {
+import Button from '../components/Button';
+import NumberButtons from '../components/NumberButtons';
+
+function Counter({ count, onClick }) {
   return (
     <div>
       <p>Counter</p>
       <Button
         id="Click me"
         count={count}
-        onClick={() => {
-          onClick(1);
-        }}
+        onClick={() => { onClick(1); }}
       />
-      <Buttons numbers={numbers} count={count} onClick={onClick} />
+      <NumberButtons count={count} onClick={onClick} />
     </div>
   );
 }
 
+Counter.propTypes = {
+  count: propTypes.number.isRequired,
+  onClick: propTypes.func.isRequired,
+};
 export default Counter;
