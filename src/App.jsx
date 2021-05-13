@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Page from './Page';
 
-const App = () => {
+export default () => {
   const [count, setCount] = useState(0);
 
   const handleClickPlusCount = () => {
@@ -20,5 +20,3 @@ const App = () => {
     />
   );
 };
-
-export default App;

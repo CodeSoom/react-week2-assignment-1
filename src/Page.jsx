@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Buttons from './Buttons';
 
-const Page = ({ counter, onClickPlusCount, onClickNumber }) => (
+export default ({ counter, onClickPlusCount, onClickNumber }) => (
   <div>
     <h2>Counter</h2>
     <Button
@@ -14,5 +14,3 @@ const Page = ({ counter, onClickPlusCount, onClickNumber }) => (
     <Buttons handleClickNumber={onClickNumber} />
   </div>
 );
-
-export default Page;

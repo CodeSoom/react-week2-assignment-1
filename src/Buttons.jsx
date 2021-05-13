@@ -1,7 +1,6 @@
-import { func } from 'prop-types';
 import React from 'react';
 
-const Buttons = ({ handleClickNumber }) => (
+export default ({ handleClickNumber }) => (
   <>
     {[1, 2, 3, 4, 5].map((number) => (
       <button
@@ -13,5 +12,3 @@ const Buttons = ({ handleClickNumber }) => (
     ))}
   </>
 );
-
-export default Buttons;
