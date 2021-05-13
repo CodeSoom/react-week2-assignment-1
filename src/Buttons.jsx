@@ -14,8 +14,4 @@ const Buttons = ({ handleClickNumber }) => (
   </>
 );
 
-Buttons.propTypes = {
-  handleClickNumber: func.isRequired,
-};
-
 export default Buttons;
