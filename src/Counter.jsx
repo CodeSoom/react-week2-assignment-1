@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from './Button';
 
-export default function CounterContainer({ count, increaseCount }) {
+export default function Counter({ count, increaseCount }) {
   const steps = [1, 2, 3, 4, 5];
 
   return (
@@ -28,7 +28,7 @@ export default function CounterContainer({ count, increaseCount }) {
   );
 }
 
-CounterContainer.propTypes = {
+Counter.propTypes = {
   count: PropTypes.number.isRequired,
   increaseCount: PropTypes.func.isRequired,
 };
