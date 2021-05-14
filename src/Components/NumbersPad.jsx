@@ -7,7 +7,7 @@ export default function NumbersPad({ numbers, onClick }) {
     <div>
       {numbers.map((i) => (
         <Button key={i} onClick={() => onClick(i)}>
-          {`${i}`}
+          {i}
         </Button>
       ))}
     </div>
