@@ -1,26 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Page from './Page';
-
-function App() {
-  const [count, setCount] = useState(0);
-
-  function handleClickPlusOne() {
-    setCount(count + 1);
-  }
-
-  function handleClickPlusNumber(value) {
-    setCount(count + value);
-  }
-
-  return (
-    <Page
-      count={count}
-      onClickPlusOne={handleClickPlusOne}
-      onClickPlusNumber={handleClickPlusNumber}
-    />
-  );
-}
+import App from "./App";
 
 ReactDOM.render(<App />, document.getElementById('app'));
