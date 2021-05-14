@@ -3,16 +3,16 @@ import React from 'react';
 import Counter from './Counter';
 import Buttons from './Buttons';
 
-export default function Page({ count, onClick, onClickNumber }) {
+export default function Page({ count, onClickPlusOne, onClickPlusNumber }) {
   return (
     <div>
       <p>Counter</p>
       <Counter
         count={count}
-        onClick={onClick}
+        onClickPlusOne={onClickPlusOne}
       />
       <Buttons
-        onClickNumber={onClickNumber}
+        onClickPlusNumber={onClickPlusNumber}
       />
     </div>
   );

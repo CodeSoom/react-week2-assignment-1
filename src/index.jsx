@@ -6,19 +6,19 @@ import Page from './Page';
 function App() {
   const [count, setCount] = useState(0);
 
-  function handleClick() {
+  function handleClickPlusOne() {
     setCount(count + 1);
   }
 
-  function handleClickNumber(value) {
+  function handleClickPlusNumber(value) {
     setCount(count + value);
   }
 
   return (
     <Page
       count={count}
-      onClick={handleClick}
-      onClickNumber={handleClickNumber}
+      onClickPlusOne={handleClickPlusOne}
+      onClickPlusNumber={handleClickPlusNumber}
     />
   );
 }
