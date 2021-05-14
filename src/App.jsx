@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
 
-import Counter from "./Counter";
-import Buttons from "./Buttons";
-
+import Counter from './Counter';
+import Buttons from './Buttons';
 
 export default function App() {
   const [count, setCount] = useState(0);
