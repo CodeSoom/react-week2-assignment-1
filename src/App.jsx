@@ -1,19 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Page from './Page';
 
 function App() {
-  const (state, setState) = useState({
-    count: 0,
-    countOne: 1,
-  });
-
-  const { count } = state;
+  const [count, setCount] = useState(0);
 
   function handleClick() {
-    setState({
-      count: count + 1,
-      countOne: count + 1,
-    });
+    setCount(count + 1);
   }
 
   return (
