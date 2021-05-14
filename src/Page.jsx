@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Counter from './Counter';
 import Buttons from './Buttons';
@@ -18,9 +17,3 @@ export default function Page({ count, onClick, onClickNumber }) {
     </div>
   );
 }
-
-Page.propTypes = {
-  count: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
-  onClickNumber: PropTypes.func.isRequired,
-};

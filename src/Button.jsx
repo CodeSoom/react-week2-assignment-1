@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 export default function Button({ value, onClickNumber }) {
   return (
@@ -8,8 +7,3 @@ export default function Button({ value, onClickNumber }) {
     </button>
   );
 }
-
-Button.propTypes = {
-  value: PropTypes.number.isRequired,
-  onClickNumber: PropTypes.func.isRequired,
-};

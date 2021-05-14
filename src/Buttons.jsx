@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Button from './Button';
 
@@ -14,7 +13,3 @@ export default function Buttons({ onClickNumber }) {
     </p>
   );
 }
-
-Buttons.propTypes = {
-  onClickNumber: PropTypes.func.isRequired,
-};
