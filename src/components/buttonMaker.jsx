@@ -6,6 +6,7 @@ function ButtonMaker({ value, onClickChange }) {
     value: PropTypes.string.isRequired,
     onClickChange: PropTypes.string.isRequired,
   };
+
   return (
     <button type="button" key={value} onClick={() => onClickChange(value)}>
       {value}

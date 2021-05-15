@@ -6,6 +6,7 @@ function ClickMeButton({ count, handelClick }) {
     count: PropTypes.string.isRequired,
     handelClick: PropTypes.string.isRequired,
   };
+
   return (
     <div>
       <button type="button" onClick={handelClick}>
