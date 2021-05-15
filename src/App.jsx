@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import Page from './Page';
 
 export default () => {
@@ -7,7 +8,6 @@ export default () => {
   const handleClickPlusCount = () => {
     setCount(count + 1);
   };
-
   const handleClickNumber = (number) => {
     setCount(count + number);
   };
