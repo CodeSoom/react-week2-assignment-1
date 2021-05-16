@@ -1,15 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import Button from '../components/Button';
+import Counter from '../components/Counter';
 import NumberButtons from '../components/NumberButtons';
 
-function Counter({ count, onClick }) {
+export default function CounterPage({ count, onClick }) {
   return (
     <div>
       <p>Counter</p>
-      <Button
-        id="Click me"
+      <Counter
+        id="counter"
         count={count}
         onClick={() => { onClick(1); }}
       />
@@ -18,8 +18,7 @@ function Counter({ count, onClick }) {
   );
 }
 
-Counter.propTypes = {
+CounterPage.propTypes = {
   count: propTypes.number.isRequired,
   onClick: propTypes.func.isRequired,
 };
-export default Counter;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Counter from './pages/counter';
+import CounterPage from './pages/CounterPage';
 
-function App() {
+export default function App() {
   const [state, setState] = useState({ count: 0 });
   const { count } = state;
 
@@ -10,6 +10,5 @@ function App() {
     setState({ count: count + value });
   }
 
-  return <Counter count={count} onClick={handleClick} />;
+  return <CounterPage count={count} onClick={handleClick} />;
 }
-export default App;
