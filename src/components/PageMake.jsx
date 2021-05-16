@@ -20,6 +20,7 @@ export default function PageMake({ count, handelClick, onClickChange }) {
       {[1, 2, 3, 4, 5].map((i) => (
         <ButtonMaker
           value={i}
+          key={i}
           onClickChange={onClickChange}
         />
       ))}

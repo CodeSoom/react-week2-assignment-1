@@ -8,7 +8,7 @@ export default function ButtonMaker({ value, onClickChange }) {
   };
 
   return (
-    <button type="button" key={value} onClick={() => onClickChange(value)}>
+    <button type="button" onClick={() => onClickChange(value)}>
       {value}
     </button>
   );
