@@ -6,10 +6,6 @@ import NumberButtons from './NumberButtons';
 export default function App() {
   const [count, setCount] = useState(0);
 
-  function handleClickPlusOne() {
-    setCount(count + 1);
-  }
-
   function handleClickPlusNumber(value) {
     setCount(count + value);
   }
@@ -19,7 +15,7 @@ export default function App() {
       <p>Counter</p>
       <Counter
         count={count}
-        onClickPlusOne={handleClickPlusOne}
+        onClickPlusOne={() => handleClickPlusNumber(1)}
       />
       <NumberButtons
         onClickPlusNumber={handleClickPlusNumber}
