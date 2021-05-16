@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ClickMeButton({ count, handelClick }) {
+export default function ClickMeButton({ count, handelClick }) {
   ClickMeButton.propTypes = {
     count: PropTypes.string.isRequired,
     handelClick: PropTypes.string.isRequired,
@@ -18,4 +18,3 @@ function ClickMeButton({ count, handelClick }) {
     </div>
   );
 }
-export default ClickMeButton;

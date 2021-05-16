@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ButtonMaker({ value, onClickChange }) {
+export default function ButtonMaker({ value, onClickChange }) {
   ButtonMaker.propTypes = {
     value: PropTypes.string.isRequired,
     onClickChange: PropTypes.string.isRequired,
@@ -13,4 +13,3 @@ function ButtonMaker({ value, onClickChange }) {
     </button>
   );
 }
-export default ButtonMaker;
