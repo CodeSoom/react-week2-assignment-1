@@ -7,6 +7,7 @@ export default function NumberButtons({ onClickPlusNumber }) {
     <p>
       {numbers.map((number) => (
         <button
+          key={number}
           type="button"
           onClick={() => onClickPlusNumber(number)}
         >
