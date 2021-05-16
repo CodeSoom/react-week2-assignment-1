@@ -3,12 +3,12 @@ import React from 'react';
 import Button from './Button';
 import Buttons from './Buttons';
 
-export default function Page({ counter, onClickPlusCount, onClickNumber }) {
+export default function Page({ counter, onClickPlusCount }) {
   return (
     <div>
       <h2>Counter</h2>
       <Button
-        onClick={onClickPlusCount}
+        onClick={() => onClickPlusCount(1)}
       >
         Click me!
         (
@@ -17,7 +17,7 @@ export default function Page({ counter, onClickPlusCount, onClickNumber }) {
       </Button>
       <br />
       <br />
-      <Buttons handleClickNumber={onClickNumber} />
+      <Buttons onClickPlusCount={onClickPlusCount} />
     </div>
   );
 }
