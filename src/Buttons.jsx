@@ -1,12 +1,16 @@
 import React from 'react';
 
+import Button from './Button';
+
 function Buttons({ onClick }) {
+  const numbers = [1, 2, 3, 4, 5];
+
   return (
     <p>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <button type="button" key={i} onClick={() => onClick(i)}>
-          {i}
-        </button>
+      {numbers.map((number) => (
+        <Button key={number} onClick={() => onClick(number)}>
+          {number}
+        </Button>
       ))}
     </p>
   );

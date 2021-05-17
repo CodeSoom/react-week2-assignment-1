@@ -3,16 +3,10 @@ import React, { useState } from 'react';
 import Page from './Page';
 
 function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
+  const [count, setCount] = useState(0);
 
   function handleClick(value) {
-    setState({
-      count: count + value,
-    });
+    setCount(count + value);
   }
 
   return (
