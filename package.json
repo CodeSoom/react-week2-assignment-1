@@ -2,7 +2,7 @@
   "name": "assignment-2-1",
   "version": "1.0.0",
   "description": "CodesSoom React Week2 assignment",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "start": "webpack serve",
     "test:e2e": "codeceptjs run --steps",
@@ -32,6 +32,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
