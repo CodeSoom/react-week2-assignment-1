@@ -10,9 +10,9 @@ export default function Page() {
 
   const { count } = state;
 
-  function handleClick() {
+  function handleClick({ number }) {
     setState({
-      count: count + 1,
+      count: count + number,
     });
   }
 
@@ -21,7 +21,7 @@ export default function Page() {
       <p>Hello World!</p>
       <Counter
         count={count}
-        onClick={handleClick}
+        onClick={() => handleClick({ number: 1 })}
       />
       <Buttons
         onClick={handleClick}
