@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from './Button';
+import NumberButton from './NumberButton';
 
-function NumberButtons({ labels }) {
+function NumberButtons({ values }) {
   return (
     <p>
       {
-        labels.map((label) => <Button key={label}>{label}</Button>)
+        values.map((value) => <NumberButton key={value}>{value}</NumberButton>)
       }
     </p>
   );
 }
 
 NumberButtons.propTypes = {
-  labels: PropTypes.arrayOf(PropTypes.number).isRequired,
+  values: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default NumberButtons;
