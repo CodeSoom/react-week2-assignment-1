@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import CounterPage from './CounterPage';
 
 function App() {
-  <CounterPage />;
+  return (
+    <CounterPage />
+  );
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
