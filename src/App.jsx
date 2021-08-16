@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CountButton from './CountButton';
-import Buttons from './Buttons';
+import NumberButtons from './NumberButtons';
 
 export default function App() {
   const [state, setState] = useState({
@@ -22,7 +22,7 @@ export default function App() {
         />
 
       </p>
-      <Buttons labels={[1, 2, 3]} />
+      <NumberButtons labels={[1, 2, 3]} />
     </div>
   );
 }

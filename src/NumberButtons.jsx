@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-function Buttons({ labels }) {
+function NumberButtons({ labels }) {
   return (
     <p>
       {
@@ -12,8 +12,8 @@ function Buttons({ labels }) {
   );
 }
 
-Buttons.propTypes = {
+NumberButtons.propTypes = {
   labels: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
-export default Buttons;
+export default NumberButtons;
