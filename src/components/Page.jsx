@@ -23,7 +23,9 @@ export default function Page() {
         count={count}
         onClick={handleClick}
       />
-      <Buttons />
+      <Buttons
+        onClick={handleClick}
+      />
     </div>
   );
 }
