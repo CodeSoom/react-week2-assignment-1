@@ -12,7 +12,7 @@ function App() {
       </p>
       <p>
         <button type="button" onClick={() => setCount((prevCount) => prevCount + 1)}>
-          Click Me!
+          Click me!
           (
           {count}
           )
