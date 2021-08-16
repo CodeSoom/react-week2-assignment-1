@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import Button from './Button';
 import Buttons from './Buttons';
+import ClickMe from './ClickMe';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,19 +13,8 @@ function App() {
       <p>
         {count}
       </p>
-      <p>
-        <Button onClick={() => setCount((prevCount) => prevCount + 1)}>
-          Click me!
-          (
-          <span>
-            {count}
-          </span>
-          )
-        </Button>
-      </p>
-      <p>
-        <Buttons setCount={setCount} />
-      </p>
+      <ClickMe count={count} setCount={setCount} />
+      <Buttons setCount={setCount} />
     </>
   );
 }
