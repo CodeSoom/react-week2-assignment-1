@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 function Counter({ count, onClick }) {
     return (
-        <button type="button" onClick={onClick}>
+        <button type="button" onClick={() => onClick(1)}>
             Click me!
             (
             { count }
@@ -12,21 +12,21 @@ function Counter({ count, onClick }) {
     );
 }
 
-function Button({ children }) {
+function Button({ children, onClick }) {
     return (
-            <button type="button">
+            <button type="button" onClick={onClick}>
                 {children}
             </button>
     );
 }
 
-function Buttons() {
+function Buttons({ onClick }) {
     const NUMBER_BUTTONS = [1, 2, 3, 4, 5];
 
     return (
         <p>
             {NUMBER_BUTTONS.map((i) => (
-                <Button key={i}>
+                <Button key={i} onClick={() => onClick(i)}>
                     {i}
                 </Button>
             ))}
@@ -42,7 +42,9 @@ function Page({ count, onClick }) {
                 count={count}
                 onClick={onClick}
             />
-            <Buttons />
+            <Buttons 
+                onClick={onClick}
+            />
         </div>
     );
 }
@@ -54,9 +56,9 @@ function App() {
     
     const { count } = state;
 
-    function handleClick() {
+    function handleClick(i) {
         setState({
-            count: count + 1,
+            count: count + i,
         });
     }
     
