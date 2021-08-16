@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import Counter from './Counter';
-import ClickMe from './ClickMe';
+import NumberButtons from './NumberButtons';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +16,7 @@ function App() {
         {count}
       </p>
       <Counter setCount={setCount}>{count}</Counter>
-      <Buttons setCount={setCount} />
+      <NumberButtons setCount={setCount} />
     </>
   );
 }

@@ -5,7 +5,7 @@ import Button from './Button';
 
 const BUTTON_NUMBERS = [1, 2, 3, 4, 5];
 
-export default function Buttons({ setCount }) {
+export default function NumberButtons({ setCount }) {
   const onClick = (number) => setCount((prevCount) => prevCount + number);
   return (
     <p>
@@ -14,6 +14,6 @@ export default function Buttons({ setCount }) {
   );
 }
 
-Buttons.propTypes = {
+NumberButtons.propTypes = {
   setCount: PropTypes.func.isRequired,
 };
