@@ -22,7 +22,7 @@ export default function App() {
         />
 
       </p>
-      <NumberButtons labels={[1, 2, 3]} />
+      <NumberButtons />
     </div>
   );
 }
