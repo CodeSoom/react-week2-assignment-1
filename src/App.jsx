@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Counter from './Counter';
+import CountButton from './CountButton';
 import Buttons from './Buttons';
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div>
       <p>
-        <Counter
+        <CountButton
           count={count}
           onClick={handleClick}
         />
