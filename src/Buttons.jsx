@@ -8,9 +8,9 @@ const BUTTON_NUMBERS = [1, 2, 3, 4, 5];
 export default function Buttons({ setCount }) {
   const onClick = (number) => setCount((prevCount) => prevCount + number);
   return (
-    <>
+    <p>
       {BUTTON_NUMBERS.map((number) => <Button onClick={() => onClick(number)}>{number}</Button>)}
-    </>
+    </p>
   );
 }
 

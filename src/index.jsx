@@ -9,7 +9,9 @@ function App() {
 
   return (
     <>
-      Counter
+      <h1>
+        Counter
+      </h1>
       <p>
         {count}
       </p>
