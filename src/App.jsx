@@ -1,29 +1,6 @@
 import React, { useState } from 'react';
-
-function Counter({ count, onClick }) {
-  return (
-    <button type="button" onClick={onClick}>
-      Click me!
-      (
-      {count}
-      )
-    </button>
-  );
-}
-
-function Button({ children }) {
-  return <button type="button">{children}</button>;
-}
-
-function Buttons({ labels }) {
-  return (
-    <p>
-      {
-        labels.map((label) => <Button key={label}>{label}</Button>)
-      }
-    </p>
-  );
-}
+import Counter from './Counter';
+import Buttons from './Buttons';
 
 export default function App() {
   const [state, setState] = useState({
