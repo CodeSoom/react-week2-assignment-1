@@ -21,9 +21,11 @@ function Button({ children }) {
 }
 
 function Buttons() {
+    const NUMBER_BUTTONS = [1, 2, 3, 4, 5];
+
     return (
         <p>
-            {[1, 2, 3].map((i) => (
+            {NUMBER_BUTTONS.map((i) => (
                 <Button key={i}>
                     {i}
                 </Button>
