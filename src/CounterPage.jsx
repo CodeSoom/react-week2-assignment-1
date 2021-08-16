@@ -20,8 +20,8 @@ export default function CounterPage() {
       </Button>
       <div>
         {
-          [1, 2, 3, 4, 5].map((i) => (
-            <Button key={i} onClick={() => handleClick(i)}>{i}</Button>
+          [1, 2, 3, 4, 5].map((value) => (
+            <Button key={value.toString()} onClick={() => handleClick(value)}>{}</Button>
           ))
         }
       </div>
