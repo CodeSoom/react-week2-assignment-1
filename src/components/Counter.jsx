@@ -1,12 +1,12 @@
 import React from "react";
-import Button from "./Button";
-import Page from "./Page";
 
 function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
-      Click me({count})
-    </button>
+    <div>
+      <button type="button" onClick={() => onClick(1)}>
+        Click me({count})
+      </button>
+    </div>
   );
 }
 
