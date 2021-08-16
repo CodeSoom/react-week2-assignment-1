@@ -9,8 +9,12 @@ export default function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function handleCountClick() {
     setState({ count: count + 1 });
+  }
+
+  function setCount(value) {
+    setState({ count: count + value });
   }
 
   return (
@@ -18,11 +22,11 @@ export default function App() {
       <p>
         <CountButton
           count={count}
-          onClick={handleClick}
+          onClick={handleCountClick}
         />
 
       </p>
-      <NumberButtons />
+      <NumberButtons setCount={setCount} />
     </div>
   );
 }
