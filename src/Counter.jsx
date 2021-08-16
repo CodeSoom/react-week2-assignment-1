@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 
 import Button from './Button';
 
-export default function ClickMe({ count, setCount }) {
+export default function Counter({ children, setCount }) {
   return (
     <p>
       <Button onClick={() => setCount((prevCount) => prevCount + 1)}>
         Click me!
         (
-        {count}
+        {children}
         )
       </Button>
     </p>
   );
 }
 
-ClickMe.propTypes = {
-  count: PropTypes.number.isRequired,
+Counter.propTypes = {
+  children: PropTypes.node.isRequired,
   setCount: PropTypes.func.isRequired,
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import Buttons from './Buttons';
+import Counter from './Counter';
 import ClickMe from './ClickMe';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <p>
         {count}
       </p>
-      <ClickMe count={count} setCount={setCount} />
+      <Counter setCount={setCount}>{count}</Counter>
       <Buttons setCount={setCount} />
     </>
   );
