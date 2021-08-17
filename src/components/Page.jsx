@@ -21,7 +21,7 @@ export default function Page() {
       <p>Hello World!</p>
       <Counter
         count={count}
-        onClick={() => handleClick({ number: 1 })}
+        onClick={handleClick}
       />
       <Buttons
         onClick={handleClick}
