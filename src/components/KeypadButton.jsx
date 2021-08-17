@@ -1,10 +1,11 @@
 import React from "react";
+import Button from "./Button";
 
 function KeypadButton({ count, onClick }) {
   return (
-    <button type="button" onClick={() => onClick(count)}>
-      {count}
-    </button>
+    <div>
+      <Button count={count} onClick={() => onClick(count)}></Button>
+    </div>
   );
 }
 

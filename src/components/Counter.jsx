@@ -1,11 +1,10 @@
 import React from "react";
+import Button from "./Button";
 
 function Counter({ count, onClick }) {
   return (
     <div>
-      <button type="button" onClick={() => onClick(1)}>
-        Click me({count})
-      </button>
+      <Button count={count} onClick={() => onClick(1)}></Button>
     </div>
   );
 }
