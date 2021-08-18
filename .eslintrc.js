@@ -26,7 +26,8 @@ module.exports = {
   },
   rules: {
     indent: ['error', 2],
-    'no-trailing-spaces': 'error',
+    'no-trailing-spaces': [0, { skipBlankLines: true }],
+    'react/prop-types': 'off',
     curly: 'error',
     'brace-style': 'error',
     'no-multi-spaces': 'error',
