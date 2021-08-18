@@ -29,6 +29,7 @@ module.exports = {
     'no-trailing-spaces': 'error',
     curly: 'error',
     'brace-style': 'error',
+    'react/prop-types': 'off',
     'no-multi-spaces': 'error',
     'space-infix-ops': 'error',
     'space-unary-ops': 'error',
