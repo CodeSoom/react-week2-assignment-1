@@ -7,9 +7,8 @@ export default function Buttons({ onClick }) {
         <Button
           key={i}
           onClick={onClick}
-        >
-          {i}
-        </Button>
+          number={i}
+        />
       ))}
     </p>
   );
