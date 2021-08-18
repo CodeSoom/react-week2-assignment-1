@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
 import Page from './components/Page';
 
-function App() {
+export default function App() {
   const [state, setState] = useState({
     count: 0,
   });
@@ -10,19 +11,23 @@ function App() {
 
   function handleClick() {
     setState({
+      ...state,
       count: count + 1,
     });
   }
 
-  function handleClickNumber(value) {
+  function handleClickNumber(number) {
     setState({
-      count: count + value,
+      ...state,
+      count: count + number,
     });
   }
 
   return (
-    <Page count={count} onClick={handleClick} onClickNumber={handleClickNumber} />
+    <Page
+      count={count}
+      onClick={handleClick}
+      onClickNumber={handleClickNumber}
+    />
   );
 }
-
-export default App;
