@@ -1,10 +1,10 @@
-export default function Button({ children, onClick }) {
+export default function Button({ number, onClick }) {
   return (
     <button
       type="button"
-      onClick={() => onClick({ number: children })}
+      onClick={() => onClick({ number })}
     >
-      {children}
+      {number}
     </button>
   );
 }
