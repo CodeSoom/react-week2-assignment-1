@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Counter from './counter';
 import Buttons from './buttons';
 
