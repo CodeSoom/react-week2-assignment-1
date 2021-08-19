@@ -11,6 +11,7 @@ export default function App() {
 
   function handleClick(value) {
     setState({
+      ...state,
       count: count + value,
     });
   }
