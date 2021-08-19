@@ -24,7 +24,6 @@ export default function App() {
           count={count}
           onClick={handleCountClick}
         />
-
       </p>
       <NumberButtons setCount={setCount} />
     </div>
