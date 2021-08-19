@@ -6,7 +6,7 @@ export default function Buttons({ onClick }) {
       {[1, 2, 3, 4, 5].map((i) => (
         <Button
           key={i}
-          value={i}
+          number={i}
           onClick={onClick}
         />
       ))}

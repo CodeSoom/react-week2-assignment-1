@@ -1,7 +1,7 @@
-export default function Button({ onClick, value }) {
+export default function Button({ number, onClick }) {
   return (
-    <button type="button" onClick={() => onClick(value)}>
-      {value}
+    <button type="button" onClick={() => onClick(number)}>
+      {number}
     </button>
   );
 }
