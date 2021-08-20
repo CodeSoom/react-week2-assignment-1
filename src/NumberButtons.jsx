@@ -2,11 +2,7 @@ import NumberButton from './NumberButton';
 
 const numbers = [1, 2, 3, 4, 5];
 
-export default function NumberButtons({ setCount }) {
-  function handleNumberClick(value) {
-    setCount(value);
-  }
-
+export default function NumberButtons({ handleNumberClick }) {
   return (
     <p>
       {
