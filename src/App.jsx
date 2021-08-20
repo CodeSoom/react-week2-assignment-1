@@ -11,11 +11,11 @@ export default function App() {
   const { count } = state;
 
   function handleCountClick() {
-    setState({ count: count + 1 });
+    setState({ ...state, count: count + 1 });
   }
 
   function setCount(value) {
-    setState({ count: count + value });
+    setState({ ...state, count: count + value });
   }
 
   return (
