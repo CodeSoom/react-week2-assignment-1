@@ -1,18 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Button from './Button';
 
 export default function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={() => onClick(1)}>
+    <Button onClick={() => onClick(1)}>
       Click me!
       (
       {count}
       )
-    </button>
+    </Button>
   );
 }
-
-Counter.propTypes = {
-  count: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
-};

@@ -9,7 +9,10 @@ export default function App() {
   const { count } = state;
 
   function handleClick(number) {
-    setState({ count: count + number });
+    setState({
+      ...state,
+      count: count + number,
+    });
   }
 
   return (
