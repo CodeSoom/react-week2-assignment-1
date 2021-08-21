@@ -10,16 +10,16 @@ export default function App() {
 
   const { count } = state;
 
-  function setCount(value) {
-    setState({ ...state, count: count + value });
+  function setCount(number) {
+    setState({ ...state, count: count + number });
   }
 
   function handleCountClick() {
     setCount(1);
   }
 
-  function handleNumberClick(value) {
-    setCount(value);
+  function handleNumberClick(number) {
+    setCount(number);
   }
 
   return (
