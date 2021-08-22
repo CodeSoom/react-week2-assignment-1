@@ -15,6 +15,7 @@ export default function App() {
       count: count + value,
     });
   }
+
   return (
     <Page
       count={count}
