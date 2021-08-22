@@ -1,11 +1,13 @@
 import React from "react";
 
-function Button({ count, onClick }) {
+export default function Button({ children, onClick }) {
+  const style = {
+    background: "#F00",
+  };
+
   return (
-    <button type="button" onClick={() => onClick(1)}>
-      Click me({count})
+    <button type="button" onClick={onClick} style={style}>
+      {children}
     </button>
   );
 }
-
-export default Button;

@@ -1,24 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-import Page from "./components/Page";
+import App from "./App";
 
-function App() {
-  const [state, setState] = useState({
-    count: 0
-  });
-
-  const { count } = state;
-
-  // click me를 눌럿을때는 1만들어오게 하고
-  // 나머지는 숫자만큼 들어오게 해서 더해준다.
-  function handleClick(number) {
-    setState({
-      count: count + number
-    });
-  }
-
-  return <Page count={count} onClick={handleClick} />;
-}
-
+// index 파일은 아래와 같이 간단하게 구성한다.
 ReactDOM.render(<App />, document.getElementById("app"));
