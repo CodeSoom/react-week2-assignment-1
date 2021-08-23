@@ -29,6 +29,7 @@ module.exports = {
     'no-trailing-spaces': 'error',
     curly: 'error',
     'brace-style': 'error',
+    'react/prop-types': 'off',
     'no-multi-spaces': 'error',
     'space-infix-ops': 'error',
     'space-unary-ops': 'error',
@@ -45,5 +46,7 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'key-spacing': ['error', { mode: 'strict' }],
     'arrow-spacing': ['error', { before: true, after: true }],
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };
