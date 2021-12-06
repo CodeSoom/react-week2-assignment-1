@@ -1,12 +1,9 @@
 import React from 'react';
 
-function Title() {
+function Title({ title }) {
   return (
     <div>
-      <div>
-        Counter
-      </div>
-      <br />
+      {title}
     </div>
   );
 }
