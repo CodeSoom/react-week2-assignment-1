@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Button = (props) => (
-  <button onClick={props.onClick}>
-    {props.children}
+// eslint-disable-next-line react/prop-types
+const Button = ({ onClick, children }) => (
+  <button onClick={onClick} type="button">
+    {children}
   </button>
 );
 

@@ -13,7 +13,7 @@ const App = () => {
       Counter
       <div>
         <Button onClick={() => accumulate(1)}>
-          Click Me! &#40;
+          Click me! &#40;
           { accumulator }
           &#41;
         </Button>
