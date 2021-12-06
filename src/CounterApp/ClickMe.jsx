@@ -9,7 +9,7 @@ import React from 'react';
 export default function ClickMe({ count, onClick }) {
   return (
     <button type="button" onClick={onClick}>
-      Click Me!
+      Click me!
       (
       {count}
       )
