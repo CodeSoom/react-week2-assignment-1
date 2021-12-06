@@ -18,7 +18,7 @@ function Page() {
   return (
     <>
       <Counter count={count} onIncreaseByNumber={handleIncreaseByNumber} />
-      <Buttons />
+      <Buttons onIncreaseByNumber={handleIncreaseByNumber} />
     </>
   );
 }
