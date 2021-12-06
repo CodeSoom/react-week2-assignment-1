@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import Title from './Title';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,9 +11,7 @@ function App() {
 
   return (
     <div>
-      <div>
-        Counter
-      </div>
+      <Title />
       <br />
       <button type="button" onClick={handleClick}>
         Click me! (
