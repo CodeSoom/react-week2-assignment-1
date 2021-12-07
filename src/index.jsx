@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Counter from './Counter';

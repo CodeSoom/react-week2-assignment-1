@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const ClickButton = ({ count, clickHandler }) => (
+const ClickMeButton = ({ count, clickHandler }) => (
   <div style={{ margin: '0 0 10px 0' }}>
     <button type="button" onClick={clickHandler}>
       Click me!
@@ -12,4 +12,4 @@ const ClickButton = ({ count, clickHandler }) => (
   </div>
 );
 
-export default ClickButton;
+export default ClickMeButton;
