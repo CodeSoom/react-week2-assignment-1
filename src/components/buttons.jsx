@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from './button';
 
-function Buttons({ onIncreaseByNumber }) {
+export default function Buttons({ onIncreaseByNumber }) {
   const NUMBER_BUTTONS = [1, 2, 3, 4, 5];
 
   return (
@@ -13,5 +13,3 @@ function Buttons({ onIncreaseByNumber }) {
     </p>
   );
 }
-
-export default Buttons;

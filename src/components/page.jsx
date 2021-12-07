@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Counter from './counter';
 import Buttons from './buttons';
 
-function Page() {
+export default function Page() {
   const [state, setState] = useState({
     count: 0,
   });
@@ -22,5 +22,3 @@ function Page() {
     </>
   );
 }
-
-export default Page;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Counter({ count, onIncreaseByNumber }) {
+export default function Counter({ count, onIncreaseByNumber }) {
   return (
     <button type="button" onClick={() => onIncreaseByNumber(1)}>
       Click me!
@@ -10,5 +10,3 @@ function Counter({ count, onIncreaseByNumber }) {
     </button>
   );
 }
-
-export default Counter;
