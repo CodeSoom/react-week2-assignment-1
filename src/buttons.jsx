@@ -2,11 +2,18 @@ import React from 'react';
 
 import Button from './button';
 
-export default function Buttons() {
+const array = [1, 2, 3, 4, 5];
+
+export default function Buttons({ onClickButton }) {
   return (
     <div>
-      {[1, 2, 3].map((i) => (
-        <Button key={i}>{i}</Button>
+      {array.map((i) => (
+        <Button
+          key={i}
+          onClick={() => { onClickButton(i); }}
+        >
+          {i}
+        </Button>
       ))}
     </div>
   );

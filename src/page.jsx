@@ -3,14 +3,14 @@ import React from 'react';
 import Buttons from './buttons';
 import Counter from './counter';
 
-export default function Page({ count, onClick }) {
+export default function Page({ count, onClick, onClickButton }) {
   return (
     <div>
-      <Buttons />
       <Counter
         count={count}
         onClick={onClick}
       />
+      <Buttons onClickButton={onClickButton} />
     </div>
   );
 }
