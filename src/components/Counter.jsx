@@ -9,6 +9,6 @@ function Counter({ count, onClick }) {
       )
     </button>
   );
-};
+}
 
 export default Counter;
