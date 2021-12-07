@@ -1,43 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// const element = <p>Counter</p>; //op1
-
-function Counter({ count, onClick }) { // 2. 반환값: 첫번째 Counter 버튼
+function NumericButton() { // (3) NumericButton컴포넌트: App에서 실행됨
     return (
-        <p>
-            <button type="button" onClick={onClick}>
-                Click me! ({count})
-            </button>
-        </p>
+        [1, 2, 3, 4, 5].map((i) => (
+            <button>{i}</button>
+        ))
     )
 }
 
-function Page({ count, onClick }) { // 1. 반환값: 전체적인틀 count, onClick이 매개변수로 주어지는것?
+function ClickButton() { // (2) ClickButton컴포넌트: App에서 실행됨
+    return (
+        <button>Click me! ()</button>
+    )
+}
+
+function App() { // (1) App컴포넌트: ReactDOM에서 실행됨
     return (
         <div>
             <p>Counter</p>
-            <Counter
-                count={count}
-                onClick={onClick}
-            />
+            <ClickButton />
+            <NumericButton />
         </div>
-    );
-} // op2
-
-function App() { // 0. 이것이 입력값?? count, onClick이 props?? count, onClick이 인자의 형태로 주어지는것?
-    const count = 0;
-    function handleClick() {
-        //
-    }
-    return (
-        <Page
-            count={count}
-            onClick={handleClick}
-        />
     )
 }
 
+//
 ReactDOM.render(
     <App />,
     document.getElementById('app'),
