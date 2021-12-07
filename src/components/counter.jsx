@@ -1,6 +1,6 @@
-export default function Counter({ count, onIncreaseByNumber }) {
+export default function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={() => onIncreaseByNumber(1)}>
+    <button type="button" onClick={() => onClick(1)}>
       Click me!
       (
       {count}

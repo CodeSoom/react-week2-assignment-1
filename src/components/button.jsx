@@ -1,6 +1,6 @@
-export default function Button({ number, onIncreaseByNumber }) {
+export default function Button({ number, onClick }) {
   return (
-    <button type="button" onClick={() => onIncreaseByNumber(number)}>
+    <button type="button" onClick={() => onClick(number)}>
       {number}
     </button>
   );

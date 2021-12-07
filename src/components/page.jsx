@@ -17,8 +17,8 @@ export default function Page() {
 
   return (
     <>
-      <Counter count={count} onIncreaseByNumber={handleIncreaseByNumber} />
-      <Buttons onIncreaseByNumber={handleIncreaseByNumber} />
+      <Counter count={count} onClick={handleIncreaseByNumber} />
+      <Buttons onClick={handleIncreaseByNumber} />
     </>
   );
 }
