@@ -1,10 +1,37 @@
 import React, { Children, useState } from "react";
 import ReactDOM from "react-dom";
 
+function NumButton({ onClick, children }) {
+  return (
+    <button onClick={() => onClick(children)} type="button">{children}</button>
+  )
+}
+
+function Buttons({ onClick }) {
+  const nums = [1, 2, 3, 4, 5];
+  return (
+    <div>
+      {nums.map((i) => (
+        <NumButton key={i} onClick={onClick}>{i}</NumButton>
+      ))}
+    </div>
+
+  )
+}
+
+function MainClick({ onClick, count }) {
+  return (
+    <button onClick={() => onClick(1)} >Click Me! ({count})</button>
+  )
+}
+
 
 function Page({ onClick, count }) {
   return (
-    <button onClick={onClick} >Click Me! ({count})</button>
+    <div>
+      <MainClick onClick={onClick} count={count} />
+      <Buttons onClick={onClick} />
+    </div>
   )
 }
 
@@ -14,9 +41,9 @@ function App() {
   })
   const { count } = state
 
-  function handleClick() {
+  function handleClick(num) {
     setState({
-      count: count + 1
+      count: count + num
     })
   }
 
