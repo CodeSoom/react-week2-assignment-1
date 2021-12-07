@@ -1,4 +1,4 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 function NumButton({ onClick, children }) {
@@ -21,7 +21,7 @@ function Buttons({ onClick }) {
 
 function MainClick({ onClick, count }) {
   return (
-    <button onClick={() => onClick(1)} >Click Me! ({count})</button>
+    <button onClick={() => onClick(1)} >Click me ({count})</button>
   )
 }
 
