@@ -3,15 +3,15 @@ import React from 'react';
 import Counter from './Counter';
 import Buttons from './Buttons';
 
-function Page({ count, onClick }) {
+function Page({ count, onClickCounter, onClickNumber }) {
   return (
     <div>
       <p>Counter</p>
       <Counter
         count={count}
-        onClick={onClick}
+        onClick={onClickCounter}
       />
-      <Buttons />
+      <Buttons onClickNumber={onClickNumber} />
     </div>
   );
 }

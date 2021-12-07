@@ -8,10 +8,14 @@ function App() {
 
   const { count } = state;
 
-  function handleClick() {
+  function onClickCounter() {
     setState({ count: count + 1 });
   }
-  return <Page count={count} onClick={handleClick} />;
+
+  function onClickNumber(number) {
+    setState({ count: count + number });
+  }
+  return <Page count={count} onClickCounter={onClickCounter} onClickNumber={onClickNumber} />;
 }
 
 ReactDOM.render(

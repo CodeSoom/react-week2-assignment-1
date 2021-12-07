@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from './Button';
 
-function Buttons() {
+function Buttons({ onClickNumber }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
-        <Button key={i}>
+        <Button key={i} onClick={() => onClickNumber(i)}>
           {i}
         </Button>
       ))}
