@@ -9,14 +9,18 @@ function App() {
 
  const { count } = state;
 
- function handleClick() {
+ function handleClick(size) {
   setState({
-   count: count + 1,
+   count: count + size,
   });
  }
 
  return (
-  <CounterPage count={count} onClick={handleClick} />
+  <CounterPage
+   count={count}
+   onClick={() => handleClick(1)}
+   onClickNumber={(number) => handleClick(number)}
+  />
  );
 }
 

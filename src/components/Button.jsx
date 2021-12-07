@@ -1,7 +1,11 @@
 import React from 'react';
 
-function Button({ children }) {
- return <button type="button">{children}</button>;
+function Button({ children, onClick }) {
+ return (
+  <button type="button" onClick={onClick}>
+   {children}
+  </button>
+ );
 }
 
 export default Button;
