@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import Page from './Page';
+import Counter from './Counter';
+import ClickMeButton from './ClickMeButton';
+import NumberButtons from './NumberButtons';
 
 export default function App() {
   const [state, setState] = useState({
@@ -17,9 +19,10 @@ export default function App() {
   }
 
   return (
-    <Page
-      count={count}
-      onClick={buttonClick}
-    />
+    <>
+      <Counter />
+      <ClickMeButton count={count} onClick={buttonClick} />
+      <NumberButtons onClick={buttonClick} />
+    </>
   );
 }
