@@ -5,13 +5,15 @@ function App() {
   const [state, setState] = useState({
     count: 0,
   });
+
   const { count } = state;
 
-  function handleClick() {
+  function handleClick(number) {
     setState({
-      count: count + 1,
+      count: count + number,
     });
   }
+
   return (
     <Page
       count={count}
