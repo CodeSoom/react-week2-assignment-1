@@ -1,3 +1,5 @@
+const buttons = [...Array(5).keys()].map((number) => number + 1);
+
 /**
  * @export
  * @param {{
@@ -6,7 +8,7 @@
  * }} props
  * @return {import('react').ReactElement}
  */
-export default function IncreaseButtons({ buttons = [], onClick }) {
+export default function IncreaseButtons({ onClick }) {
   return (
     <ul>
       {buttons.map((button) => (

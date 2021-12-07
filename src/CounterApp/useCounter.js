@@ -7,10 +7,9 @@ const { useState } = require('react');
  */
 export default function useCounter(initialValue = 0) {
   const [count, setCount] = useState(initialValue);
-  // increment means to increase by steps or by a step
-  const increment = () => setCount(count + 1);
 
-  // increase means to become larger or greater
+  const increment = () => setCount(count + 1);
   const increase = (amount) => setCount(count + amount);
+
   return { count, increment, increase };
 }
