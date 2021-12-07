@@ -3,40 +3,41 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-function Counter({ count, number, onClick }) {
+function Button({ children, onClick }) {
   return (
-    <button type="button" onClick={() => onClick(number)}>
-      Click me!
-      (
-      {count}
-      )
-    </button>
-  );
-}
-
-function Button({ children, number, onClick }) {
-  return (
-    <button type="button" onClick={() => onClick(number)}>
+    <button type="button" onClick={onClick}>
       {children}
     </button>
   );
 }
 
-function Buttons({ onClick }) {
+function Counter({ count, onClick }) {
+  const number = 1;
+
   return (
-    <div>
-      <p>
-        {[1, 2, 3, 4, 5].map((i) => (
-          <Button
-            key={i}
-            number={i}
-            onClick={onClick}
-          >
-            {i}
-          </Button>
-        ))}
-      </p>
-    </div>
+    <Button
+      onClick={() => onClick(number)}
+    >
+      Click me!
+      (
+      {count}
+      )
+    </Button>
+  );
+}
+
+function Numbers({ onClick }) {
+  return (
+    <p>
+      {[1, 2, 3, 4, 5].map((i) => (
+        <Button
+          key={i}
+          onClick={() => onClick(i)}
+        >
+          {i}
+        </Button>
+      ))}
+    </p>
   );
 }
 
@@ -46,10 +47,9 @@ function Page({ count, onClick }) {
       <p>Counter!</p>
       <Counter
         count={count}
-        number={1}
         onClick={onClick}
       />
-      <Buttons
+      <Numbers
         onClick={onClick}
       />
     </div>
@@ -63,7 +63,7 @@ function App() {
 
   const { count } = state;
 
-  function handleClick({ number }) {
+  function handleClick(number) {
     setState({
       count: count + number,
     });
@@ -72,7 +72,7 @@ function App() {
   return (
     <Page
       count={count}
-      onClick={(number) => handleClick({ number })}
+      onClick={(number) => handleClick(number)}
     />
   );
 }
