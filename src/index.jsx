@@ -1,38 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-
-function Counter({ count, onClick }) {
- return (
-  <button type="button" onClick={onClick}>
-   Click me!
-   (
-   {count}
-   )
-  </button>
- );
-}
-
-function Button({ children }) {
- return <button type="button">{children}</button>;
-}
-
-function Buttons() {
- return (
-  <div>
-   {[1, 2, 3, 4, 5].map((number) => <Button key={number}>{number}</Button>)}
-  </div>
- );
-}
-
-function Page({ count, onClick }) {
- return (
-  <div>
-   <p>Hello, World!!!</p>
-   <Counter count={count} onClick={onClick} />
-   <Buttons />
-  </div>
- );
-}
+import CounterPage from './pages/CounterPage';
 
 function App() {
  const [state, setState] = useState({
@@ -48,7 +16,7 @@ function App() {
  }
 
  return (
-  <Page count={count} onClick={handleClick} />
+  <CounterPage count={count} onClick={handleClick} />
  );
 }
 
