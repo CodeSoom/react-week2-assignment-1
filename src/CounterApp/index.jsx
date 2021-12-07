@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-bind */
-import React from 'react';
 import Title from './Title';
 import ClickMe from './ClickMe';
 import useCounter from './useCounter';

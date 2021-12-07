@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
-
 /**
  * @export
  * @param {{ count: number, onClick: () => void }} props
@@ -9,11 +6,9 @@ import React from 'react';
 export default function ClickMe({ count, onClick }) {
   return (
     <button type="button" onClick={onClick}>
-      Click me!
-      (
+      Click me! (
       {count}
       )
-
     </button>
   );
 }

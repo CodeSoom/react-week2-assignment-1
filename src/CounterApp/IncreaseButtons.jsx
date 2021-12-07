@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
-
 /**
  * @export
  * @param {{
@@ -9,10 +6,7 @@ import React from 'react';
  * }} props
  * @return {import('react').ReactElement}
  */
-export default function IncreaseButtons({
-  buttons = [],
-  onClick,
-}) {
+export default function IncreaseButtons({ buttons = [], onClick }) {
   return (
     <ul>
       {buttons.map((button) => (
