@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({ count, onClickOne }) {
+export default function Button({ count, onClickOne }) {
   return (
     <button type="button" onClick={onClickOne}>
       Click me! (
@@ -9,5 +9,3 @@ function Button({ count, onClickOne }) {
     </button>
   );
 }
-
-export default Button;

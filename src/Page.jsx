@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Buttons from './Buttons';
 
-function Page({ count, onClickOne, onClickNumbers }) {
+export default function Page({ count, onClickOne, onClickNumbers }) {
   return (
     <>
       <p>Counter</p>
@@ -11,5 +11,3 @@ function Page({ count, onClickOne, onClickNumbers }) {
     </>
   );
 }
-
-export default Page;
