@@ -5,7 +5,7 @@ import Page from './Page';
 function App() {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => {
+  const handleClickCount = () => {
     setCount((prevCount) => prevCount + 1);
   };
 
@@ -16,8 +16,8 @@ function App() {
   return (
     <Page
       count={count}
-      handleClick={handleClick}
-      handleClickNumber={handleClickNumber}
+      onClickCount={handleClickCount}
+      onClickNumber={handleClickNumber}
     />
 
   );
