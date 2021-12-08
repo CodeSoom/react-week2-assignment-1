@@ -1,9 +1,6 @@
 import React from 'react';
 
-function Button({ count, setCount }) {
-  function onClickOne() {
-    setCount({ count: count + 1 });
-  }
+function Button({ count, onClickOne }) {
   return (
     <button type="button" onClick={onClickOne}>
       Click me! (

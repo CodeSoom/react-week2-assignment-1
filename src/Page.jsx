@@ -2,12 +2,12 @@ import React from 'react';
 import Button from './Button';
 import Buttons from './Buttons';
 
-function Page({ count, setCount }) {
+function Page({ count, onClickOne, onClickNumbers }) {
   return (
     <>
       <p>Counter</p>
-      <Button count={count} setCount={setCount} />
-      <Buttons count={count} setCount={setCount} />
+      <Button count={count} onClickOne={onClickOne} />
+      <Buttons onClickNumbers={onClickNumbers} />
     </>
   );
 }

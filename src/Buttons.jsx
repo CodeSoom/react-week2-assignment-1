@@ -1,10 +1,6 @@
 import React from 'react';
 
-function Buttons({ count, setCount }) {
-  function onClickNumbers(numbers) {
-    setCount({ count: count + numbers });
-  }
-
+function Buttons({ onClickNumbers }) {
   return (
     <div>
       {[1, 2, 3, 4, 5].map((v) => (
