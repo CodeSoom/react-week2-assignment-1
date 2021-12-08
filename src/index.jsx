@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-function Condition({ children }) { // (5) Condition컴포넌트: (4)으로부터 props의 children을 받고, children으로 조건문실행
+/* function Condition({ children }) { // (5) Condition컴포넌트: (4)으로부터 props의 children을 받고, children으로 조건문실행
     if (children === 1) {
         return (
             console.log(children)
@@ -27,30 +27,27 @@ function Condition({ children }) { // (5) Condition컴포넌트: (4)으로부터
             console.log(5)
         )
     }
-}
+}*/
 
-function Button(props) { // (4) Button컴포넌트: App에서 실행됨, (3)으로부터 i라는 props를 받고, (5)로 props의 children을 전달
-    const { children } = props
+function Button({ children, onClick }) { // (4) Button컴포넌트: App에서 실행됨, (3)으로부터 i를 children으로 받음
     return (
-        <button onClick={() => Condition({ children })}>
+        <button type="button" onClick={() => onClick(children)}>
             {children}
         </button>
     )
 }
 
-function Numeric() { // (3) Numeric컴포넌트: App에서 실행됨, (4)로 i라는 props를 전달
+function Numeric() { // (3) Numeric컴포넌트
     return (
-        <p>
-            {
-                [1, 2, 3, 4, 5].map((i) => (
-                    <Button>{i}</Button>
-                ))
-            }
-        </p>
+        [1, 2, 3, 4, 5].map((i) => (
+            <Button>
+                {i}
+            </Button>
+        ))
     )
 }
 
-function Counter({ count, onClick }) { // (2) Counter컴포넌트: App에서 실행됨, React Hook(useState)를 사용하여 state변수와 이 변수를 갱신할 수 있는 함수를 Return
+function Counter({ count, onClick }) { // (2) Counter컴포넌트: App에서 실행됨, React Hook(useState)를 사용하여 state변수+이 변수를 갱신할 수 있는 함수를 Return
     return (
         <button type="button" onClick={onClick}>
             Click me! ({count})
@@ -59,10 +56,18 @@ function Counter({ count, onClick }) { // (2) Counter컴포넌트: App에서 실
 }
 
 function App() { // (1) App컴포넌트: ReactDOM에서 실행됨, count&onClick의 props를 (2)에 넘겨줌
-    const [count, setCount] = useState(0) //? 강의처럼 풀어서 하는 이유...
+    const [state, setState] = useState({
+        count: 0,
+        customCount: 0,
+    });
+    const { count } = state;
+    const { customCount } = state;
 
     function handleClick() {
-        setCount(count + 1)
+        setState({
+            count: count + 1,
+            customCount: customCount + 1,
+        });
     }
 
     return (
@@ -72,7 +77,10 @@ function App() { // (1) App컴포넌트: ReactDOM에서 실행됨, count&onClick
                 count={count}
                 onClick={handleClick}
             />
-            <Numeric />
+            <Button
+                customCount={customCount}
+                onClick={handleClick}
+            />
         </div>
     )
 }
