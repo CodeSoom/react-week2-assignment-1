@@ -1,7 +1,7 @@
 import Button from './Button';
 
 const Counter = ({ count, onClick }) => (
-  <Button onClick={() => onClick(1)}>
+  <Button onClick={onClick}>
     Click me!
     (
     {count}
