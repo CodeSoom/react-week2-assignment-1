@@ -5,9 +5,13 @@ import Page from './Page';
 function App() {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => setCount((prevCount) => prevCount + 1);
+  const handleClick = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
 
-  const handleClickNumber = (number) => setCount((prevCount) => prevCount + number);
+  const handleClickNumber = (number) => {
+    setCount((prevCount) => prevCount + number);
+  };
 
   return (
     <Page
