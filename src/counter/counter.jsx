@@ -9,9 +9,9 @@ const Counter = () => {
       Counter
       <div>
         <Button onClick={() => accumulate(1)}>
-          Click me! &#40;
+          Click me! (
           {accumulator}
-          &#41;
+          )
         </Button>
       </div>
       <br />
