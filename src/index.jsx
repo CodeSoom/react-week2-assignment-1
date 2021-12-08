@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
 function NumButton({ onClick, children }) {
   return (
-    <button onClick={() => onClick(children)} type="button">{children}</button>
+    <button onClick={() => onClick(children)} type='button'>{children}</button>
   )
 }
 
