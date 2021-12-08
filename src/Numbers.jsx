@@ -1,4 +1,4 @@
-function Numbers({ onClick }) {
+export default function Numbers({ onClick }) {
   return (
     <div>
       {[1, 2, 3, 4, 5].map((number) => (
@@ -9,5 +9,3 @@ function Numbers({ onClick }) {
     </div>
   );
 }
-
-export default Numbers;

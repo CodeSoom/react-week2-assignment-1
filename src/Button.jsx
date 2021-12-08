@@ -1,4 +1,4 @@
-function Button({ count, onClick }) {
+export default function Button({ count, onClick }) {
   return (
     <button type="button" onClick={onClick}>
       Click me! (
@@ -7,5 +7,3 @@ function Button({ count, onClick }) {
     </button>
   );
 }
-
-export default Button;

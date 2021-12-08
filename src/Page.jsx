@@ -2,7 +2,7 @@ import Title from './Title';
 import Button from './Button';
 import Numbers from './Numbers';
 
-function Page({ count, handleClick, handleClickNumber }) {
+export default function Page({ count, handleClick, handleClickNumber }) {
   return (
     <div>
       <Title title="Counter" />
@@ -14,5 +14,3 @@ function Page({ count, handleClick, handleClickNumber }) {
     </div>
   );
 }
-
-export default Page;

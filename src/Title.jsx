@@ -1,9 +1,7 @@
-function Title({ title }) {
+export default function Title({ title }) {
   return (
     <div>
       {title}
     </div>
   );
 }
-
-export default Title;
