@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
-import Counter from './counter';
-import Buttons from './buttons';
+import Counter from './Counter';
+import Buttons from './Buttons';
 
 export default function Page() {
   const [state, setState] = useState({
     count: 0,
   });
-
   const { count } = state;
+
   function handleIncreaseByNumber(number) {
     setState({
       count: count + number,

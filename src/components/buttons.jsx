@@ -1,4 +1,4 @@
-import Button from './button';
+import Button from './Button';
 
 export default function Buttons({ onClick }) {
   const NUMBER_BUTTONS = [1, 2, 3, 4, 5];
@@ -6,7 +6,7 @@ export default function Buttons({ onClick }) {
   return (
     <p>
       {NUMBER_BUTTONS.map((number) => (
-        <Button number={number} onClick={onClick} />
+        <Button key={number} number={number} onClick={onClick} />
       ))}
     </p>
   );
