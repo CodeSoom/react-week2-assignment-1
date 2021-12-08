@@ -1,5 +1,5 @@
-import React from 'react';
 import useAccumulator from '../hook/useAccumulator';
+
 import Button from '../components/Button';
 
 const Counter = () => {
