@@ -1,7 +1,7 @@
 import Counter from './Counter';
 import Numbers from './Numbers';
 
-function Page({ count, onClick }) {
+export default function Page({ count, onClick }) {
   return (
     <div>
       <p>Counter!</p>
@@ -15,5 +15,3 @@ function Page({ count, onClick }) {
     </div>
   );
 }
-
-export default Page;

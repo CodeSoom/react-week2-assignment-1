@@ -1,6 +1,6 @@
 import Button from './Button';
 
-function Counter({ count, onClick }) {
+export default function Counter({ count, onClick }) {
   const number = 1;
 
   return (
@@ -14,5 +14,3 @@ function Counter({ count, onClick }) {
     </Button>
   );
 }
-
-export default Counter;

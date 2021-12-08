@@ -1,6 +1,6 @@
 import Button from './Button';
 
-function Numbers({ onClick }) {
+export default function Numbers({ onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
@@ -14,5 +14,3 @@ function Numbers({ onClick }) {
     </p>
   );
 }
-
-export default Numbers;
