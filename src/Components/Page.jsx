@@ -1,5 +1,5 @@
 import Counter from './Counter';
-import Adder from './Adder';
+import IncreaseButtons from './IncreaseButtons';
 
 const Page = ({ count, onClick }) => (
   <>
@@ -11,7 +11,7 @@ const Page = ({ count, onClick }) => (
       />
     </div>
     <div>
-      {[1, 2, 3, 4, 5].map((i) => <Adder step={i} onClick={() => onClick(i)} />)}
+      <IncreaseButtons step={5} onClick={onClick} />
     </div>
   </>
 );
