@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ReactDOM from 'react-dom';
 import ClickMeButton from './ClickMeButton';
-import NumberButtonList from './NumberButtonList';
+import NumberButtons from './NumberButtons';
 
 function App() {
   const [count, setCount] = useState(0);
 
   function handleClick(number) {
-    setCount(count + number);
+    setCount((value) => value + number);
   }
 
   return (
     <>
       <p>Counter</p>
       <ClickMeButton count={count} onClick={handleClick} />
-      <NumberButtonList onClick={handleClick} />
+      <NumberButtons onClick={handleClick} />
     </>
   );
 }
