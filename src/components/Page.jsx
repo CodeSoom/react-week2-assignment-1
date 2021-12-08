@@ -1,6 +1,7 @@
 import React from 'react'
+import MainClick from './MainClick.jsx'
 
-function NumButton({ onClick, children }) {
+function NumberButton({ onClick, children }) {
   return (
     <button onClick={() => onClick(children)} type='button'>{children}</button>
   )
@@ -11,16 +12,10 @@ function Buttons({ onClick }) {
   return (
     <div>
       {numbers.map((i) => (
-        <NumButton key={i} onClick={onClick}>{i}</NumButton>
+        <NumberButton key={i} onClick={onClick}>{i}</NumberButton>
       ))}
     </div>
 
-  )
-}
-
-function MainClick({ onClick, count }) {
-  return (
-    <button onClick={() => onClick(1)} >Click me ({count})</button>
   )
 }
 
