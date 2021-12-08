@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
 import NumberButton from './NumberButton';
 import ClickMeButton from './ClickMeButton';
 
