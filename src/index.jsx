@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './App';
+
 ReactDOM.render(
-  <div>하하</div>,
+  <App />,
   document.getElementById('app'),
 );
