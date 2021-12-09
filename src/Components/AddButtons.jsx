@@ -1,15 +1,13 @@
 import Button from './Button';
 
-const AddButtons = ({ step, onClick }) => {
-  const increasButton = [];
-  for (let i = 1; i <= step; i += 1) {
-    increasButton.push(<Button onClick={() => onClick(i)}>{i}</Button>);
-  }
-  return (
-    <>
-      {increasButton}
-    </>
-  );
-};
+const AddButtons = ({ step, onClick }) => (
+  <>
+    {Array.from({ length: step }, (_, i) => i + 1).map((i) => (
+      <Button key={i} onClick={() => onClick(i)}>
+        {i}
+      </Button>
+    ))}
+  </>
+);
 
 export default AddButtons;
