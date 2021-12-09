@@ -4,22 +4,14 @@ import Buttons from './buttons';
 import Counter from './counter';
 
 export default function Page() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
+  const [count, setCount] = useState(0);
 
   function handleClickCounter() {
-    setState({
-      count: count + 1,
-    });
+    setCount(() => count + 1);
   }
 
   function handleClickButton(i) {
-    setState({
-      count: count + i,
-    });
+    setCount(() => count + i);
   }
 
   return (
