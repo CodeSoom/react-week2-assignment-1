@@ -23,12 +23,12 @@ export default function Page() {
   }
 
   return (
-    <div>
+    <>
       <Counter
         count={count}
         onClick={handleClickCounter}
       />
-    </div>
       <Buttons onClick={handleClickButton} />
+    </>
   );
 }
