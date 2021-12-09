@@ -2,11 +2,12 @@ import React from 'react'
 
 import MainClick from './MainClick.jsx'
 import Buttons from './Buttons.jsx'
+import NumberButton from './NumberButton.jsx';
 
 function Page({ onClick, count }) {
   return (
     <div>
-      <MainClick onClick={onClick} count={count} />
+      <NumberButton onClick={onClick} number={1} >Click me ({count})</NumberButton>
       <Buttons onClick={onClick} />
     </div>
   )
