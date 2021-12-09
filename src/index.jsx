@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom';
+
 import Page from './Page';
 
 function App() {
@@ -19,7 +20,6 @@ function App() {
       onClickCount={handleClickCount}
       onClickNumber={handleClickNumber}
     />
-
   );
 }
 
