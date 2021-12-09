@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 import NumberButton from './NumberButton';
 
-function Buttons({ onClick }) {
+export default function Buttons({ onClick }) {
   const numbers = [1, 2, 3, 4, 5];
   return (
     <div>
@@ -11,7 +11,5 @@ function Buttons({ onClick }) {
       ))}
     </div>
 
-  )
+  );
 }
-
-export default Buttons;
