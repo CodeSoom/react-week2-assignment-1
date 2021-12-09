@@ -5,13 +5,17 @@ export default function App() {
 
   const countStep = [1, 2, 3, 4, 5];
 
+  function handleClickCount(step) {
+    setCount(count + step);
+  }
+
   return (
     <div>
       Counter
       <div>
         <button
           type="button"
-          onClick={() => setCount(count + 1)}
+          onClick={() => handleClickCount(1)}
         >
           Click me!
           (
@@ -23,7 +27,7 @@ export default function App() {
         {countStep.map((it) => (
           <button
             type="button"
-            onClick={() => setCount(count + it)}
+            onClick={() => handleClickCount(it)}
             value={it}
             key={it}
           >
