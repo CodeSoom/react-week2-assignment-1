@@ -9,7 +9,7 @@ export default function Page() {
   });
   const { count } = state;
 
-  function handleIncreaseByNumber(number) {
+  function handleIncreaseByNumber(number = 1) {
     setState({
       count: count + number,
     });
