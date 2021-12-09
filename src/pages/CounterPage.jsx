@@ -2,7 +2,7 @@ import React from 'react';
 import Buttons from '../components/Buttons';
 import Counter from '../components/Counter';
 
-function CounterPage({ count, onClick, onClickNumber }) {
+export default function CounterPage({ count, onClick, onClickNumber }) {
  return (
   <div>
    <p>Hello, World!!!</p>
@@ -11,5 +11,3 @@ function CounterPage({ count, onClick, onClickNumber }) {
   </div>
  );
 }
-
-export default CounterPage;
