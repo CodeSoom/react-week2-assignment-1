@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Button from './Button';
+
 export default function App() {
   const [count, setCount] = useState(0);
 
@@ -13,26 +15,18 @@ export default function App() {
     <div>
       Counter
       <div>
-        <button
-          type="button"
+        <Button
+          value={`Click me! (${count})`}
           onClick={() => handleClickCount(1)}
-        >
-          Click me!
-          (
-          {count}
-          )
-        </button>
+        />
       </div>
       <div>
         {countStep.map((it) => (
-          <button
-            type="button"
-            onClick={() => handleClickCount(it)}
+          <Button
             value={it}
             key={it}
-          >
-            {it}
-          </button>
+            onClick={() => handleClickCount(it)}
+          />
         ))}
       </div>
     </div>
