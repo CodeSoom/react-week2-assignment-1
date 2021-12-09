@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function App() {
-  const count = [1, 2, 3, 4, 5];
+  const [count, setCount] = useState(0);
+
+  const countStep = [1, 2, 3, 4, 5];
 
   return (
     <div>
       Counter
       <div>
-        <button type="button">
-          click!
+        <button
+          type="button"
+          onClick={() => setCount(count + 1)}
+        >
+          Click me!
+          (
+          {count}
+          )
         </button>
       </div>
       <div>
-        {count.map((it) => (
+        {countStep.map((it) => (
           <button
             type="button"
+            onClick={() => setCount(count + it)}
             value={it}
             key={it}
           >
