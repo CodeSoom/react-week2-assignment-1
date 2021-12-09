@@ -1,7 +1,7 @@
-import Counter from './counter';
-import Buttons from './buttons';
+import Counter from './Counter';
+import Buttons from './Buttons';
 
-function Page({ count, onClick, onNumberClick }) {
+export default function Page({ count, onClick, onNumberClick }) {
   return (
     <div>
       <p>- Counter -</p>
@@ -15,5 +15,3 @@ function Page({ count, onClick, onNumberClick }) {
     </div>
   );
 }
-
-export default Page;

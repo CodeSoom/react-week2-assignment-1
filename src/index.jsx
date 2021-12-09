@@ -1,24 +1,17 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Page from './components/page';
+
+import Page from './components/Page';
 
 function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
+  const [count, setCount] = useState(0);
 
   function handleClick() {
-    setState({
-      count: count + 1,
-    });
+    setCount(count + 1);
   }
 
   function handleClickNumber(value) {
-    setState({
-      count: count + value,
-    });
+    setCount(count + value);
   }
 
   return (
