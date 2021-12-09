@@ -1,13 +1,12 @@
 import Counter from './Counter';
 import Buttons from './Buttons';
-import Title from './Title';
 
 const TITLE = 'Counter';
 
 export default function Page({ count, onClickCounter, onClickNumber }) {
   return (
     <div>
-      <Title title={TITLE} />
+      <p>{title}</p>
       <Counter
         count={count}
         onClick={onClickCounter}
