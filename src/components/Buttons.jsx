@@ -7,7 +7,7 @@ function Buttons({ onClick }) {
   return (
     <div>
       {numbers.map((i) => (
-        <NumberButton key={i} onClick={onClick}>{i}</NumberButton>
+        <NumberButton key={i} number={i} onClick={onClick}>{i}</NumberButton>
       ))}
     </div>
 
