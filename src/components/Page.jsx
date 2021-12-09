@@ -6,7 +6,7 @@ import Title from './Title';
 
 const TITLE = 'Counter';
 
-function Page({ count, onClickCounter, onClickNumber }) {
+export default function Page({ count, onClickCounter, onClickNumber }) {
   return (
     <div>
       <Title title={TITLE} />
@@ -18,5 +18,3 @@ function Page({ count, onClickCounter, onClickNumber }) {
     </div>
   );
 }
-
-export default Page;
