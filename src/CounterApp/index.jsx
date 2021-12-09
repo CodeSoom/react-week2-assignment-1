@@ -4,7 +4,7 @@ import useCounter from './useCounter';
 import IncreaseButtons from './IncreaseButtons';
 
 export default function CounterApp() {
-  const { count, increment, increase } = useCounter(0);
+  const { count, increment, increase } = useCounter({ count: 0 });
   function handleClickClickMe() {
     increment();
   }

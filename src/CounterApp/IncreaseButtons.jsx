@@ -1,4 +1,4 @@
-const buttons = [...Array(5).keys()].map((number) => number + 1);
+const counts = [...Array(5).keys()].map((number) => number + 1);
 
 /**
  * @export
@@ -11,7 +11,7 @@ const buttons = [...Array(5).keys()].map((number) => number + 1);
 export default function IncreaseButtons({ onClick }) {
   return (
     <ul>
-      {buttons.map((button) => (
+      {counts.map((button) => (
         <li key={button}>
           <button type="button" onClick={() => onClick(button)}>
             {button}
