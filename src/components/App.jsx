@@ -13,6 +13,7 @@ function App() {
 
   function handleClick(num) {
     setState({
+      ...state,
       count: count + num
     })
   }
