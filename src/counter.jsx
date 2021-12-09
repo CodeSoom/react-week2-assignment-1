@@ -1,10 +1,14 @@
+import Button from './button';
+
 export default function Counter({ count, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
+    <Button
+      onClick={onClick}
+    >
       Click me
       (
       {count}
       )
-    </button>
+    </Button>
   );
 }
