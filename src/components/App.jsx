@@ -16,6 +16,9 @@ export default function App() {
   };
 
   return (
-    <Page onClick={handleClick} count={count} />
+    <Page
+      onClick={handleClick}
+      count={count}
+    />
   );
 }
