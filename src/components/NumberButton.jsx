@@ -4,7 +4,8 @@ export default function NumberButton({ onClick, children }) {
   return (
     <button
       onClick={onClick}
-      type="button">
+      type="button"
+    >
       {children}
     </button>
   );

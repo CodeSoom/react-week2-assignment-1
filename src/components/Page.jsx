@@ -8,7 +8,8 @@ export default function Page({ onClick, count }) {
     <div>
       <NumberButton
         onClick={() => onClick(1)}
-        number={1}>
+        number={1}
+      >
         Click me (
         {count}
         )
