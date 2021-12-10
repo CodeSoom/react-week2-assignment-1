@@ -3,17 +3,13 @@ import Button from './Button';
 const NUMBERS = [1, 2, 3, 4, 5];
 
 export default function Buttons({ onClickNumber }) {
-  function renderNumbers(number) {
-    return (
-      <Button key={number} onClick={() => onClickNumber(number)}>
-        {number}
-      </Button>
-    );
-  }
-
   return (
     <p>
-      {NUMBERS.map(renderNumbers)}
+      {NUMBERS.map((number) => (
+        <Button key={number} onClick={() => onClickNumber(number)}>
+          {number}
+        </Button>
+      ))}
     </p>
   );
 }
