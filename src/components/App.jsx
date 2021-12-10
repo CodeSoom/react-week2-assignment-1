@@ -8,10 +8,10 @@ export default function App() {
   });
   const { count } = state;
 
-  const handleClick = (num) => {
+  const handleClick = (number) => {
     setState({
       ...state,
-      count: count + num,
+      count: count + number,
     });
   };
 
