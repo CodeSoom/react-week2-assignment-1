@@ -8,12 +8,12 @@ export default function App() {
   });
   const { count } = state;
 
-  function handleClick(num) {
+  const handleClick = (num) => {
     setState({
       ...state,
       count: count + num,
     });
-  }
+  };
 
   return (
     <Page onClick={handleClick} count={count} />
