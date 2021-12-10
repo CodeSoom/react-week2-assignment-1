@@ -1,3 +1,5 @@
+import Button from '../Button';
+
 const counts = [...Array(5).keys()].map((number) => number + 1);
 
 /**
@@ -11,11 +13,11 @@ const counts = [...Array(5).keys()].map((number) => number + 1);
 export default function IncreaseButtons({ onClick }) {
   return (
     <ul>
-      {counts.map((button) => (
-        <li key={button}>
-          <button type="button" onClick={() => onClick(button)}>
-            {button}
-          </button>
+      {counts.map((count) => (
+        <li key={count}>
+          <Button onClick={() => onClick(count)}>
+            {count}
+          </Button>
         </li>
       ))}
     </ul>
