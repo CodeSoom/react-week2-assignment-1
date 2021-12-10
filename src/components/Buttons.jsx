@@ -9,8 +9,7 @@ export default function Buttons({ onClick }) {
       {numbers.map((i) => (
         <NumberButton
           key={i}
-          number={i}
-          onClick={onClick}>
+          onClick={() => onClick(i)}>
           {i}
         </NumberButton>
       ))}

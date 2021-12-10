@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function NumberButton({ onClick, number, children }) {
+export default function NumberButton({ onClick, children }) {
   return (
     <button
-      onClick={() => onClick(number)}
+      onClick={onClick}
       type="button">
       {children}
     </button>
