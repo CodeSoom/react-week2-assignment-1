@@ -7,11 +7,11 @@ export default function Page() {
   const [count, setCount] = useState(0);
 
   function handleClickCounter() {
-    setCount(() => count + 1);
+    setCount(count + 1);
   }
 
   function handleClickButton(i) {
-    setCount(() => count + i);
+    setCount(count + i);
   }
 
   return (
