@@ -6,11 +6,11 @@ export default function App() {
   const [count, setCount] = useState(0);
 
   function onClickCounter() {
-    setCount({ count: count + 1 });
+    setCount(count + 1);
   }
 
   function onClickNumber(number) {
-    setCount({ count: count + number });
+    setCount(count + number);
   }
 
   return (
