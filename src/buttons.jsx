@@ -1,11 +1,11 @@
 import Button from './button';
 
-const buttonValue = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 
 export default function Buttons({ onClick }) {
   return (
     <div>
-      {buttonValue.map((i) => (
+      {numbers.map((i) => (
         <Button
           key={i}
           onClick={() => { onClick(i); }}
