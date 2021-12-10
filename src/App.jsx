@@ -7,10 +7,14 @@ export default function App() {
   function onClickOne() {
     setState((prev) => ({ ...prev, count: count + 1 }));
   }
-  function onClickNumbers(numbers) {
+  function onClickNumber(numbers) {
     setState((prev) => ({ ...prev, count: count + numbers }));
   }
   return (
-    <Page count={count} onClickOne={onClickOne} onClickNumbers={onClickNumbers} />
+    <Page
+      count={count}
+      onClickOne={onClickOne}
+      onClickNumber={onClickNumber}
+    />
   );
 }
