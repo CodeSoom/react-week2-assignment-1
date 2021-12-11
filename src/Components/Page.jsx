@@ -7,7 +7,7 @@ const Page = ({ count, onClick }) => (
     <div>
       <Counter
         count={count}
-        onClick={() => onClick(1)}
+        onClick={onClick}
       />
     </div>
     <div>
