@@ -1,4 +1,4 @@
-import Button from './button';
+import Button from './Button';
 
 const numbers = [1, 2, 3, 4, 5];
 
