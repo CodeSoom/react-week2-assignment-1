@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-function Buttons({ onClick }) {
+export default function Buttons({ onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
@@ -12,5 +12,3 @@ function Buttons({ onClick }) {
     </p>
   );
 }
-
-export default Buttons;

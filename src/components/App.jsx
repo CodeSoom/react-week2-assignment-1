@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Page from './Page';
 
-function App() {
+export default function App() {
   const [state, setState] = useState({
     count: 0,
   });
@@ -21,5 +21,3 @@ function App() {
     />
   );
 }
-
-export default App;
