@@ -1,59 +1,37 @@
 import React, { useState } from 'react';
 import * as ReactDOM from 'react-dom';
+import Page from './components/Page';
 
-function Counter() {
+function increaseCount() {
   const [state, setState] = useState({
     count: 0,
   });
 
   const { count } = state;
 
-  function handleClick() {
-    console.log('click');
+  function handleClick(number) {
     setState({
-      count: count + 1,
+      count: count + number,
     });
   }
 
-  return (
-    <Button type="button" onClick={handleClick}>
-      Click me!
-      (
-      {count}
-      )
-    </Button>
-  );
-}
-
-// eslint-disable-next-line react/prop-types
-function Button({ children }) {
-  return (
-    <button type="button">
-      {children}
-    </button>
-  );
-}
-
-function Buttons() {
-  return (
-    <>
-      {[1, 2, 3].map((i) => (
-        <Button key={i}>
-          {i}
-        </Button>
-      ))}
-    </>
-  );
+  return {
+    count,
+    handleClick,
+  };
 }
 
 function App() {
+  const {
+    count,
+    handleClick,
+  } = increaseCount();
+
   return (
-    <div>
-      <p>Hello, world!</p>
-      <p>Hi!</p>
-      <Buttons />
-      <Counter />
-    </div>
+    <Page
+      count={count}
+      onClick={handleClick}
+    />
   );
 }
 
