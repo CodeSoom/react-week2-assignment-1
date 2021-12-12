@@ -3,10 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -14,9 +11,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -25,6 +20,8 @@ module.exports = {
     Scenario: 'readonly',
   },
   rules: {
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
     indent: ['error', 2],
     'no-trailing-spaces': 'error',
     curly: 'error',
