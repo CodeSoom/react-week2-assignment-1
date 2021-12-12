@@ -1,7 +1,7 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react';
+import Button from './Button';
 
-import { range } from "./js/utils";
+import { range } from './js/utils';
 
 export default function Buttons({ onClick }) {
   return (

@@ -1,6 +1,6 @@
-import React from "react";
-import Buttons from "./Buttons";
-import Counter from "./Counter";
+import React from 'react';
+import Buttons from './Buttons';
+import Counter from './Counter';
 
 export default function Page({ count, onClick }) {
   return (
