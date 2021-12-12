@@ -5,6 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'airbnb',
   ],
   parserOptions: {
@@ -25,6 +26,17 @@ module.exports = {
     Scenario: 'readonly',
   },
   rules: {
+    'react/function-component-definition': [2, {
+      namedComponents: 'function-declaration',
+    }],
+    'react/prop-types': 'off',
+    'react/jsx-no-bind': ['error', {
+      ignoreRefs: true,
+      allowArrowFunctions: true,
+      allowFunctions: false,
+      allowBind: false,
+      ignoreDOMComponents: true,
+    }],
     indent: ['error', 2],
     'no-trailing-spaces': 'error',
     curly: 'error',
