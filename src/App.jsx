@@ -1,15 +1,16 @@
+import { useState } from 'react';
+
 import Title from './Title';
 import ClickMeButton from './ClickMeButton';
 import NumberButtons from './NumberButtons';
 
 export default function App() {
-  const [state, setState] = useStatee(0);
-  const { count } = state;
+  const [count, setCount] = useState(0);
 
   function handleClick(value = 1) {
-    setState({
-      count: count + value,
-    });
+    setCount(count+value);
+    console.log(value);
+    console.log(count);
   }
 
   return (
