@@ -4,8 +4,10 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'airbnb',
+    'plugin:react/jsx-runtime',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -14,9 +16,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -25,6 +25,8 @@ module.exports = {
     Scenario: 'readonly',
   },
   rules: {
+    'linebreak-style': 0,
+    'react/prop-types': 0,
     indent: ['error', 2],
     'no-trailing-spaces': 'error',
     curly: 'error',
