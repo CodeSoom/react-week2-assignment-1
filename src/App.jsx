@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Page from './Page';
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
   const { count } = state;
 
   const handleClick = (increment) => {
-    setState({ count: count + increment });
+    setState({ ...state, count: count + increment });
   };
 
   return <Page count={count} onClick={handleClick} />;

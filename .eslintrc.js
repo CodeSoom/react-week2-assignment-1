@@ -41,5 +41,7 @@ module.exports = {
     'key-spacing': ['error', { mode: 'strict' }],
     'arrow-spacing': ['error', { before: true, after: true }],
     'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-one-expression-per-line': 'off',
   },
 };
