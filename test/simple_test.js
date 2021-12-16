@@ -3,61 +3,61 @@ Feature('Click me');
 const range = (count) => [...Array(count)];
 
 Scenario('Click me test', ({ I }) => {
-  I.amOnPage('/');
+ I.amOnPage('/');
 
-  I.see('(0)');
+ I.see('(0)');
 
-  range(5).forEach(() => I.click('Click me'));
+ range(5).forEach(() => I.click('Click me'));
 
-  I.see('(5)');
+ I.see('(5)');
 });
 
 Scenario('Click 1 test', ({ I }) => {
-  I.amOnPage('/');
+ I.amOnPage('/');
 
-  I.see('(0)');
+ I.see('(0)');
 
-  range(5).forEach(() => I.click('1'));
+ range(5).forEach(() => I.click('1'));
 
-  I.see('(5)');
+ I.see('(5)');
 });
 
 Scenario('Click 2 test', ({ I }) => {
-  I.amOnPage('/');
+ I.amOnPage('/');
 
-  I.see('(0)');
+ I.see('(0)');
 
-  range(5).forEach(() => I.click('2'));
+ range(5).forEach(() => I.click('2'));
 
-  I.see('(10)');
+ I.see('(10)');
 });
 
 Scenario('Click 3 test', ({ I }) => {
-  I.amOnPage('/');
+ I.amOnPage('/');
 
-  I.see('(0)');
+ I.see('(0)');
 
-  range(5).forEach(() => I.click('3'));
+ range(5).forEach(() => I.click('3'));
 
-  I.see('(15)');
+ I.see('(15)');
 });
 
 Scenario('Click 4 test', ({ I }) => {
-  I.amOnPage('/');
+ I.amOnPage('/');
 
-  I.see('(0)');
+ I.see('(0)');
 
-  range(5).forEach(() => I.click('4'));
+ range(5).forEach(() => I.click('4'));
 
-  I.see('(20)');
+ I.see('(20)');
 });
 
 Scenario('Click 5 test', ({ I }) => {
-  I.amOnPage('/');
+ I.amOnPage('/');
 
-  I.see('(0)');
+ I.see('(0)');
 
-  range(5).forEach(() => I.click('5'));
+ range(5).forEach(() => I.click('5'));
 
-  I.see('(25)');
+ I.see('(25)');
 });
