@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Counter({ count, onClick }) {
+function CountButton({ count, onClick }) {
   return (
     <button type="button" onClick={onClick}>
       Click me!
@@ -11,4 +11,4 @@ function Counter({ count, onClick }) {
   );
 }
 
-export default Counter;
+export default CountButton;

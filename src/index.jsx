@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDom from 'react-dom';
-import Counter from './counter';
+import CountButton from './countButton';
 import CounterNumber from './counterNumber';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         Counter
       </p>
       <p>
-        <Counter count={count} onClick={handleClick} />
+        <CountButton count={count} onClick={handleClick} />
       </p>
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
