@@ -11,6 +11,7 @@
     "predeploy": "webpack build && mv ./dist/main.js ./main.js",
     "deploy": "gh-pages -d . && rm ./main.js"
   },
+  "homepage": "https://0407chan.github.io/react-week1-assignment-2",
   "keywords": [],
   "author": "",
   "license": "ISC",
