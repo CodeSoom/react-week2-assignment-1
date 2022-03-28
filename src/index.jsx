@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Counter from './Counter';
 
-function App() {
-  return <div>hello world!</div>;
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Counter />, document.getElementById('app'));
