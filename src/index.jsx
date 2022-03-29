@@ -23,10 +23,15 @@ function App() {
   }
 
   return (
-    <Page
-      count={count}
-      onClick={handleClick}
-    />
+    <>
+      <Page
+        count={count}
+        onClick={handleClick}
+      />
+      <Buttons
+        onClick={addClickNumber}
+      />
+    </>
   );
 }
 
