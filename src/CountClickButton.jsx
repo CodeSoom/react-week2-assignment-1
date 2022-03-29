@@ -14,6 +14,13 @@ function CountClickButton() {
   }
 
   function handleSetButton(value) {
+    if (count) {
+      setState({
+        count: count + value,
+      });
+      return;
+    }
+
     setState({
       count: value,
     });
@@ -23,7 +30,7 @@ function CountClickButton() {
     <div>
       <p>
         <button type='button' onClick={handleClickButton}>
-          어여 눌러봐 ~ ({count})
+          Click me ({count})
         </button>
       </p>
       <p>
