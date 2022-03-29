@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import CountButton from './countButton';
-import CountNumberButton from './countNumberButton';
+import CountButton from './CountButton';
+import CountNumberButton from './CountNumberButton';
 
-function CountPage() {
+export default function CountPage() {
   const [count, setCount] = useState(0);
 
   function handleClick() {
@@ -28,5 +28,3 @@ function CountPage() {
     </div>
   );
 }
-
-export default CountPage;

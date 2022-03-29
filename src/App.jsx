@@ -1,4 +1,4 @@
-import CountPage from './countButton';
+import CountPage from './CountPage';
 
 export default function App() {
   return (
