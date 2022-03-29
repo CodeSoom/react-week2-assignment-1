@@ -1,8 +1,4 @@
-export default function Button({ value, setCount }) {
-  function handleClick() {
-    setCount((prevValue) => prevValue + parseInt(value, 10));
-  }
-
+export default function Button({ value, handleClick }) {
   return (
     <button
       type="button"
