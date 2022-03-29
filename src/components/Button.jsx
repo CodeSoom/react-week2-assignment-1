@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Button({ children, setCount }) {
   function handleClick() {
     setCount((prevValue) => prevValue + parseInt(children, 10));
