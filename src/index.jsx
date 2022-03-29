@@ -1,12 +1,6 @@
-import React from 'react';
 import ReactDom from 'react-dom';
-import CountPage from './countPage';
 
-function App() {
-  return (
-    <CountPage />
-  );
-}
+import App from './App';
 
 ReactDom.render(
   <App />,
