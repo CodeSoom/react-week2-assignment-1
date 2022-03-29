@@ -1,4 +1,4 @@
-export default function Counter({ children, setCount }) {
+export default function Counter({ count, setCount }) {
   function handleClick() {
     setCount((prevValue) => prevValue + 1);
   }
@@ -8,7 +8,10 @@ export default function Counter({ children, setCount }) {
       type="button"
       onClick={handleClick}
     >
-      { children }
+      Click me!
+      (
+      { count }
+      )
     </button>
   );
 }

@@ -13,12 +13,7 @@ export default function App() {
       <p>
         Counter
       </p>
-      <Counter setCount={setCount}>
-        Click me!
-        (
-        { count }
-        )
-      </Counter>
+      <Counter count={count} setCount={setCount} />
       <p>
         {numbers.map((number) => (
           <Button value={number} setCount={setCount}>
