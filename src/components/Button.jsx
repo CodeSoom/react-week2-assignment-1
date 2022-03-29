@@ -1,6 +1,6 @@
-export default function Button({ children, setCount }) {
+export default function Button({ value, setCount }) {
   function handleClick() {
-    setCount((prevValue) => prevValue + parseInt(children, 10));
+    setCount((prevValue) => prevValue + parseInt(value, 10));
   }
 
   return (
@@ -8,7 +8,7 @@ export default function Button({ children, setCount }) {
       type="button"
       onClick={handleClick}
     >
-      { children }
+      { value }
     </button>
   );
 }

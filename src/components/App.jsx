@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import Title from './Title';
 import Counter from './Counter';
 import Button from './Button';
 
@@ -11,7 +10,9 @@ export default function App() {
 
   return (
     <>
-      <Title />
+      <p>
+        Counter
+      </p>
       <Counter setCount={setCount}>
         Click me!
         (
@@ -20,7 +21,7 @@ export default function App() {
       </Counter>
       <p>
         {numbers.map((number) => (
-          <Button setCount={setCount}>
+          <Button value={number} setCount={setCount}>
             {number}
           </Button>
         ))}
