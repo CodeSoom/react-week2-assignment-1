@@ -17,16 +17,12 @@ function Counter() {
   return (
     <>
       <p>Counter</p>
-      <clickMeButton
-        count={count}
-        onClick={() => handleClick(1)}
-      />
-      <numberButton
-        {[1,2,3,4,5].map((i) => (
-
-        ))}
-
-      />
+      <p>
+        <clickMeButton count={count} onClick={() => handleClick(1)} />
+      </p>
+      {[1, 2, 3, 4, 5].map((i) => (
+        <numberButton key={i} number={i} onClick={() => handleClick(i)} />
+      ))}
     </>
   );
 }
