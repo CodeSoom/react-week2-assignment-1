@@ -29,13 +29,13 @@ function CountClickButton() {
   return (
     <div>
       <p>
-        <button type='button' onClick={handleClickButton}>
+        <button type="button" onClick={handleClickButton}>
           Click me ({count})
         </button>
       </p>
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <button type='button' key={i} onClick={() => handleSetButton(i)}>
+          <button type="button" key={i} onClick={() => handleSetButton(i)}>
             {i}
           </button>
         ))}
