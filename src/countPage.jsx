@@ -23,7 +23,7 @@ export default function CountPage() {
       </p>
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <CountNumberButton value={i} onClick={() => handleClickNumber(i)} />
+          <CountNumberButton value={i} onClick={handleClickNumber} />
         ))}
       </p>
     </div>
