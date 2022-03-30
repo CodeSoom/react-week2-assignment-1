@@ -25,6 +25,7 @@ module.exports = {
     Scenario: 'readonly',
   },
   rules: {
+    'react/jsx-one-expression-per-line': 'off',
     indent: ['error', 2],
     'no-trailing-spaces': 'error',
     curly: 'error',
