@@ -1,12 +1,11 @@
 import React from 'react';
 
-import CounterText from './CounterText';
 import CountClickButton from './CountClickButton';
 
 function App() {
   return (
     <div>
-      <CounterText />
+      <h1>Counter</h1>
       <CountClickButton />
     </div>
   );
