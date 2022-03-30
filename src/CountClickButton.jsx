@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function CountClickButton() {
+export default function CountClickButton() {
   const [state, setState] = useState({
     count: 0,
   });
@@ -43,5 +43,3 @@ function CountClickButton() {
     </div>
   );
 }
-
-export default CountClickButton;
