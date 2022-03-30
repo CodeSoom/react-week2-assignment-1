@@ -7,11 +7,11 @@ export default function CountPage() {
   const [count, setCount] = useState(0);
 
   function handleClick() {
-    setCount((prev) => prev + 1);
+    setCount(count + 1);
   }
 
   function handleClickNumber(value) {
-    setCount((prev) => prev + value);
+    setCount(count + value);
   }
   return (
     <div>
