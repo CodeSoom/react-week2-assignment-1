@@ -14,10 +14,17 @@ export default function App() {
     });
   }
 
+  function handleClickNumber(value) {
+    setState({
+      count: count + value,
+    });
+  }
+
   return (
     <Page
       count={count}
       onClick={handleClick}
+      onClickNumber={handleClickNumber}
     />
   );
 }
