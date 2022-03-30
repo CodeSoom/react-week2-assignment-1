@@ -9,7 +9,7 @@ export default function App() {
 
   const { count } = state;
 
-  function handleClick(increase) {
+  function handleClick(increase = 1) {
     setState({
       count: count + increase,
     });
