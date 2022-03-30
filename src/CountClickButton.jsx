@@ -15,15 +15,8 @@ export default function CountClickButton() {
   }
 
   function handleSetButton(value) {
-    if (count) {
-      setState({
-        count: count + value,
-      });
-      return;
-    }
-
     setState({
-      count: value,
+      count: count + value,
     });
   }
 
