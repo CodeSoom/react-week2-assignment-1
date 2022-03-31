@@ -1,5 +1,3 @@
-import React from 'react';
-
 import CountClickButton from './CountClickButton';
 
 function App() {
