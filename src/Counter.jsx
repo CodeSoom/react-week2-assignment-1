@@ -13,7 +13,7 @@ export default function Counter() {
     <div>
       <p>Counter</p>
       <p>
-        <ClickMeButton count={count} onClick={() => handleClick(1)} />
+        <ClickMeButton count={count} onClick={handleClick} />
       </p>
       {[1, 2, 3, 4, 5].map((i) => (
         <NumberButton key={i} number={i} onClick={() => handleClick(i)} />
