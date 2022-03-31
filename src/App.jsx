@@ -11,6 +11,7 @@ export default function App() {
 
   function handleClick(increase = 1) {
     setState({
+      ...state,
       count: count + increase,
     });
   }
