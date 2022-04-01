@@ -10,6 +10,7 @@ export default function App() {
 
   function handleClick() {
     setState({
+      ...state,
       count: count + 1,
     });
   }
