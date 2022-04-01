@@ -11,7 +11,7 @@ export default function Page({ count, onClick, onClickNumber }) {
         onClick={onClick}
       />
       <Buttons
-        onClickNumber={onClickNumber}
+        onClick={onClickNumber}
       />
     </div>
   );
