@@ -1,7 +1,8 @@
 import { useState } from 'react';
+
 import Button from './components/Button';
 
-const App = () => {
+export default function App() {
   const [count, setCount] = useState(0);
 
   const handleCount = (value) => {
@@ -19,13 +20,11 @@ const App = () => {
       </Button>
       <br />
       <br />
-      {Array.from({ length: 5 }, (_, i) => (
-        <Button value={i + 1} onClick={() => handleCount(count + i + 1)}>
-          {i + 1}
+      {[1, 2, 3, 4, 5].map((number) => (
+        <Button value={number} onClick={() => handleCount(count + number)}>
+          {number}
         </Button>
       ))}
     </>
   );
-};
-
-export default App;
+}
