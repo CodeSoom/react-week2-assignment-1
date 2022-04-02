@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function CountClickButton() {
+export default function CountPage() {
   const [state, setState] = useState({
     count: 0,
   });
