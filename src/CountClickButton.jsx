@@ -9,7 +9,7 @@ export default function CountClickButton() {
 
   function handleClickButton() {
     setState({
-      ...count,
+      ...state,
       count: count + 1,
     });
   }
