@@ -1,7 +1,7 @@
 import React from 'react';
-import CounterButton from './CounterButton';
+import NumberCounter from './NumberCounter';
 
-const CounterButtons = ({ setCount }) => {
+const CounterContainer = ({ setCount }) => {
   const handleClick = (event) => {
     event.preventDefault();
     const { value } = event.target;
@@ -9,9 +9,9 @@ const CounterButtons = ({ setCount }) => {
   };
   return (
     <div>
-      <CounterButton handleClick={handleClick} />
+      <NumberCounter handleClick={handleClick} />
     </div>
   );
 };
 
-export default CounterButtons;
+export default CounterContainer;
