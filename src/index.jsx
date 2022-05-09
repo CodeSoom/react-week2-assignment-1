@@ -33,7 +33,7 @@ const App = () => {
       </p>
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <button type="button" onClick={() => clickNumber(i)}>
+          <button type="button" key={i} onClick={() => clickNumber(i)}>
             {i}
           </button>
         ))}
