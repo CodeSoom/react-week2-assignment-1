@@ -1,4 +1,5 @@
 import React from 'react';
+import CounterButton from './CounterButton';
 
 const CounterButtons = ({ setCount }) => {
   const handleClick = (event) => {
@@ -8,11 +9,7 @@ const CounterButtons = ({ setCount }) => {
   };
   return (
     <div>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <button type="button" key={i} value={i} onClick={handleClick}>
-          {i}
-        </button>
-      ))}
+      <CounterButton handleClick={handleClick} />
     </div>
   );
 };

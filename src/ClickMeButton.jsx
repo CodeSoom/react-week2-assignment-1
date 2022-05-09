@@ -1,15 +1,16 @@
 import React from 'react';
+import Button from './Button';
 
 const ClickMeButton = ({ count, setCount }) => {
   const handleClick = () => {
     setCount((previousCount) => previousCount + 1);
   };
   return (
-    <button type="button" onClick={handleClick}>
+    <Button type="button" onClick={handleClick}>
       Click me!(
       {count}
       )
-    </button>
+    </Button>
   );
 };
 
