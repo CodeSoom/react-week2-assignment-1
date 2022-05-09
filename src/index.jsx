@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import ClickMeButton from './ClickMeButton';
 import CounterButtons from './CounterButtons';
 
-const Home = () => {
+const App = () => {
   const [count, setCount] = useState(0);
   return (
     <>
@@ -14,6 +14,6 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default App;
 
-ReactDOM.render(<Home />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
