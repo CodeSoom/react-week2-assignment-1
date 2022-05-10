@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import ClickmeButton from './ClickmeButton';
-import NumberButton from './NumberButton';
+import NumberButtons from './NumberButtons';
 
 export default function Counter() {
   const [count, setCount] = useState(0);
@@ -22,7 +22,7 @@ export default function Counter() {
         {count}
         )
       </ClickmeButton>
-      <NumberButton onClick={handleClickNumber} />
+      <NumberButtons onClick={handleClickNumber} />
     </div>
   );
 }
