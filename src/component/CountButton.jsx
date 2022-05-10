@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-function CountBtn({ count, onClick }) {
+function CountButton({ count, onClick }) {
   return (
     <div>
       <Button
@@ -10,10 +10,12 @@ function CountBtn({ count, onClick }) {
         onClick={() => onClick(1)}
       >
         Click me!
+        (
         {count}
+        )
       </Button>
     </div>
   );
 }
 
-export default CountBtn;
+export default CountButton;

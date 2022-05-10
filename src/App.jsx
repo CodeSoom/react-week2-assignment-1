@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
-import CountBtn from './component/CountBtn';
+
+import CountButton from './component/CountButton';
 import Numbers from './component/Numbers';
 
 function App() {
   const [count, setCount] = useState(0);
   const numbers = [1, 2, 3, 4, 5];
 
-  function handleClicked(n) {
+  function handleClick(n) {
     setCount(count + n);
   }
 
   return (
     <div>
       <p>Counter</p>
-      <CountBtn
+      <CountButton
         count={count}
-        onClick={handleClicked}
+        onClick={handleClick}
       />
       <Numbers
         numbers={numbers}
-        onClick={handleClicked}
+        onClick={handleClick}
       />
     </div>
   );
