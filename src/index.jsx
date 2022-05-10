@@ -8,13 +8,13 @@ const App = () => {
 
   const { count } = state;
 
-  const clickCount = () => {
+  const handleClickCount = () => {
     setState({
       count: count + 1,
     });
   };
 
-  const clickNumber = (number) => {
+  const handleClickNumbers = (number) => {
     setState({
       count: count + number,
     });
@@ -24,7 +24,7 @@ const App = () => {
     <>
       <p>Counter</p>
       <p>
-        <button type="button" onClick={() => clickCount()}>
+        <button type="button" onClick={() => handleClickCount()}>
           Click me!
           (
           {count}
@@ -33,7 +33,7 @@ const App = () => {
       </p>
       <p>
         {[1, 2, 3, 4, 5].map((i) => (
-          <button type="button" key={i} onClick={() => clickNumber(i)}>
+          <button type="button" key={i} onClick={() => handleClickNumbers(i)}>
             {i}
           </button>
         ))}
