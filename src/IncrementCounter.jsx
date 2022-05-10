@@ -3,7 +3,7 @@ import Button from './Button';
 
 const IncrementCounter = ({ count, setCount }) => {
   const handleClick = () => {
-    setCount((previousCount) => previousCount + 1);
+    setCount();
   };
   return (
     <Button type="button" handleClick={handleClick}>

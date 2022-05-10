@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import useCount from './useCount';
+
 import IncrementCounter from './IncrementCounter';
 import CounterContainer from './CounterContainer';
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useCount(0);
   return (
     <>
       <div>Counter</div>

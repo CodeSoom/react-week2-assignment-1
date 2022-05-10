@@ -2,14 +2,14 @@ import React from 'react';
 import NumberCounter from './NumberCounter';
 
 const CounterContainer = ({ setCount }) => {
-  const handleClick = (event) => {
+  const onCountClick = (event) => {
     event.preventDefault();
     const { value } = event.target;
-    setCount((previousCount) => previousCount + Number(value));
+    setCount(Number(value));
   };
   return (
     <div>
-      <NumberCounter handleClick={handleClick} />
+      <NumberCounter handleCountClick={onCountClick} />
     </div>
   );
 };
