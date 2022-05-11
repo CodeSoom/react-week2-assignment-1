@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <Title />
-      <Counter handleCounter={() => setCount()}>
+      <Counter onCounter={() => setCount()}>
         Click me!(
         {count}
         )
