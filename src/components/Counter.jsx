@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NumberButtons from './NumberButtons';
 import ClickMeButton from './ClickMeButton';
 
-function Counter() {
+export default function Counter() {
   const [state, setState] = useState({
     count: 0,
   });
@@ -19,15 +19,9 @@ function Counter() {
     <div>
       <p>Counter</p>
       <p>
-        <ClickMeButton onClick={handleClick}>
-          Click me! (
-          {count}
-          )
-        </ClickMeButton>
+        <ClickMeButton onClick={handleClick}>Click me! ({count})</ClickMeButton>
       </p>
       <NumberButtons count={count} onClick={handleClick} />
     </div>
   );
 }
-
-export default Counter;

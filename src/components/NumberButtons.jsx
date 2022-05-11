@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NumberButtons({ onClick }) {
+export default function NumberButtons({ onClick }) {
   return (
     <>
       {[1, 2, 3, 4, 5].map((i) => (
@@ -11,5 +11,3 @@ function NumberButtons({ onClick }) {
     </>
   );
 }
-
-export default NumberButtons;
