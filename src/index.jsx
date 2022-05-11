@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Buttons from './components/Buttons';
 import Counter from './components/Counter';
 
-const BUTTON_LIST = [1, 2, 3, 4, 5];
+const BUTTON_LABELS = [1, 2, 3, 4, 5];
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,7 +20,7 @@ function App() {
     <div>
       <h3>Counter</h3>
       <Counter count={count} onClick={handleCounterClick} />
-      <Buttons labels={BUTTON_LIST} onClick={handleButtonClick} />
+      <Buttons labels={BUTTON_LABELS} onClick={handleButtonClick} />
     </div>
   );
 }
