@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Counter = ({ onCounter, children, value }) => {
-  const handleCounter = () => {
-    onCounter(value);
+  const handleCounter = (countValue) => {
+    onCounter(countValue);
   };
   return (
-    <button type="button" onClick={handleCounter} value={value}>{children}</button>
+    <button type="button" onClick={() => handleCounter(value)}>{children}</button>
   );
 };
 

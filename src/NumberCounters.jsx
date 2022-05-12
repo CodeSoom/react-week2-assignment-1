@@ -2,10 +2,10 @@ import React from 'react';
 
 import Counter from './Counter';
 
-const NumberCounters = ({ setCount }) => (
+const NumberCounters = ({ onCounter }) => (
   <div>
     {[1, 2, 3, 4, 5].map((i) => (
-      <Counter onCounter={() => setCount(i)}>
+      <Counter onCounter={onCounter} value={i}>
         {i}
       </Counter>
     ))}
