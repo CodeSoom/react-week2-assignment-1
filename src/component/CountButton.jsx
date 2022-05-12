@@ -7,7 +7,7 @@ function CountButton({ count, onClick }) {
     <div>
       <Button
         type="button"
-        onClick={() => onClick()}
+        onClick={onClick}
       >
         Click me!
         (
