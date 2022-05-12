@@ -4,7 +4,7 @@ function Button({ onClick, children }) {
   return (
     <button
       type="button"
-      onClick={() => onClick(children)}
+      onClick={onClick}
     >
       {children}
     </button>
