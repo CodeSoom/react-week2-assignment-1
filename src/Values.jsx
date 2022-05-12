@@ -1,12 +1,8 @@
 import React from 'react';
 
-function Values({ setValue }) {
-  function handleClick(increment) {
-    setValue((prev) => prev + increment);
-  }
-
+function Values({ onClick }) {
   return (
-    [1, 2, 3, 4, 5].map((increment) => <button type="button" onClick={() => handleClick(increment)}>{increment}</button>)
+    [1, 2, 3, 4, 5].map((increment) => <button type="button" onClick={() => onClick(increment)}>{increment}</button>)
   );
 }
 

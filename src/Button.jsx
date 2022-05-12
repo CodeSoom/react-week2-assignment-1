@@ -1,12 +1,8 @@
 import React from 'react';
 
-function Button({ value, setValue }) {
-  function handleClick() {
-    setValue((prev) => prev + 1);
-  }
-
+function Button({ value, onClick }) {
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" onClick={() => onClick(1)}>
       Click me! (
       {value}
       )

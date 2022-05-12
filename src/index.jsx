@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { useState } from 'react/cjs/react.development';
+
 import Button from './Button';
 import Values from './Values';
 
 function App() {
   const [value, setValue] = useState(0);
+  function handleClick(number) {
+    setValue((prev) => prev + number);
+  }
 
   return (
     <>
@@ -13,10 +17,10 @@ function App() {
         Counter
       </p>
       <p>
-        <Button value={value} setValue={setValue} />
+        <Button value={value} onClick={handleClick} />
       </p>
       <p>
-        <Values setValue={setValue} />
+        <Values onClick={handleClick} />
       </p>
     </>
   );
