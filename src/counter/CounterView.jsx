@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function CounterView({ handleCounter, children, value }) {
+export default function CounterView({ curriedOnCounter, children, value }) {
   return (
-    <button type="button" onClick={handleCounter(value)}>{children}</button>
+    <button type="button" onClick={curriedOnCounter(value)}>{children}</button>
   );
 }

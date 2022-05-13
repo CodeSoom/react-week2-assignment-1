@@ -2,11 +2,11 @@ import React from 'react';
 import CounterView from './CounterView';
 
 const Counter = ({ onCounter, children, value }) => {
-  const handleCounter = (countValue) => () => {
+  const curriedOnCounter = (countValue) => () => {
     onCounter(countValue);
   };
   return (
-    <CounterView handleCounter={handleCounter} value={value}>
+    <CounterView curriedOnCounter={curriedOnCounter} value={value}>
       {children}
     </CounterView>
   );
