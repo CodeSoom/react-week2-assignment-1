@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import MultipleIncrease from './MultipleIncrease';
+import SingleIncrease from './SingleIncrease';
 
 export default function Counter() {
   const [state, setState] = useState({
@@ -16,11 +18,8 @@ export default function Counter() {
 
   return (
     <div>
-      <button type="button" onClick={() => handleIncrease(1)}>
-        Click me! (
-        {count}
-        )
-      </button>
+      <p>Counter</p>
+      <SingleIncrease onClick={handleIncrease} count={count} />
       <MultipleIncrease onClick={handleIncrease} />
     </div>
   );
