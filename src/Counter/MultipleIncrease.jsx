@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MultipleIncrease({ onClick }) {
+export default function MultipleIncrease({ onClick }) {
   return (
     <p>
       {
@@ -13,5 +13,3 @@ function MultipleIncrease({ onClick }) {
     </p>
   );
 }
-
-export default MultipleIncrease;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import MultipleIncrease from './MultipleIncrease';
 
-function Counter() {
+export default function Counter() {
   const [state, setState] = useState({
     count: 0,
   });
@@ -25,5 +25,3 @@ function Counter() {
     </div>
   );
 }
-
-export default Counter;
