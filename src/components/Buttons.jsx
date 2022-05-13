@@ -10,7 +10,7 @@ const transformLabels = {
   5: '다섯',
 };
 
-function Buttons({ labels, onClick }) {
+export default function Buttons({ labels, onClick }) {
   return (
     <div style={{ marginTop: '1rem' }}>
       {labels.map((label) => (
@@ -19,5 +19,3 @@ function Buttons({ labels, onClick }) {
     </div>
   );
 }
-
-export default Buttons;
