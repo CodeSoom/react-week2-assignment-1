@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Title = () => (
-  <div>Counter</div>
-);
-
-export default Title;
+export default function Title() {
+  return (
+    <div>Counter</div>
+  );
+}

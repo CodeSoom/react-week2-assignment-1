@@ -3,11 +3,11 @@ import React from 'react';
 import Title from './Title';
 import CounterContainer from './counter/CounterContainer';
 
-const App = () => (
-  <>
-    <Title />
-    <CounterContainer />
-  </>
-);
-
-export default App;
+export default function App() {
+  return (
+    <>
+      <Title />
+      <CounterContainer />
+    </>
+  );
+}
