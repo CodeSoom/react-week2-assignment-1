@@ -1,12 +1,12 @@
 // 라이브러리 & 프레임워크
-import React, { useState } from "react";
+import React, { useState } from 'react';
 // 상수 값
-import * as COUNTER_CONST from "./const/counter";
+import counter from './const/counter';
 // 컴포넌트
-import { CounterButton } from "./CounterButton";
-import { CounterPads } from "./CounterPads";
+import { CounterButton } from './CounterButton';
+import { CounterPads } from './CounterPads';
 
-const { counterLabel } = COUNTER_CONST;
+const { label } = counter;
 
 // Counter
 export function Counter() {
@@ -17,7 +17,7 @@ export function Counter() {
   }
   return (
     <div>
-      <p>{counterLabel}</p>
+      <p>{label}</p>
       <CounterButton count={count} onClick={handleCounter} />
       <CounterPads onClick={handleCounter} />
     </div>

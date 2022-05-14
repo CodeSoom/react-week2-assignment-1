@@ -1,8 +1,8 @@
 // 라이브러리 & 프레임워크
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 // 컴포넌트
-import { Counter } from "./Counter";
+import { Counter } from './Counter';
 
 // 전체 App 요소
 function App() {
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));

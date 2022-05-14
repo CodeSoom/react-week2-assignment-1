@@ -1,10 +1,10 @@
 // ui 데이터 모음
-const counterInterface = {
-  counterLabel: 'Counter',
-  counterButtonLabel: 'Click me!',
-  counterPads: [1, 2, 3, 4, 5],
+const counter = {
+  label: 'Counter',
+  buttonLabel: 'Click me!',
+  pads: [1, 2, 3, 4, 5],
 };
 
-Object.freeze(counterInterface);
+Object.freeze(counter);
 
-export default counterInterface;
+export default counter;
