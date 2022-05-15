@@ -2,25 +2,41 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 
+
 function App() {
     const [count, setCount] = useState(0);
     const [number, setNumber] = useState([1,2,3,4])
   return (
     <div>
       <p>Counter</p>
-      <button onClick={()=>setCount(count+1)}>Click me!({count})
-      </button>
-    {
-    number.map((i)=>{
-        return(
-        <div className="addnumber" key={i}>
-            <button onClick={()=>setCount(count+i)}>{i}</button>
-        </div>
-        )
-    })
-    }
+      <Button count={count} setCount={setCount}/>
+      <AddtheNumber number={number} count={count} setCount={setCount}/>
     </div>
   );
+}  
+function Button(props){
+    console.log(props)
+    return (    
+        
+        <button onClick={()=>props.setCount(props.count+1)}>Click me!({props.count})
+      </button>
+    )
+}
+function AddtheNumber(props) {
+    return (
+        <div>
+            {
+            props.number.map((i)=>{
+
+                return(
+                <div className="addnumber" key={i}>
+                    <button onClick={()=>props.setCount(props.count+i)}>{i}</button>
+                </div>
+                )
+            })
+            }
+        </div>
+    )
 }
 
 ReactDOM.render(
