@@ -1,41 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-
-function Counter({ count, onClick }) {
-  return (
-    <button type="button" onClick={onClick}>
-      Click me!(
-      {count}
-      )
-    </button>
-  );
-}
-
-function Button({ children, onClick }) {
-  return (
-    <button onClick={() => onClick(children)} type="button">{children}</button>
-  );
-}
-
-function Buttons({ createNumbers, onClick }) {
-  return (
-    <p>
-      {createNumbers(5).map((i) => (
-        <Button onClick={onClick} key={i}>{i}</Button>
-      ))}
-    </p>
-  );
-}
-
-function Page({ count, onClick, createNumbers }) {
-  return (
-    <div>
-      <p>Counter</p>
-      <Counter count={count} onClick={() => onClick()} />
-      <Buttons createNumbers={createNumbers} onClick={onClick} />
-    </div>
-  );
-}
+import Counter from './pages/Counter';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -52,7 +17,7 @@ function App() {
   };
 
   return (
-    <Page
+    <Counter
       count={count}
       onClick={handleClick}
       createNumbers={createNumbers}
