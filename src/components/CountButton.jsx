@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Counter({ countUp, count }) {
+function CountButton({ countUp, count }) {
   const onClickButton = () => {
     countUp(1);
   };
@@ -17,4 +17,4 @@ function Counter({ countUp, count }) {
   );
 }
 
-export default Counter;
+export default CountButton;

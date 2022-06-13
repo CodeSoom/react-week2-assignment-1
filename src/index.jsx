@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import CountButton from './components/CountButton';
+import NumberButtons from './components/NumberButtons';
 
-function Counter({ countUp, count }) {
-  const onClickButton = () => {
-    countUp(1);
+function App() {
+  const [count, setCount] = useState(0);
+
+  const countUp = (number) => {
+    setCount(count + Number(number));
   };
-
   return (
-    <>
-      <button type="button" onClick={onClickButton}>
-        Click me!
-        (
-        {count}
-        )
-      </button>
-    </>
+    <div>
+      <p>Counter</p>
+      <CountButton count={count} countUp={countUp} />
+      <NumberButtons countUp={countUp} />
+    </div>
   );
 }
 
-export default Counter;
+ReactDOM.render(
+  <App />,
+  document.getElementById('app'),
+);
