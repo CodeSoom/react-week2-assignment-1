@@ -2,16 +2,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-function Counter({ count, onClick }) {
-  return (
-    <button type="button" onClick={onClick} className="counter">
-      Click me!
-      (
-      { count }
-      )
-    </button>
-  );
-}
+// 컴포넌트
+import Counter from './Counter';
 
 function NumberButton({ onClick, number }) {
   return (
