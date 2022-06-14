@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
 import React, { useState } from 'react';
 
-// 컴포넌트
 import Counter from './Counter';
 import NumberButtonList from './NumberButtonList';
 import ResetButton from './ResetButton';
