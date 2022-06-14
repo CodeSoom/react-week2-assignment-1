@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NumberButton = ({ value, onClick }) => (
+const NumberButton = ({ children, onClick }) => (
   <button type="button" onClick={onClick}>
-    {value}
+    {children}
   </button>
 );
 
