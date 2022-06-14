@@ -11,11 +11,15 @@ function App() {
     setCount(count + Number(number));
   };
 
+  const handleClick = (number) => {
+    countUp(number);
+  };
+
   return (
     <div>
       <h3>Counter</h3>
-      <CountButton count={count} countUp={countUp} />
-      <NumberButtons countUp={countUp} />
+      <CountButton increasingNumber={1} count={count} onClick={handleClick} />
+      <NumberButtons increasingNumber={5} onClick={handleClick} />
     </div>
   );
 }

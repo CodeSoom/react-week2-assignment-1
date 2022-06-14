@@ -1,16 +1,16 @@
 import React from 'react';
 
-export default function NumberButtons({ countUp }) {
-  const numbers = [1, 2, 3, 4, 5];
+export default function NumberButtons({ increasingNumber, onClick }) {
+  const numbers = Array(increasingNumber).fill().map((v, i) => i + 1);
 
-  const onClickButton = (number) => {
-    countUp(number);
+  const handleClickButton = (number) => {
+    onClick(number);
   };
 
   return (
     <div>
       {numbers.map((number) => (
-        <button type="button" key={number} onClick={() => onClickButton(number)}>{number}</button>
+        <button type="button" key={number} onClick={() => handleClickButton(number)}>{number}</button>
       ))}
     </div>
   );

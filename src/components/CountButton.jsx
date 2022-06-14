@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default function CountButton({ countUp, count }) {
-  const onClickButton = () => {
-    countUp(1);
+export default function CountButton({ increasingNumber, onClick, count }) {
+  const handleClickButton = () => {
+    onClick(increasingNumber);
   };
 
   return (
     <>
-      <button type="button" onClick={onClickButton}>
+      <button type="button" onClick={handleClickButton}>
         Click me!
         (
         {count}
