@@ -1,3 +1,4 @@
+// 컴포넌트
 import Buttons from '../../components/Buttons';
 import ViewCount from '../../components/ViewCount';
 

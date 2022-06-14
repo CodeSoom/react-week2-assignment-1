@@ -1,23 +1,7 @@
-import { useState } from 'react';
-
+// 리액트 돔
 import ReactDOM from 'react-dom';
-
-import Counter from './pages/Counter';
-
-function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = (number = 1) => {
-    setCount(count + number);
-  };
-
-  return (
-    <Counter
-      count={count}
-      onClick={handleClick}
-    />
-  );
-}
+// 컴포넌트
+import App from './App';
 
 ReactDOM.render(
   <App />,
