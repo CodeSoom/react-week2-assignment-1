@@ -24,7 +24,7 @@ export default function Counter() {
       <p style={style}>Counter</p>
       <div style={style}>
         <Button
-          value={`Click me! (${count})`}
+          children={`Click me! (${count})`}
           onClick={() => {
             handleClickButton(1);
           }}
@@ -34,7 +34,7 @@ export default function Counter() {
         {numbers.map((i) => (
           <Button
             key={i}
-            value={i}
+            children={i}
             onClick={() => {
               handleClickButton(i);
             }}
