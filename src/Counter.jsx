@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+
 import Button from './Button';
 
-function Counter() {
+export default function Counter() {
   const style = { marginBottom: '10px' };
 
   const [state, setState] = useState({
@@ -43,5 +44,3 @@ function Counter() {
     </div>
   );
 }
-
-export default Counter;
