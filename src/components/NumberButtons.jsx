@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NumberButtons({ countUp }) {
+export default function NumberButtons({ countUp }) {
   const numbers = [1, 2, 3, 4, 5];
 
   const onClickButton = (number) => {
@@ -15,5 +15,3 @@ function NumberButtons({ countUp }) {
     </div>
   );
 }
-
-export default NumberButtons;

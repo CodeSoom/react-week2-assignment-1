@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+
 import CountButton from './components/CountButton';
 import NumberButtons from './components/NumberButtons';
 
@@ -9,9 +10,10 @@ function App() {
   const countUp = (number) => {
     setCount(count + Number(number));
   };
+
   return (
     <div>
-      <p>Counter</p>
+      <h3>Counter</h3>
       <CountButton count={count} countUp={countUp} />
       <NumberButtons countUp={countUp} />
     </div>
