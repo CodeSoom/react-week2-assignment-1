@@ -1,5 +1,7 @@
 import { useState } from 'react';
+
 import ReactDOM from 'react-dom';
+
 import Counter from './pages/Counter';
 
 function App() {
