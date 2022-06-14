@@ -4,14 +4,7 @@ import ReactDOM from 'react-dom';
 
 // 컴포넌트
 import Counter from './Counter';
-
-function NumberButton({ onClick, number }) {
-  return (
-    <button type="button" className="number-button" onClick={onClick}>
-      { number }
-    </button>
-  );
-}
+import NumberButton from './NumberButton';
 
 const numbers = [1, 2, 3, 4, 5];
 
