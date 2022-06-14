@@ -1,4 +1,4 @@
-function CounterView({ count, onClick }) {
+function ViewCount({ count, onClick }) {
   return (
     <button type="button" onClick={onClick}>
       Click me!(
@@ -8,4 +8,4 @@ function CounterView({ count, onClick }) {
   );
 }
 
-export default CounterView;
+export default ViewCount;
