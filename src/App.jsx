@@ -7,8 +7,8 @@ import NumberButtons from './NumberButtons';
 const App = () => {
   const [count, setCount] = useState(0);
 
-  const handleClick = (value) => {
-    setCount(count + value);
+  const handleClick = (increase) => {
+    setCount(count + increase);
   };
 
   return (
