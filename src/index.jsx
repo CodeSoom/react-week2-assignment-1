@@ -13,10 +13,10 @@ function Counter({ count, onClick }) {
   );
 }
 
-function NumberButton({ onClick, children }) {
+function NumberButton({ onClick, number }) {
   return (
     <button type="button" className="number-button" onClick={onClick}>
-      { children }
+      { number }
     </button>
   );
 }
@@ -28,10 +28,8 @@ function NumberButtons({ onClick }) {
     <div className="number-buttons">
       (
       {
-        numbers.map((i) => (
-          <NumberButton key={i} onClick={() => onClick(i)}>
-            { i }
-          </NumberButton>
+        numbers.map((number) => (
+          <NumberButton key={number} number={number} onClick={() => onClick(number)} />
         ))
       }
       )
