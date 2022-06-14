@@ -7,10 +7,9 @@ const NumberButtons = ({ onClick }) => (
     {numbers.map((i) => (
       <NumberButton
         key={i}
-        onClick={() => onClick(i)}
-      >
-        {i}
-      </NumberButton>
+        number={i}
+        onClick={onClick}
+      />
     ))}
   </p>
 );

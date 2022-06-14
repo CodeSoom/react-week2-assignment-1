@@ -1,6 +1,9 @@
-const NumberButton = ({ children, onClick }) => (
-  <button type="button" onClick={onClick}>
-    {children}
+const NumberButton = ({ number, onClick }) => (
+  <button
+    type="button"
+    onClick={() => onClick(number)}
+  >
+    {number}
   </button>
 );
 
