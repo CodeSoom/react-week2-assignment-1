@@ -5,14 +5,7 @@ import ReactDOM from 'react-dom';
 // 컴포넌트
 import Counter from './Counter';
 import NumberButtonList from './NumberButtonList';
-
-function ResetButton({ onClick }) {
-  return (
-    <button type="button" className="reset-button" onClick={onClick}>
-      reset
-    </button>
-  );
-}
+import ResetButton from './ResetButton';
 
 function App() {
   const [count, setCount] = useState(0);
