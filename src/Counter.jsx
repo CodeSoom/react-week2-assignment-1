@@ -24,21 +24,23 @@ export default function Counter() {
       <p style={style}>Counter</p>
       <div style={style}>
         <Button
-          children={`Click me! (${count})`}
           onClick={() => {
             handleClickButton(1);
           }}
-        />
+        >
+          {`Click me! (${count})`}
+        </Button>
       </div>
       <div style={style}>
         {numbers.map((i) => (
           <Button
             key={i}
-            children={i}
             onClick={() => {
               handleClickButton(i);
             }}
-          />
+          >
+            {i}
+          </Button>
         ))}
       </div>
     </div>
