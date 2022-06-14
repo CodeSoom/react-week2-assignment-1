@@ -18,7 +18,10 @@ const App = () => {
         value={count}
         onClick={() => handleClick(1)}
       />
-      <NumberButtons onClick={handleClick} />
+      <NumberButtons
+        numbers={[1, 2, 3, 4, 5]}
+        onClick={handleClick}
+      />
     </>
   );
 };
