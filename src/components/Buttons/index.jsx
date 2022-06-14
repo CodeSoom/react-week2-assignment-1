@@ -1,6 +1,8 @@
 import Button from '../Button';
 
-function Buttons({ createNumbers, onClick }) {
+import createNumbers from '../../utils/CreateNumbers';
+
+function Buttons({ onClick }) {
   return (
     <p>
       {createNumbers(5).map((i) => (
