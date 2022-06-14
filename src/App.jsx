@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+
+import Title from './Title';
 import CounterButton from './CounterButton';
 import NumberButtons from './NumberButtons';
-import Title from './Title';
 
 const App = () => {
   const [count, setCount] = useState(0);
