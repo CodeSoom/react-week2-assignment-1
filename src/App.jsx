@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Counter from './pages/Counter';
 
-import createNumbers from './utils/createNumbers';
+import createNumbers from './utils/ChangeNamed';
 
 function App() {
   const [count, setCount] = useState(0);
