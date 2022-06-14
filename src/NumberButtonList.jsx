@@ -1,5 +1,3 @@
-import React from 'react';
-
 import NumberButton from './NumberButton';
 
 export default function NumberButtonList({ onClick }) {
