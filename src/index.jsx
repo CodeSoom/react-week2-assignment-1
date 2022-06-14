@@ -4,23 +4,7 @@ import ReactDOM from 'react-dom';
 
 // 컴포넌트
 import Counter from './Counter';
-import NumberButton from './NumberButton';
-
-const numbers = [1, 2, 3, 4, 5];
-
-function NumberButtons({ onClick }) {
-  return (
-    <div className="number-buttons">
-      (
-      {
-        numbers.map((number) => (
-          <NumberButton key={number} number={number} onClick={() => onClick(number)} />
-        ))
-      }
-      )
-    </div>
-  );
-}
+import NumberButtonList from './NumberButtonList';
 
 function ResetButton({ onClick }) {
   return (
@@ -51,7 +35,7 @@ function App() {
 
       <Counter count={count} onClick={handleClickCounter} />
 
-      <NumberButtons onClick={handleClickNumberButton} />
+      <NumberButtonList onClick={handleClickNumberButton} />
 
       <ResetButton onClick={handleClickResetButton} />
     </div>
