@@ -1,7 +1,6 @@
-// 컴포넌트
 import Button from '../Button';
-// 유틸 함수
-import createNumbers from '../../utils/CreateNumbers';
+
+import createNumbers from '../../utils/createNumbers';
 
 function Buttons({ onClick }) {
   return (

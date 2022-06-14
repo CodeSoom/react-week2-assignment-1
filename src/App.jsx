@@ -1,6 +1,5 @@
-// 리액트
 import { useState } from 'react';
-// 컴포넌트
+
 import Counter from './pages/Counter';
 
 function App() {

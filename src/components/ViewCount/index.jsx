@@ -1,6 +1,6 @@
 function ViewCount({ count, onClick }) {
   return (
-    <button type="button" onClick={onClick}>
+    <button type="button" onClick={() => onClick()}>
       Click me!(
       {count}
       )
