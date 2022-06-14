@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import Counter from './pages/Counter';
 
+import createNumbers from './utils/createNumbers';
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -13,6 +15,7 @@ function App() {
     <Counter
       count={count}
       onClick={handleClick}
+      createNumbers={createNumbers}
     />
   );
 }
