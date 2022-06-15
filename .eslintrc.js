@@ -37,7 +37,7 @@ module.exports = {
     'space-in-parens': ['error', 'never'],
     'block-spacing': 'error',
     'array-bracket-spacing': ['error', 'never'],
-    'object-curly-spacing': "react/jsx-uses-react": "off", ['error', 'always'],
+    'object-curly-spacing': ['error', 'always'],
     'key-spacing': ['error', { mode: 'strict' }],
     'arrow-spacing': ['error', { before: true, after: true }],
 
