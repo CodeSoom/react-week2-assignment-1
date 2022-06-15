@@ -7,5 +7,4 @@ export default function Buttons({ onClick }) {
         </button>
       ))}
     </p>
-  );
-}
+  );    "react/jsx-uses-react": "off",
