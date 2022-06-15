@@ -1,5 +1,5 @@
 export default function NumberButtons({ increasingNumber, onClick }) {
-  const numbers = Array(increasingNumber).fill().map((v, i) => i + 1);
+  const numbers = Array(increasingNumber).fill().map((_, i) => i + 1);
 
   const handleClickButton = (number) => {
     onClick(number);
