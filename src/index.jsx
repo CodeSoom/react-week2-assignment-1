@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import Page from './Page';
 
 function App() {
-  const [state, setCount] = useState({ count: 0 });
-  const { count } = state;
+  const [count, setCount] = useState(0);
 
   function handleClick(buttonNumber) {
-    setCount({ count: count + buttonNumber });
+    setCount(count + buttonNumber);
   }
   return <Page onClick={handleClick} count={count} />;
 }
