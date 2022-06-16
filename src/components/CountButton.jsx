@@ -1,16 +1,14 @@
-export default function CountButton({ increasingNumber, onClick, count }) {
+export default function CountButton({ onClick, count }) {
   const handleClickButton = () => {
-    onClick(increasingNumber);
+    onClick();
   };
 
   return (
-    <>
-      <button type="button" onClick={handleClickButton}>
-        Click me!
-        (
-        {count}
-        )
-      </button>
-    </>
+    <button type="button" onClick={handleClickButton}>
+      Click me!
+      (
+      {count}
+      )
+    </button>
   );
 }
