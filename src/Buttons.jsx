@@ -1,12 +1,10 @@
 import React from 'react';
 
-export default function Buttons({ onClick }) {
-  const numberButton = [1, 2, 3, 4, 5];
-
+export default function Buttons({ buttonList, onClick }) {
   return (
     <p>
       {
-        numberButton.map((i) => (
+        buttonList.map((i) => (
           <button type="button" key={i} onClick={() => onClick(i)}>{i}</button>
         ))
       }

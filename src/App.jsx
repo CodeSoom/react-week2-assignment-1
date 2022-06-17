@@ -4,32 +4,21 @@ import Buttons from './Buttons';
 import Counter from './Counter';
 
 export default function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
+  const [count, setCount] = useState(0);
+  const numberButtonList = [1, 2, 3, 4, 5];
 
-  const { count } = state;
-
-  function countClick() {
-    setState({
-      count: count + 1,
-    });
-  }
-
-  function numberClick(number) {
-    setState({
-      count: count + number,
-    });
+  function handleAddCount(number) {
+    setCount(count + number);
   }
 
   return (
     <div>
-      <p>Counter</p>
+      <h1>Counter</h1>
       <Counter
         count={count}
-        onClick={countClick}
+        onClick={() => handleAddCount(1)}
       />
-      <Buttons onClick={numberClick} />
+      <Buttons buttonList={numberButtonList} onClick={handleAddCount} />
     </div>
   );
 }
