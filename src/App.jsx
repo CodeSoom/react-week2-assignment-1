@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
-import Button from './Button';
+import { useState } from 'react';
+
+import CurrentCountButton from './CurrentCountButton';
 import CountButtons from './CountButtons';
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
 
-  const onClickButton = (number) => {
+  const handleClickButton = (number) => {
     setCount((prevCount) => (prevCount + number));
   };
 
   return (
     <>
       <p>Counter</p>
-      <p>
-        <Button onClick={() => onClickButton(1)}>{`Click me! (${count})`}</Button>
-      </p>
-      <CountButtons onClick={onClickButton} />
+      <CurrentCountButton count={count} onClick={handleClickButton} />
+      <CountButtons onClick={handleClickButton} />
     </>
   );
 }
-
-export default App;

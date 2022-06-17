@@ -1,7 +1,6 @@
-import React from 'react';
 import Button from './Button';
 
-function CountButtons({ onClick }) {
+export default function CountButtons({ onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
@@ -10,5 +9,3 @@ function CountButtons({ onClick }) {
     </p>
   );
 }
-
-export default CountButtons;
