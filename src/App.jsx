@@ -21,7 +21,7 @@ export default function App() {
     <div>
       <Title />
       <CountButton count={count} onClick={() => handleClick(COUNT_UNIT)} />
-      <NumberButtons increasingNumber={KEYPAD_NUMBERS} onClick={handleClick} />
+      <NumberButtons keypad={KEYPAD_NUMBERS} onClick={handleClick} />
     </div>
   );
 }
