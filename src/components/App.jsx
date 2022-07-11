@@ -8,7 +8,7 @@ function App() {
 
   const { count } = state;
 
-  function handleClick(numberToBeAdded = 1) {
+  function handleClick(event, numberToBeAdded = 1) {
     setState({
       count: count + numberToBeAdded,
     });
