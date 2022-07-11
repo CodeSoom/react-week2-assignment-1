@@ -1,13 +1,9 @@
 import React from 'react';
 
-export default function NumberButton({ handleClick }) {
+export default function NumberButton({ handleClick, value }) {
   return (
-    <div>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <button type="button" key={`number-${i}`} value={i} onClick={(e) => handleClick(e)}>
-          {i}
-        </button>
-      ))}
-    </div>
+    <button type="button" value={value} onClick={(e) => handleClick(e)}>
+      {value}
+    </button>
   );
 }

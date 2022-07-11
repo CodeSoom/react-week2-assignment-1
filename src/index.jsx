@@ -24,7 +24,11 @@ function App() {
       <RenderButton count={render} updateValue={1} handleClick={handleAddValue} />
       <br />
       <br />
-      <NumberButton handleClick={handleGetUpdateValue} />
+      <div>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <NumberButton handleClick={handleGetUpdateValue} key={`number-${i}`} value={i} />
+        ))}
+      </div>
       <br />
       <br />
       <button type="button" onClick={() => setRender(0)}>
