@@ -1,20 +1,18 @@
 /* @jsx React.createElement */
 
-import React from 'react';
+import * as React from 'react';
+export { React };
 import Buttons from './Buttons';
 import Counter from './Counter';
 
 // 페이지 컴포넌트
-function Page({ count, onClick }) {
+// eslint-disable-next-line react/prop-types
+function Page({ count, onClick }) { // onClick 함수 호출
     return (
         <div>
-            <p>Hellow, world!!!</p>
-            <p>Hi!</p>
-            <Counter
-                count={count}
-                onClick={() => onClick()}
-            />
-            <Buttons />
+            <p>Counter</p>
+            <Counter count = {count} onClick = {onClick} />
+            <Buttons onClick = {onClick} />
         </div>
     );
 }
