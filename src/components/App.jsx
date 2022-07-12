@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
-import Page from './Page';
+import Button from './Button';
+import NumberButton from './NumberButton';
 
 function App() {
   const [count, setCount] = useState(0);
 
   function handleClick(numberToBeAdded = 1) {
-    setCount(count + numberToBeAdded);
+    setCount((prevState) => prevState + numberToBeAdded);
   }
 
   return (
-    <Page
-      count={count}
-      onClick={handleClick}
-    />
+    <>
+      <p>Counter</p>
+      <p>
+        <Button count={count} onClick={handleClick} />
+      </p>
+      <p>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <NumberButton key={i} number={i} onClick={handleClick} />
+        ))}
+      </p>
+    </>
   );
 }
 
