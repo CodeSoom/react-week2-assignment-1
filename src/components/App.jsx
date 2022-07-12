@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 import Page from './Page';
 
-function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
+export default function App() {
+  const [count, setCount] = useState(0);
 
   function handleClick() {
-    setState({ count: count + 1 });
+    setCount(count + 1);
   }
 
-  function handleClickNumber({ number }) {
-    setState({ count: count + number });
+  function handleClickNumber({number}) {
+    setCount(count + number);
   }
 
   return (
@@ -24,5 +20,3 @@ function App() {
     />
   );
 }
-
-export default App;
