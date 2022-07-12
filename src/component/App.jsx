@@ -11,9 +11,11 @@ function App() {
 
     const { count } = state;
 
-    function handleClick() {
+    function handleClick(AddNumber = 1) { // AddNumber는 기본값 1을 통하여 클릭미 클릭할때 1씩 증감하도록 처리
+        console.log(AddNumber); // onClick 함수에서 가져온 AddNumber = children이다 children은 button  컴포넌트에서 가져온거다.
+        
         setState({
-            count: count + 1,
+            count: count + AddNumber,
         })
     }
 
