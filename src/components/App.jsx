@@ -2,16 +2,10 @@ import React, { useState } from 'react';
 import Page from './Page';
 
 function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
+  const [count, setCount] = useState(0);
 
   function handleClick(numberToBeAdded = 1) {
-    setState((prevState) => ({
-      count: prevState.count + numberToBeAdded,
-    }));
+    setCount(count + numberToBeAdded);
   }
 
   return (
