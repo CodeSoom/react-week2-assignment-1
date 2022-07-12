@@ -1,10 +1,11 @@
 /* @jsx React.createElement */
-import React from 'react';
+import React from 'react'; // 리액트 임포트 필수!
 
 // 버튼 컨포넌트
-function Button({ children }) {
+// eslint-disable-next-line react/prop-types
+function Button({ children, onClick }) {
     return (
-        <button type="button">            
+        <button type="button" onClick={() => onClick(children)}>            
             {children}
         </button>
     );
