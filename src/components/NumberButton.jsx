@@ -1,8 +1,13 @@
 import React from 'react';
 
-function NumberButton({ key, number, onClick }) {
+function NumberButton({ number, onClick }) {
   return (
-    <button type="button" key={key} onClick={() => onClick(number)}>{number}</button>
+    <button
+      type="button"
+      onClick={() => onClick(number)}
+    >
+      {number}
+    </button>
   );
 }
 
