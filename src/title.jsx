@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const Title = ({ title }) => <h1>{title}</h1>;
+export function Title({ text }) {
+  return <h2>{text}</h2>;
+}
 
-export default Title;
+export const MemoizedTitle = memo(Title);
