@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Button from './button';
 
 function ButtonList({ numbers, onClick }) {
@@ -13,4 +13,4 @@ function ButtonList({ numbers, onClick }) {
   );
 }
 
-export default ButtonList;
+export default memo(ButtonList);
