@@ -8,7 +8,7 @@ export default function App() {
     setCount(count + 1);
   }
 
-  function handleClickNumber({number}) {
+  function handleClickNumber({ number }) {
     setCount(count + number);
   }
 
