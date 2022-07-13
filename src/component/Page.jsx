@@ -7,7 +7,7 @@ import Counter from './Counter';
 
 // 페이지 컴포넌트
 // eslint-disable-next-line react/prop-types
-function Page({ count, onClick }) { // onClick 함수 호출
+export default function Page({ count, onClick }) { // onClick 함수 호출
     return (
         <div>
             <p>Counter</p>
@@ -16,5 +16,3 @@ function Page({ count, onClick }) { // onClick 함수 호출
         </div>
     );
 }
-
-export default Page;
