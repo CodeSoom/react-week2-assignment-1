@@ -4,7 +4,7 @@ import React, { useState } from 'react'; // 리액트 임포트 필수! useState
 import Page from './Page';
 
 // Page 컴포넌트 호출 및 핸들러 이벤트 실행
-function App() {
+export default function App() {
     const [state, setState]  = useState({
         count: 0,
     });
@@ -27,5 +27,3 @@ function App() {
     )
 
 }
-
-export default App;
