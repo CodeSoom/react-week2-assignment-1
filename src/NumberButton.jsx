@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function NumberButton({ handleClick, value }) {
   return (
-    <button type="button" value={value} onClick={(e) => handleClick(e)}>
+    <button type="button" onClick={() => handleClick(Number(value))}>
       {value}
     </button>
   );
