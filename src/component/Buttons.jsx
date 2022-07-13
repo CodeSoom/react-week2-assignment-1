@@ -5,7 +5,7 @@ import Button from "./Button";
 
 // 버튼 뷰 컴포넌트
 // eslint-disable-next-line react/prop-types
-function Buttons({ onClick }) {
+export default function Buttons({ onClick }) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((i) => (
@@ -16,5 +16,3 @@ function Buttons({ onClick }) {
     </p>
   );
 }
-
-export default Buttons;
