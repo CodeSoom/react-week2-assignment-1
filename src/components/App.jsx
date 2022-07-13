@@ -5,7 +5,7 @@ import NumberButton from './NumberButton';
 function App() {
   const [count, setCount] = useState(0);
 
-  function handleClick(numberToBeAdded = 1) {
+  function handleClick(numberToBeAdded) {
     setCount((prevState) => prevState + numberToBeAdded);
   }
 
