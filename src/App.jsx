@@ -9,16 +9,41 @@ export default function App() {
 
   const { count } = state;
 
-  function handleClickCount() {
+  function handleClickMe() {
     setState({
       count: count + 1,
     });
   }
 
-  return (
-    <Page
-      count={count}
-      onClick={handleClickCount}
-    />
-  );
+  function handleClickNumbers() {
+    console.log("hello");
+  }
+
+
+  function handleClick() {
+    if () { // ClickMe 가 클릭 되었을 때
+      return (
+        <Page
+          count={count}
+          onClick={handleClickMe}
+        />
+      );
+    }
+
+    if () { // ClickNumbers가 클릭 되었을 때 
+      return (
+        <Page
+          count={count}
+          onClick={handleClickNumbers}
+        />
+      );
+    }
+  }
+
+  // return (
+  //   <Page
+  //     count={count}
+  //     onClick={handleClickMe}
+  //   />
+  // );
 }
