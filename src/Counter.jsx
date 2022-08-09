@@ -1,5 +1,3 @@
-import React from 'react';
-
 import button from './Button';
 
 export default function Counter({ count, onClick }) {

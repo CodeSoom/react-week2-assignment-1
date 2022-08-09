@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Button from './Button';
 
 export default function Buttons({ count, onClick }) {
@@ -14,14 +12,14 @@ export default function Buttons({ count, onClick }) {
   );
 }
 
-export default function Counter({ count, onClick }) {
-  return (
-    <button type="button" onClick={onClick}>
-      Click me!
-      (
-      { count }
-      )
-    </button>
-  );
-}
+// export default function Counter({ count, onClick }) {
+//   return (
+//     <button type="button" onClick={onClick}>
+//       Click me!
+//       (
+//       { count }
+//       )
+//     </button>
+//   );
+// }
 

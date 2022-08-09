@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Page from './Page';
 
@@ -15,35 +15,35 @@ export default function App() {
     });
   }
 
-  function handleClickNumbers() {
-    console.log("hello");
-  }
+  // function handleClickNumbers() {
+  //   console.log("hello");
+  // }
 
 
-  function handleClick() {
-    if () { // ClickMe 가 클릭 되었을 때
-      return (
-        <Page
-          count={count}
-          onClick={handleClickMe}
-        />
-      );
-    }
+  // function handleClick() {
+  //   if () { // ClickMe 가 클릭 되었을 때
+  //     return (
+  //       <Page
+  //         count={count}
+  //         onClick={handleClickMe}
+  //       />
+  //     );
+  //   }
 
-    if () { // ClickNumbers가 클릭 되었을 때 
-      return (
-        <Page
-          count={count}
-          onClick={handleClickNumbers}
-        />
-      );
-    }
-  }
+  //   if () { // ClickNumbers가 클릭 되었을 때 
+  //     return (`!!!!!`
+  //       <Page
+  //         count={count}
+  //         onClick={handleClickNumbers}
+  //       />
+  //     );
+  //   }
+  // }
 
-  // return (
-  //   <Page
-  //     count={count}
-  //     onClick={handleClickMe}
-  //   />
-  // );
+  return (
+    <Page
+      count={count}
+      onClick={handleClickMe}
+    />
+  );
 }
