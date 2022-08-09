@@ -1,13 +1,13 @@
 import React from "react";
 
-import Counter from "./Counter";
-import NumberButtons from "./NumberButtons";
+import ClickMe from "./Buttons/ClickMe";
+import NumberButtons from "./Buttons/NumberButtons";
 
 export default function CounterPage({ count, buttonClick }) {
     return (
         <div>
           <p>Counter</p>
-          <Counter
+          <ClickMe
             count={count}
             buttonClick={buttonClick}
           />

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-import CounterPage from './CounterPage';
+import CounterPage from './Page';
 
-export default function App() {
+export default function CounterApp() {
     const [count, setCount] = useState(0);
   
     function handleClick(number) {

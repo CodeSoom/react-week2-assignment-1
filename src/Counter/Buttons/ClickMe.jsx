@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Counter({ count, buttonClick }) {
+export default function ClickMe({ count, buttonClick }) {
     return (
       <button type="button" onClick={() => buttonClick(1)}>
         Click me!
