@@ -4,7 +4,7 @@ import Buttons from './Buttons';
 export default function Page({ count, onClick }) {
   return (
     <div>
-      <p>Hello, react!</p>
+      <p>Counter</p>
       <Counter
         count={count}
         onClick={onClick}
