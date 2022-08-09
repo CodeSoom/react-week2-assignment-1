@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function NumberButton({ children, onClick }) {
+export default function NumberButton({ children, buttonClick }) {
     return (
-      <button type="button" onClick={() => onClick(children)}>
+      <button type="button" onClick={() => buttonClick(children)}>
         {children}
       </button>
     );

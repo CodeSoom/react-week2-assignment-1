@@ -12,7 +12,7 @@ export default function App() {
     return (
       <CounterPage
         count={count}
-        onClick={handleClick}
+        buttonClick={handleClick}
       />
     );
 }
