@@ -9,7 +9,7 @@ export default function Page({ count, onClick }) {
         count={count}
         onClick={onClick}
       />
-      <Buttons 
+      <Buttons
         count={count}
         onClick={onClick}
       />
