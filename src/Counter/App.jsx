@@ -5,7 +5,7 @@ import CounterPage from './Page';
 export default function CounterApp() {
   const [count, setCount] = useState(0);
 
-  function handleButtonClick(number) {
+  function handleClickButton(number) {
     setCount(count + number);
   }
 
@@ -13,7 +13,7 @@ export default function CounterApp() {
     <CounterPage
       count={count}
       // eslint-disable-next-line react/jsx-no-bind
-      onButtonClick={handleButtonClick}
+      onClickButton={handleClickButton}
     />
   );
 }
