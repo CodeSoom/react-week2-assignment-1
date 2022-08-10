@@ -1,24 +1,36 @@
-import React, { useState } from 'react';
-import Title from './Title';
+import { useState } from 'react';
 import ClickMeButton from './ClickMeButton';
 import NumberButtons from './NumberButtons';
 
-function App() {
+export default function App() {
   const [state, setState] = useState({
     count: 0,
   });
 
   const { count } = state;
 
+  function handleClickMe() {
+    setState({
+      count: count + 1,
+    });
+  }
+
+  function handleNumberButton(number) {
+    setState({
+      count: count + number,
+    });
+  }
+
   return (
     <div>
-      <Title />
+      <p>Counter</p>
       <ClickMeButton
         count={count}
+        handleClickMe={handleClickMe}
       />
-      <NumberButtons />
+      <NumberButtons
+        handleNumberButton={handleNumberButton}
+      />
     </div>
   );
 }
-
-export default App;

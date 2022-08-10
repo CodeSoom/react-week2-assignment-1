@@ -1,18 +1,17 @@
-import React from 'react';
+import NumberButton from './NumberButton';
 
-function NumberButtons() {
+export default function NumberButtons({
+  handleNumberButton,
+}) {
   return (
     <p>
       {[1, 2, 3, 4, 5].map((number) => (
-        <button
-          type="button"
+        <NumberButton
           key={number}
-        >
-          {number}
-        </button>
+          number={number}
+          handleNumberButton={handleNumberButton}
+        />
       ))}
     </p>
   );
 }
-
-export default NumberButtons;
