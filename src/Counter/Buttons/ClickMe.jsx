@@ -1,6 +1,6 @@
-export default function ClickMe({ count, buttonClick }) {
+export default function ClickMe({ count, onButtonClick }) {
   return (
-    <button type="button" onClick={() => buttonClick(1)}>
+    <button type="button" onClick={() => onButtonClick(1)}>
       Click me!
       (
       { count }

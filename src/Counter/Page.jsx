@@ -1,15 +1,15 @@
 import ClickMe from './Buttons/ClickMe';
 import NumberButtons from './Buttons/NumberButtons';
 
-export default function CounterPage({ count, buttonClick }) {
+export default function CounterPage({ count, onButtonClick }) {
   return (
     <div>
       <p>Counter</p>
       <ClickMe
         count={count}
-        buttonClick={buttonClick}
+        onButtonClick={onButtonClick}
       />
-      <NumberButtons buttonClick={buttonClick} />
+      <NumberButtons onButtonClick={onButtonClick} />
     </div>
   );
 }

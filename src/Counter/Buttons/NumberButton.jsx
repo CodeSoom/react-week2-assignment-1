@@ -1,6 +1,6 @@
-export default function NumberButton({ children, buttonClick }) {
+export default function NumberButton({ children, onButtonClick }) {
   return (
-    <button type="button" onClick={() => buttonClick(children)}>
+    <button type="button" onClick={() => onButtonClick(children)}>
       {children}
     </button>
   );
