@@ -1,13 +1,15 @@
 module.exports = {
-  presets: [
+  presets:
     [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current',
+      [
+        '@babel/preset-env',
+        {
+          targets: {
+            node: 'current',
+            chrome: '79',
+          },
         },
-      },
+      ],
+      '@babel/preset-react',
     ],
-    '@babel/preset-react',
-  ],
 };
