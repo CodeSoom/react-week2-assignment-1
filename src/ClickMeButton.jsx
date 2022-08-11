@@ -1,12 +1,12 @@
 export default function ClickMeButton({
   count,
-  handleClickMe,
+  onClickButton,
 }) {
   return (
     <div>
       <button
         type="button"
-        onClick={() => handleClickMe()}
+        onClick={() => onClickButton(1)}
       >
         Click Me!
         (

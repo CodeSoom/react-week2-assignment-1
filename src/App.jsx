@@ -9,13 +9,7 @@ export default function App() {
 
   const { count } = state;
 
-  function handleClickMe() {
-    setState({
-      count: count + 1,
-    });
-  }
-
-  function handleNumberButton(number) {
+  function handleCountChange(number) {
     setState({
       count: count + number,
     });
@@ -26,10 +20,10 @@ export default function App() {
       <p>Counter</p>
       <ClickMeButton
         count={count}
-        handleClickMe={handleClickMe}
+        onClickButton={handleCountChange}
       />
       <NumberButtons
-        handleNumberButton={handleNumberButton}
+        onClickButton={handleCountChange}
       />
     </div>
   );

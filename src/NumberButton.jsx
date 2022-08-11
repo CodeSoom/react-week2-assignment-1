@@ -1,11 +1,11 @@
 export default function NumberButton({
   number,
-  handleNumberButton,
+  onClickButton,
 }) {
   return (
     <button
       type="button"
-      onClick={() => handleNumberButton(number)}
+      onClick={() => onClickButton(number)}
     >
       {number}
     </button>
