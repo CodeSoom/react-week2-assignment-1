@@ -2,7 +2,7 @@ import React from 'react';
 
 function Button({ keyNumber, onClick }) {
   return (
-    <button type="button" onClick={() => onClick(keyNumber)}>
+    <button key={keyNumber.toString()} type="button" onClick={() => onClick(keyNumber)}>
       {keyNumber}
     </button>
   );
