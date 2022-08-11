@@ -9,9 +9,9 @@ export default function App() {
 
   const { count } = state;
 
-  function handleClick(addValue) {
+  function handleClick(addedValue) {
     setState({
-      count: count + addValue,
+      count: count + addedValue,
     });
   }
 
