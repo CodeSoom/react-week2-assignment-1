@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from './Button';
 
-function Buttons({ onClick }) {
+export default function Buttons({ onClick }) {
   return (
     <p>
       {
@@ -15,5 +15,3 @@ function Buttons({ onClick }) {
     </p>
   );
 }
-
-export default Buttons;
