@@ -4,22 +4,14 @@ import Buttons from './Buttons';
 import Counter from './Counter';
 
 function App() {
-  const [state, setState] = useState({
-    count: 0,
-  });
-
-  const { count } = state;
+  const [count, setCount] = useState(0);
 
   function handleClick() {
-    setState({
-      count: count + 1,
-    });
+    setCount(count + 1);
   }
 
   function handleNumberClick(value) {
-    setState({
-      count: count + value,
-    });
+    setCount(count + value);
   }
 
   return (
