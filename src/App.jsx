@@ -9,7 +9,5 @@ export default function App() {
     setCount(count + i);
   }
 
-  return (
-    <Page count={count} onClick={(i) => handleClick(i)} />
-  );
+  return <Page count={count} onClick={handleClick} />;
 }
