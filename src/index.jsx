@@ -13,7 +13,7 @@ function App() {
     setState({ count: count + 1 });
   }
 
-  function handleClickDirectPlus(i) {
+  function handleClickByNumber(i) {
     setState({ count: count + i });
   }
 
@@ -23,7 +23,7 @@ function App() {
         count={count}
         onClick={handleClick}
         buttonList={buttonList}
-        handleClickDirectPlus={handleClickDirectPlus}
+        handleClickByNumber={handleClickByNumber}
       />
     </div>
   );
