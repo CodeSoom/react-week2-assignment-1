@@ -11,9 +11,9 @@ function App() {
 
   const numberList = [1, 2, 3, 4, 5];
 
-  const handleClick = () => {
+  const handleClick = (increasingValue) => {
     setState({
-      count: count + 1,
+      count: count + increasingValue,
     });
   };
 
