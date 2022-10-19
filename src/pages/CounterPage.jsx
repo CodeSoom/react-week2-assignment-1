@@ -1,24 +1,29 @@
-import React from 'react';
-import ClickableButton from '../components/Button/ClickableButton';
-import IncreasingByNumberButton from '../components/Button/IncreasingByNumberButton';
+import React, { useState } from 'react';
 
-function CounterPage({ count, handleClick, numberList }) {
+import ClickableButton from '../components/Button/ClickableButton';
+import NumberButton from '../components/Button/NumberButton';
+
+function CounterPage() {
+  const [state, setState] = useState({
+    count: 0,
+  });
+
+  const { count } = state;
+
+  const handleClick = (increasingValue) => {
+    setState({
+      count: count + increasingValue,
+    });
+  };
+
   return (
     <div>
       <p>Counter</p>
-      <ClickableButton count={count} handleClick={handleClick} />
-      <div>
-        {
-          numberList.map((value) => (
-            <IncreasingByNumberButton
-              number={value}
-              key={value}
-              handleClick={handleClick}
-            />
-          ))
-        }
-
-      </div>
+      <ClickableButton
+        count={count}
+        onClick={handleClick}
+      />
+      <NumberButton onClick={handleClick} />
     </div>
   );
 }
