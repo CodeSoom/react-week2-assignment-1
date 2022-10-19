@@ -1,10 +1,9 @@
 import React from 'react';
 
-function ClickableButton({ count, handleClick }) {
-  const increasingCount = 1;
+function ClickableButton({ count, onClick }) {
   return (
     <div>
-      <button type="button" onClick={() => handleClick(increasingCount)}>
+      <button type="button" onClick={() => onClick(1)}>
         Click me!
         (
         { count }
