@@ -1,4 +1,3 @@
-import React from 'react';
 import Counter from '../components/Counter';
 import Buttons from '../components/buttons/Buttons';
 
