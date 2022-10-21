@@ -1,5 +1,3 @@
-import React from 'react';
-
 function NumberButton({ onClick }) {
   const numberList = [1, 2, 3, 4, 5];
   return (
