@@ -1,11 +1,28 @@
-import React from 'react';
+import { useState } from 'react';
 
-import CounterPage from './pages/CounterPage';
+import ClickableButton from './components/Button/ClickableButton';
+import NumberButton from './components/Button/NumberButton';
 
 function App() {
+  const [state, setState] = useState({
+    count: 0,
+  });
+
+  const { count } = state;
+
+  const handleClick = (increasingValue) => {
+    setState({
+      count: count + increasingValue,
+    });
+  };
   return (
     <div>
-      <CounterPage />
+      <p>Counter</p>
+      <ClickableButton
+        count={count}
+        onClick={handleClick}
+      />
+      <NumberButton onClick={handleClick} />
     </div>
   );
 }
