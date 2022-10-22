@@ -1,5 +1,3 @@
-import React from 'react';
-
 function NumberButton({ children, onClick }) {
   return (
     <button

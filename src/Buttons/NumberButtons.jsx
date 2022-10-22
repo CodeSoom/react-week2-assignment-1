@@ -1,4 +1,3 @@
-import React from 'react';
 import NumberButton from './NumberButton';
 
 function NumberButtons({ onClick }) {
