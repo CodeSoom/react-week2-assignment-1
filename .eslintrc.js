@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
@@ -17,6 +18,11 @@ module.exports = {
   plugins: [
     'react',
   ],
+  settings: {
+    react: {
+      version: 'latest',
+    },
+  },
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',

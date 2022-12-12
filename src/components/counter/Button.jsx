@@ -1,13 +1,9 @@
-import React from 'react'
+const Button = ({ onIncrease, children }) => (
+  <li>
+    <button type="button" onClick={onIncrease}>
+      {children}
+    </button>
+  </li>
+);
 
-const Button = ({incrementValue, onIncrement, children}) => {
-  return (
-    <li>
-        <button onClick={() => onIncrement(incrementValue)}>
-           {children} {incrementValue}
-        </button>
-    </li> 
-  )
-}
-
-export default Button
+export default Button;

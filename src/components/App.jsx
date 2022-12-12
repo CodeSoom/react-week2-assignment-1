@@ -1,11 +1,11 @@
-import React from 'react'
-import Counter from './counter/Counter'
-import CounterPage from './pages/CounterPage'
+import Header from './layouts/Header';
+import Counter from './counter/Counter';
 
-const App = () => {
-  return (
-    <CounterPage />
-  )
-}
+const App = () => (
+  <div>
+    <Header />
+    <Counter />
+  </div>
+);
 
-export default App
+export default App;

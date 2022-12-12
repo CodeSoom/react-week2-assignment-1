@@ -1,16 +1,17 @@
-import React from 'react'
 import Button from './Button';
 
-const Buttons = ({onIncrement}) => {
-const incrementValues = [1,2,3,4,5];
+const Buttons = ({ onIncrease }) => {
+  const incrementValues = [1, 2, 3, 4, 5];
 
   return (
-    <ul className='counterBtns'>
-        {incrementValues.map((incrementValue)=> (
-            <Button incrementValue={incrementValue} onIncrement={onIncrement} />
-        ))}
+    <ul className="counterBtns">
+      {incrementValues.map((incrementValue) => (
+        <Button key={incrementValue} onIncrease={() => onIncrease(incrementValue)}>
+          {incrementValue}
+        </Button>
+      ))}
     </ul>
-  )
-}
+  );
+};
 
-export default Buttons
+export default Buttons;
