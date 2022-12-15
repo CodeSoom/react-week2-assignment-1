@@ -1,10 +1,8 @@
-import React from 'react';
-
 const Buttons = ({ onClick }) => (
   <div>
-    {[1, 2, 3, 4, 5].map((i) => (
-      <button key={i} type='button' onClick={() => onClick(i)}>
-        {i}
+    {[1, 2, 3, 4, 5].map((btnNumber) => (
+      <button key={number} type='button' onClick={() => onClick(btnNumber)}>
+        {btnNumber}
       </button>
     ))}
   </div>

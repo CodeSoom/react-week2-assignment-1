@@ -1,7 +1,5 @@
-import React from 'react';
-
-import Button from './button';
-import Buttons from './buttons';
+import Button from './Button';
+import Buttons from './Buttons';
 
 const Page = ({ count, onClick }) => (
   <div>
