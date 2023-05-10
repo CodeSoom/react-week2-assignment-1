@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import ClickMe from './ClickMe.jsx';
-import Button from './Button.jsx';
+import ClickMe from './components/ClickMe.jsx';
+import Button from './components/Button.jsx';
 
 export default function App() {
   const [counterNumber, setCounterNumber] = useState(0);
