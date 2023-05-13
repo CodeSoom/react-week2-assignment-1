@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ClickMeButton from './components/ClickMeButton.jsx';
-import NumberButtons from './components/NumberButtons.jsx';
+import ClickMeButton from './components/ClickMeButton';
+import NumberButtons from './components/NumberButtons';
 
 export default function App() {
   const [counterNumber, setCounterNumber] = useState(0);
@@ -14,10 +14,11 @@ export default function App() {
       <p>Counter</p>
       <ClickMeButton
         counterNumber={counterNumber}
-        handlerClickButton={handlerClickButton}
+        onClick={handlerClickButton}
+        whatNumberToAdd={1}
       />
       <br />
-      <NumberButtons handlerClickButton={handlerClickButton} />
+      <NumberButtons onClick={handlerClickButton} />
     </div>
   );
 }

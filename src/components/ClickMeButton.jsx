@@ -1,11 +1,13 @@
 import React from 'react';
 
-export default function ClickMeButton({ counterNumber, handlerClickButton }) {
+export default function ClickMeButton({
+  counterNumber,
+  onClick,
+  whatNumberToAdd,
+}) {
   return (
-    <button type="button" onClick={() => handlerClickButton({ number: 1 })}>
-      Click me (
-      {counterNumber}
-      )
+    <button type="button" onClick={() => onClick({ number: whatNumberToAdd })}>
+      Click me ({counterNumber})
     </button>
   );
 }
