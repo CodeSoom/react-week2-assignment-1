@@ -15,7 +15,7 @@ export default function App() {
       <ClickMeButton
         counterNumber={counterNumber}
         onClick={handlerClickButton}
-        whatNumberToAdd={1}
+        number={1}
       />
       <br />
       <NumberButtons onClick={handlerClickButton} />
